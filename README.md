@@ -22,11 +22,11 @@ The project emphasizes cumulative learning rather than isolated practice. Each l
 
 ## Repository Structure
 
-- [advisor-instructions.md](</Users/gamlielibn/Documents/Grad School Prep/advisor-instructions.md>): teaching and curriculum rules
-- [student-profile.md](</Users/gamlielibn/Documents/Grad School Prep/student-profile.md>): durable context about background, pacing, and preferences
-- [curriculum-progress.md](</Users/gamlielibn/Documents/Grad School Prep/curriculum-progress.md>): current position, mastery status, and next-step guidance
-- [lesson-01-descriptive-statistics-linear-search-loss.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-01-descriptive-statistics-linear-search-loss.md>): current lesson
-- [lesson-01-score-analyzer-starter.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-01-score-analyzer-starter.py>): starter scaffold for the current coding exercise
+- [advisor-instructions.md](advisor-instructions.md): teaching and curriculum rules
+- [student-profile.md](student-profile.md): durable context about background, pacing, and preferences
+- [curriculum-progress.md](curriculum-progress.md): current position, mastery status, and next-step guidance
+- [lesson-01-descriptive-statistics-linear-search-loss.md](lesson-01-descriptive-statistics-linear-search-loss.md): current lesson
+- [lesson-01-score-analyzer-starter.py](lesson-01-score-analyzer-starter.py): starter scaffold for the current coding exercise
 
 ## Current Status
 
