@@ -27,14 +27,16 @@ The project emphasizes cumulative learning rather than isolated practice. Each l
 - [curriculum-progress.md](curriculum-progress.md): current position, mastery status, and next-step guidance
 - [lesson-01-descriptive-statistics-linear-search-loss.md](lesson-01-descriptive-statistics-linear-search-loss.md): current lesson
 - [lesson-01-score-analyzer-starter.py](lesson-01-score-analyzer-starter.py): starter scaffold for the current coding exercise
+- [lesson-02-verifying-statistical-code-and-invariants.md](lesson-02-verifying-statistical-code-and-invariants.md): current reinforcement lesson on testing and correctness
 
 ## Current Status
 
-As of Monday, July 20, 2026:
+As of Tuesday, July 21, 2026:
 
 - Week 1 has begun.
 - Lesson 1 covers descriptive statistics, mean baselines, and linear search.
-- The current assignment is still awaiting submission and review.
+- The first three helper functions are present, but the integrated report and verification evidence remain incomplete.
+- Lesson 2 focuses on completing and rigorously testing that work before advancing.
 
 ## Suggested Workflow
 
