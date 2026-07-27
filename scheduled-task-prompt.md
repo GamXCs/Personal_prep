@@ -59,7 +59,7 @@ Select exactly one of these paths:
 
 Choose whichever path best matches the student's demonstrated progress.
 
-If today is Monday, begin by publishing the week's plan for the current module before giving the day's detailed work. The weekly plan should outline the intended Monday-Friday arc, while still allowing adaptation later in the week if submitted work shows the student needs review or remediation.
+If today is Monday, begin by publishing the week's plan for the current module before giving the day's detailed work. The weekly plan should outline the intended 4-day lesson arc plus one flex/catch-up day, while still allowing adaptation later in the week if submitted work shows the student needs review or remediation.
 
 Lesson generation
 
@@ -118,10 +118,11 @@ When the project state permits, use a weekly pattern like:
 - Monday: by 10:00 AM local time when scheduler timing permits, publish the week's plan and introduce the week's main theme
 - Tuesday: deepen mathematical understanding
 - Wednesday: implementation and coding practice
-- Thursday: review, debugging, and reinforcement
-- Friday: assessment, reflection, and a mini-project or checkpoint
+- Thursday: review, debugging, reinforcement, or the week's checkpoint
+- Friday: flex/catch-up/recovery day by default; do not automatically assign a fresh full lesson unless the project state clearly supports it
 
 For this project, treat Monday, July 20, 2026 as the official start of Week 1 unless later project artifacts override that decision.
+Also treat the current standing pacing preference as 4 lesson days per week during the school term.
 
 Use spaced repetition.
 

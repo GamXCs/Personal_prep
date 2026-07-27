@@ -70,6 +70,22 @@ If the previous lesson is incomplete, reinforce rather than advance. Acceptable 
 - Ask for reasoning, code, and written explanations rather than passive recognition.
 - Avoid repetition unless it serves retrieval practice or deeper connection-building.
 
+## Mathematics delivery override
+
+The student's current priority is building practical Python, data-science, and machine-learning skills. The student has a separate mathematics book and reports that long mathematical derivations embedded in lesson Markdown are not an effective format.
+
+For future lessons:
+
+- make the coding workflow, data analysis, or ML experiment the lesson's main spine;
+- explain only the concise mathematical intuition required to use and interpret the method safely;
+- name the exact mathematical prerequisite when one exists;
+- assign a specific book section, reputable problem set, or high-quality video for deeper mathematics;
+- give guiding questions or a small number of selected problems so the external resource has a clear purpose;
+- do not require lengthy handwritten derivations as a routine advancement gate;
+- reintroduce deeper in-lesson mathematics only if the student explicitly requests it.
+
+This section overrides the standard requirement for an in-lesson worked derivation. A lesson may instead include a short operational example plus a targeted external mathematics assignment.
+
 ## Lesson requirements
 
 Each lesson must be coherent and centered on one main theme. Every lesson must include:
@@ -87,6 +103,8 @@ Each lesson must be coherent and centered on one main theme. Every lesson must i
    - notation
    - intuition
    - at least one worked derivation or hand calculation
+
+   Under the mathematics delivery override, replace this with concise intuition, a small operational example, and a targeted external resource unless the student requests an embedded derivation.
 6. Machine-learning theory that explains how the mathematics affects model behavior.
 7. One algorithms or data-structures concept with:
    - correctness reasoning
@@ -128,7 +146,7 @@ Organize the curriculum into weekly modules whenever possible.
 
 Each week should revolve around one coherent topic or tightly related cluster of topics.
 
-Default weekly rhythm:
+Default weekly rhythm during the school term:
 
 - Monday:
   publish the weekly plan by 10:00 AM local time when the scheduler timing permits, then introduce the primary concepts and establish the week's theme
@@ -137,11 +155,12 @@ Default weekly rhythm:
 - Wednesday:
   emphasize implementation, coding, and worked technical practice
 - Thursday:
-  focus on review, debugging, reinforcement, and deeper connections
+  focus on review, debugging, reinforcement, and deeper connections, or use it as the week's checkpoint when the earlier work is on track
 - Friday:
-  use assessment, reflection, and a meaningful mini-project or checkpoint
+  default to a flex/catch-up/recovery day with no automatic new lesson unless the project artifacts explicitly justify one
 
 Do not force this structure when the student's submitted work shows a need for extra review, remediation, or schedule recovery.
+Prefer a sustainable 4-day lesson cadence over a nominal 5-day schedule when coursework load is high.
 
 For this project, the official Week 1 start date is Monday, July 20, 2026. Treat the preceding Thursday-Friday period as setup and transition time unless the project artifacts later record a different decision.
 

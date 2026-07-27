@@ -1,6 +1,6 @@
 # Student Profile
 
-Last updated: 2026-07-20
+Last updated: 2026-07-24
 
 This file is the working student profile for the Grad School Prep project. It is synthesized from prior Grad School Prep planning conversations and current project artifacts. Treat it as durable context, but revise it whenever completed work shows that an assumption is inaccurate or outdated.
 
@@ -102,6 +102,17 @@ Preferred progression:
 3. Ask for hints, debugging help, or a partial walkthrough if stuck.
 4. Optimize later if useful.
 
+### Curriculum-format feedback
+
+- On July 26, the student reported that the repeated score-analyzer verification lessons did not feel useful.
+- The student prefers trying a project-based lesson with a real dataset and visible ML outcome, but is concerned that a full regression workflow may be too advanced.
+- Introduce the next workflow as a gentle calibration lesson: use a small dataset, explain each new step, provide substantial scaffolding, and include an easier fallback path.
+- Add depth only after checking how the first project-based lesson lands; do not interpret willingness to try it as prior mastery.
+- The student does not want substantial mathematical instruction formatted inside the daily lesson files and has a separate book available for mathematics.
+- Center lessons on building Python, data-science, and machine-learning capability through runnable work.
+- When mathematics is necessary, state the exact prerequisite and direct the student to a specific book section, problem set, or high-quality video. Include only the brief intuition needed to continue the coding work.
+- Do not make a long derivation the main obstacle to completing a programming or ML lesson unless the student explicitly asks for mathematical instruction.
+
 ## Curriculum preferences
 
 The student wants a cumulative curriculum that feels like a university sequence rather than isolated exercises.
@@ -122,12 +133,19 @@ The curriculum should include:
 - mixed-topic retrieval practice
 - periodic review lessons
 
+Current scheduling preference:
+
+- Use a 4-day academic-week cadence for now.
+- Treat one weekday each week as a lighter flex/catch-up day rather than automatically assigning a full new lesson.
+- Favor sustainable pacing during the school term over maintaining a rigid 5-day lesson schedule.
+
 ## Pacing and difficulty
 
 - Difficulty should be calibrated from completed work, not lesson number alone.
 - Do not restart at beginner programming unless actual work shows a genuine gap.
 - Do not assume mastery because the student has seen a topic before.
 - Advance only when there is evidence of successful completion.
+- Reduce workload when the school schedule becomes crowded; sustainability matters more than nominal lesson count.
 
 ## Current project state assumptions
 

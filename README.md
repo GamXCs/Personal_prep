@@ -13,6 +13,8 @@ This repository is a long-term study curriculum designed to prepare for graduate
 
 The project emphasizes cumulative learning rather than isolated practice. Each lesson is meant to connect programming, mathematical reasoning, algorithmic thinking, and machine-learning theory.
 
+The current pacing is a 4-day lesson week during the school term, with one built-in flex/catch-up day for sustainability.
+
 ## How The Curriculum Works
 
 - Lessons build on prior work and do not assume mastery without evidence.
@@ -28,15 +30,22 @@ The project emphasizes cumulative learning rather than isolated practice. Each l
 - [lesson-01-descriptive-statistics-linear-search-loss.md](lesson-01-descriptive-statistics-linear-search-loss.md): current lesson
 - [lesson-01-score-analyzer-starter.py](lesson-01-score-analyzer-starter.py): starter scaffold for the current coding exercise
 - [lesson-02-verifying-statistical-code-and-invariants.md](lesson-02-verifying-statistical-code-and-invariants.md): current reinforcement lesson on testing and correctness
+- [lesson-03-property-based-testing-statistical-code.md](lesson-03-property-based-testing-statistical-code.md): current implementation lesson on property-based verification
+- [lesson-04-test-adequacy-affine-invariants.md](lesson-04-test-adequacy-affine-invariants.md): current review lesson on fault detection and affine invariants
+- [lesson-05-independent-oracles-pairwise-variance.md](lesson-05-independent-oracles-pairwise-variance.md): flex-day checkpoint on independent variance verification
+- [lesson-06-testing-boundaries-and-expected-values.md](lesson-06-testing-boundaries-and-expected-values.md): targeted reinforcement on testing the imported analyzer rather than local copies
+- [lesson-07-test-discovery-and-detection-probability.md](lesson-07-test-discovery-and-detection-probability.md): current lesson on unittest discovery, collection counts, and detection probability
 
 ## Current Status
 
-As of Tuesday, July 21, 2026:
+As of Sunday, July 26, 2026:
 
 - Week 1 has begun.
 - Lesson 1 covers descriptive statistics, mean baselines, and linear search.
-- The first three helper functions are present, but the integrated report and verification evidence remain incomplete.
-- Lesson 2 focuses on completing and rigorously testing that work before advancing.
+- The analyzer functions and integrated report are present, but the verification evidence remains incomplete.
+- The test file now calls the imported analyzer and contains five checks that pass under pytest.
+- The required unittest command still discovers zero tests because those checks are top-level functions.
+- Lesson 7 is the current reinforcement: convert the checks to a `unittest.TestCase`, audit collection count, and complete the missing partitions without advancing to a new topic track.
 
 ## Suggested Workflow
 
