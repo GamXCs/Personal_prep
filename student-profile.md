@@ -1,6 +1,6 @@
 # Student Profile
 
-Last updated: 2026-07-24
+Last updated: 2026-07-27
 
 This file is the working student profile for the Grad School Prep project. It is synthesized from prior Grad School Prep planning conversations and current project artifacts. Treat it as durable context, but revise it whenever completed work shows that an assumption is inaccurate or outdated.
 
@@ -107,6 +107,22 @@ Preferred progression:
 - On July 26, the student reported that the repeated score-analyzer verification lessons did not feel useful.
 - The student prefers trying a project-based lesson with a real dataset and visible ML outcome, but is concerned that a full regression workflow may be too advanced.
 - Introduce the next workflow as a gentle calibration lesson: use a small dataset, explain each new step, provide substantial scaffolding, and include an easier fallback path.
+- The first attempted real-data regression lesson was still much too advanced.
+  Do not combine a new library, unfamiliar dataset, splitting, model fitting,
+  metrics, and residual analysis in one lesson. Introduce one layer at a time
+  using hand-readable data and ordinary Python before returning to scikit-learn.
+- The student reports that mean and squared-error calculations are already
+  understood. Their perceived weakness is completing coding assignments.
+  Emphasize specification-to-code practice, multi-function scaffolds, loops,
+  data structures, debugging, and incremental checkpoints. Supply familiar
+  arithmetic helpers when reimplementing them would distract from the coding
+  objective.
+- The student explicitly wants substantially more coding repetition across core
+  Python, NumPy, Pandas, and machine-learning libraries. Treat programming
+  fluency as the current primary development goal. Use short, cumulative
+  implementation tasks in every lesson, revisit the same coding patterns in new
+  contexts, and introduce libraries progressively rather than combining several
+  unfamiliar APIs at once.
 - Add depth only after checking how the first project-based lesson lands; do not interpret willingness to try it as prior mastery.
 - The student does not want substantial mathematical instruction formatted inside the daily lesson files and has a separate book available for mathematics.
 - Center lessons on building Python, data-science, and machine-learning capability through runnable work.

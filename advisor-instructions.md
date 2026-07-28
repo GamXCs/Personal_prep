@@ -140,6 +140,26 @@ Use these as the long-term curriculum spine, revisiting earlier topics whenever 
 - reading technical documentation
 - reading research papers
 
+## Current coding-practice emphasis
+
+The student's present priority is programming fluency in Python, NumPy, Pandas,
+and machine-learning libraries.
+
+Until project evidence supports changing this emphasis:
+
+- make runnable coding the largest part of each lesson;
+- assign multiple small checkpoints before one integrated task;
+- reuse earlier patterns such as traversal, transformation, filtering,
+  aggregation, validation, and debugging in increasingly realistic contexts;
+- teach one unfamiliar library layer at a time;
+- supply already-mastered mathematics or boilerplate when it would distract
+  from the coding target;
+- require the student to write substantial portions of the implementation
+  rather than only execute or lightly edit provided code;
+- review submitted code for correctness, readability, decomposition, and
+  debugging habits;
+- keep optional theory depth available without letting it displace coding reps.
+
 ## Weekly module structure
 
 Organize the curriculum into weekly modules whenever possible.

@@ -1,10 +1,10 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 ## Current module
 
-- Week 1 - Descriptive statistics, scaling, and lookup strategies
+- Week 2 - Regression workflow and honest evaluation
 
 ## Schedule policy
 
@@ -32,6 +32,21 @@ Last updated: 2026-07-26
 - Curriculum-direction override from student feedback: the repeated testing sequence is no longer productive and should stop here.
 - Next state: trial a small, highly scaffolded real-data regression lesson, then recalibrate from the student's experience.
 - Mathematics-format override: future lessons should prioritize Python/data-science/ML implementation. State necessary math prerequisites briefly and point to a book section, problem set, or reputable video instead of embedding long derivations.
+- The student reviewed the first Lesson 8 and reported that it was much too
+  advanced. That version has been replaced rather than assigned.
+- The student then clarified that mean and squared-error calculations are
+  already understood; the actual weakness to target is completing coding
+  assignments.
+- Lesson 8 was revised again into a coding-first prediction evaluator. The math
+  helper is supplied, while the assignment targets four function contracts,
+  list/dictionary transformations, validation, report construction, and a
+  linear maximum scan.
+- Current state: "Coding-first Lesson 8 published; four checkpoints available,
+  with a two-checkpoint reduced path."
+- Confirmed curriculum direction: programming fluency is the primary near-term
+  goal. Subsequent lessons should progress through core Python, NumPy, Pandas,
+  and ML libraries using cumulative coding assignments and one new library layer
+  at a time.
 
 ## Concepts introduced so far
 
@@ -62,6 +77,12 @@ Last updated: 2026-07-26
 - test collection, execution, and assertion contracts
 - detection probability `1 - (1-p)^k`
 - depth-first traversal of nested test suites
+- translating function contracts into code
+- transforming lists of dictionaries
+- prediction/observation alignment
+- non-mutating report construction
+- input validation
+- linear maximum scan
 
 ## Concepts with evidence of mastery
 
@@ -71,6 +92,8 @@ Last updated: 2026-07-26
 - The student has identified six appropriate test partitions in comments and created the expected test filename.
 - The student removed the shadowing analyzer copies and wrote five correct basic assertions.
 - Pytest executes all five current assertions successfully.
+- No regression concepts are marked mastered until the Lesson 8 output and
+  interpretation are submitted.
 
 ## Concepts awaiting evidence of mastery
 
@@ -82,6 +105,11 @@ Last updated: 2026-07-26
 - using an independent oracle without duplicating the implementation
 - writing tests discoverable by the required `unittest` runner
 - checking collected-test counts before trusting a green result
+- implementing multi-step functions from written contracts
+- choosing loop state and intermediate variables
+- preserving input/output alignment
+- dictionary lookup and list-traversal complexity
+- train/test separation and fitted regression are intentionally deferred
 
 ## Lesson sequence
 
@@ -176,10 +204,27 @@ Last updated: 2026-07-26
 - Preserve the concepts and completed work, but do not require the remaining testing artifacts before moving forward.
 - Return to testing only when a concrete project creates a natural need for it.
 
+### Lesson 8 - Code a Prediction Evaluator
+
+- Status: replaced with a simpler bridge lesson after difficulty feedback
+- Date published: 2026-07-27
+- Artifact: [lesson-08-coding-prediction-evaluator.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-coding-prediction-evaluator.md>)
+- Complete example: [lesson-08-transformation-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-transformation-example.py>)
+- Starter scaffold: [lesson-08-prediction-evaluator-starter.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-prediction-evaluator-starter.py>)
+- Focus:
+  - implement four explicit function contracts,
+  - transform lists of dictionaries without mutating inputs,
+  - validate parallel collections and preserve alignment,
+  - build detailed evaluation rows around supplied MSE math,
+  - find the worst prediction with an \(O(n)\) scan.
+
 ## Required submission before advancement
 
 - No remaining score-analyzer or test-runner submission is required.
-- The next calibration lesson should request only a runnable core exercise, a few interpretation answers, and a short easiest/hardest-step reflection.
+- Run `lesson-08-prediction-evaluator-starter.py` after completing its four
+  checkpoints, or submit Checkpoints 1 and 2 as the reduced path.
+- Save the successful output and `lesson-08-reflection.md` with the requested
+  interpretations plus easiest/hardest-step feedback.
 
 ## Observed misconceptions or weak areas
 
@@ -191,18 +236,24 @@ Last updated: 2026-07-26
 
 ## Recommended next lesson
 
-- Teach a gentle, project-based introduction to regression using a small real dataset.
-- Focus first on the workflow and baseline intuition; do not require regression to be derived or implemented from scratch.
-- Introduce data inspection, a train/test split, a mean baseline, one-feature linear regression, MSE, and a simple residual check in small checkpoints.
-- Include an easier core path that can be completed in 60–90 minutes and make extensions optional.
-- Keep mathematical exposition brief and operational. Assign external math study only where it directly supports the project.
+- If the coding assignment is manageable, continue with tests and a manual
+  train/test split around the same data.
+- If it is difficult, review the submitted checkpoints and isolate one coding
+  pattern at a time rather than returning to arithmetic exercises.
+- If it is easy, add record validation and grouping before introducing an ML
+  library.
+- After core Python transformations are demonstrated, use this progression:
+  NumPy arrays and vectorized transformations; Pandas selection, filtering, and
+  grouped aggregation; then scikit-learn dataset splitting, fitting, prediction,
+  and evaluation. Do not introduce multiple stages in the same first exposure.
 
 ## Next-run guidance
 
 - Inspect this log first.
 - Do not resume the analyzer verification sequence merely because its artifacts are incomplete.
-- Build the next lesson around a small real-data result while explaining every new workflow step.
-- Use checkpoints, starter code with deliberate gaps, and an easier fallback path.
-- Use the student's difficulty reflection to decide whether to slow down, repeat with variation, or add mathematical depth.
+- Inspect for the Lesson 8 starter output and reflection before choosing the next
+  regression step.
+- Use the student's difficulty reflection to decide whether to slow down, repeat
+  with variation, or add evaluation depth.
 - Do not use a lengthy derivation as the central lesson activity or advancement gate.
 - On Fridays, default to catch-up, review, or schedule maintenance rather than publishing a brand-new lesson unless the project state clearly warrants it.

@@ -15,6 +15,10 @@ The project emphasizes cumulative learning rather than isolated practice. Each l
 
 The current pacing is a 4-day lesson week during the school term, with one built-in flex/catch-up day for sustainability.
 
+The current near-term emphasis is coding fluency: repeated, cumulative practice
+in core Python followed by NumPy, Pandas, and machine-learning libraries, with
+one unfamiliar layer introduced at a time.
+
 ## How The Curriculum Works
 
 - Lessons build on prior work and do not assume mastery without evidence.
@@ -35,17 +39,27 @@ The current pacing is a 4-day lesson week during the school term, with one built
 - [lesson-05-independent-oracles-pairwise-variance.md](lesson-05-independent-oracles-pairwise-variance.md): flex-day checkpoint on independent variance verification
 - [lesson-06-testing-boundaries-and-expected-values.md](lesson-06-testing-boundaries-and-expected-values.md): targeted reinforcement on testing the imported analyzer rather than local copies
 - [lesson-07-test-discovery-and-detection-probability.md](lesson-07-test-discovery-and-detection-probability.md): current lesson on unittest discovery, collection counts, and detection probability
+- [lesson-08-coding-prediction-evaluator.md](lesson-08-coding-prediction-evaluator.md): current coding-first prediction-evaluator project
+- [lesson-08-transformation-example.py](lesson-08-transformation-example.py): complete loop-transformation pattern
+- [lesson-08-prediction-evaluator-starter.py](lesson-08-prediction-evaluator-starter.py): four-checkpoint coding scaffold
 
 ## Current Status
 
-As of Sunday, July 26, 2026:
+As of Monday, July 27, 2026:
 
 - Week 1 has begun.
 - Lesson 1 covers descriptive statistics, mean baselines, and linear search.
 - The analyzer functions and integrated report are present, but the verification evidence remains incomplete.
 - The test file now calls the imported analyzer and contains five checks that pass under pytest.
 - The required unittest command still discovers zero tests because those checks are top-level functions.
-- Lesson 7 is the current reinforcement: convert the checks to a `unittest.TestCase`, audit collection count, and complete the missing partitions without advancing to a new topic track.
+- The required testing sequence has been retired after student feedback; its
+  useful concepts remain available when a future project needs them.
+- Lesson 8 was recalibrated twice from direct feedback: the original ML workflow
+  was too advanced, while the first simplification repeated already-understood
+  mean/MSE work.
+- The current Lesson 8 is a coding-first mini-project. The math is supplied;
+  the student implements data extraction, prediction generation, report
+  construction, validation, and a linear maximum scan.
 
 ## Suggested Workflow
 
@@ -59,8 +73,8 @@ As of Sunday, July 26, 2026:
 
 The curriculum is currently working on:
 
-- arithmetic mean
-- population variance
-- squared-loss intuition
-- linear search
-- connecting statistics to regression baselines
+- translating function contracts into Python
+- transforming lists of dictionaries
+- maintaining alignment between records and predictions
+- constructing evaluation reports without mutating inputs
+- validation and linear maximum scans
