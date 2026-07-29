@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-07-27
+Last updated: 2026-07-28
 
 ## Current module
 
@@ -47,6 +47,27 @@ Last updated: 2026-07-27
   goal. Subsequent lessons should progress through core Python, NumPy, Pandas,
   and ML libraries using cumulative coding assignments and one new library layer
   at a time.
+- The student completed the two reduced-path functions correctly in about three
+  minutes and reported that the workload was too small to improve coding
+  fluency. Those functions are now recorded as a completed warm-up.
+- Lesson 8 now uses a 45–60 minute core-Python CSV pipeline as its main
+  assignment: file loading, schema validation, type conversion, non-mutating
+  record transformation, aggregation, report formatting, and debugging against
+  seven supplied acceptance tests.
+- The student requested an assignment-first workflow without initial starter
+  architecture, function signatures, TODOs, or tests. The generated pipeline
+  starter and tests are retired from the active assignment and should not be
+  used unless the student later requests scaffolding.
+- Current state: "Lesson 8 warm-up complete; unscaffolded CSV pipeline
+  specification active."
+- On July 28, `lesson_2_csv.py` provided new completion evidence: it correctly
+  reads `scores.csv`, converts scores to integers, extracts names, and filters
+  scores above 85.
+- That script repeats the file-reading block three times and keeps all logic at
+  module level. Lesson 9 advances from CSV syntax to reusable functions,
+  validation, and single-pass aggregation without supplying architecture.
+- Current state: "Lesson 9 published; working CSV basics evidenced, structured
+  pipeline assignment active."
 
 ## Concepts introduced so far
 
@@ -94,6 +115,10 @@ Last updated: 2026-07-27
 - Pytest executes all five current assertions successfully.
 - No regression concepts are marked mastered until the Lesson 8 output and
   interpretation are submitted.
+- The student correctly implemented ordered dictionary-value extraction and a
+  list-comprehension prediction transformation.
+- The student can use `csv.reader`, skip a header, convert score strings to
+  integers, preserve input order, and filter values with a condition.
 
 ## Concepts awaiting evidence of mastery
 
@@ -110,6 +135,10 @@ Last updated: 2026-07-27
 - preserving input/output alignment
 - dictionary lookup and list-traversal complexity
 - train/test separation and fitted regression are intentionally deferred
+- decomposing a working script into reusable loading, computation, and
+  presentation functions
+- schema and row validation with `csv.DictReader`
+- single-pass aggregation without repeated file reads
 
 ## Lesson sequence
 
@@ -206,11 +235,15 @@ Last updated: 2026-07-27
 
 ### Lesson 8 - Code a Prediction Evaluator
 
-- Status: replaced with a simpler bridge lesson after difficulty feedback
+- Status: warm-up complete; substantial CSV pipeline active
 - Date published: 2026-07-27
 - Artifact: [lesson-08-coding-prediction-evaluator.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-coding-prediction-evaluator.md>)
 - Complete example: [lesson-08-transformation-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-transformation-example.py>)
 - Starter scaffold: [lesson-08-prediction-evaluator-starter.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-prediction-evaluator-starter.py>)
+- Dataset: [lesson-08-student-data.csv](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-student-data.csv>)
+- Retired support artifacts: `lesson_08_student_pipeline_starter.py` and
+  `test_lesson_08_student_pipeline.py`; do not direct the student to them unless
+  scaffolding or tests are explicitly requested.
 - Focus:
   - implement four explicit function contracts,
   - transform lists of dictionaries without mutating inputs,
@@ -218,13 +251,29 @@ Last updated: 2026-07-27
   - build detailed evaluation rows around supplied MSE math,
   - find the worst prediction with an \(O(n)\) scan.
 
+### Lesson 9 - From a Working Script to a Single-Pass CSV Pipeline
+
+- Status: active
+- Date published: 2026-07-28
+- Artifact: [lesson-09-single-pass-csv-pipelines.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-single-pass-csv-pipelines.md>)
+- Executable example: [lesson-09-streaming-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-streaming-example.py>)
+- Evidence used: [lesson_2_csv.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_2_csv.py>)
+- Focus:
+  - refactor repeated top-level CSV work into a cohesive program,
+  - use header-based records and deliberate validation,
+  - compute several summaries with a single traversal,
+  - derive running count/sum updates,
+  - connect trustworthy parsing to ML feature-label alignment,
+  - analyze a one-pass maximum scan.
+
 ## Required submission before advancement
 
 - No remaining score-analyzer or test-runner submission is required.
-- Run `lesson-08-prediction-evaluator-starter.py` after completing its four
-  checkpoints, or submit Checkpoints 1 and 2 as the reduced path.
-- Save the successful output and `lesson-08-reflection.md` with the requested
-  interpretations plus easiest/hardest-step feedback.
+- Submit `lesson_09_score_pipeline.py`, its valid terminal report, one malformed
+  input run, and `lesson-09-reflection.md`.
+- Preserve the unfinished Lesson 8 pipeline specification for later cumulative
+  reuse; Lesson 9 is the calibrated core-Python step supported by the newest
+  completed CSV artifact.
 
 ## Observed misconceptions or weak areas
 
@@ -236,12 +285,12 @@ Last updated: 2026-07-27
 
 ## Recommended next lesson
 
-- If the coding assignment is manageable, continue with tests and a manual
-  train/test split around the same data.
-- If it is difficult, review the submitted checkpoints and isolate one coding
-  pattern at a time rather than returning to arithmetic exercises.
-- If it is easy, add record validation and grouping before introducing an ML
-  library.
+- If Lesson 9 is correct and appropriately challenging, introduce NumPy arrays
+  by reproducing the same score transformations with one new library layer.
+- If it is difficult, review its function boundaries and validation path before
+  adding a library.
+- If it is too easy, extend the same pipeline with grouping and tests before
+  NumPy.
 - After core Python transformations are demonstrated, use this progression:
   NumPy arrays and vectorized transformations; Pandas selection, filtering, and
   grouped aggregation; then scikit-learn dataset splitting, fitting, prediction,
@@ -251,9 +300,9 @@ Last updated: 2026-07-27
 
 - Inspect this log first.
 - Do not resume the analyzer verification sequence merely because its artifacts are incomplete.
-- Inspect for the Lesson 8 starter output and reflection before choosing the next
-  regression step.
-- Use the student's difficulty reflection to decide whether to slow down, repeat
-  with variation, or add evaluation depth.
+- Inspect for the Lesson 9 program, valid output, malformed-input output, and
+  reflection.
+- Use the recorded implementation time and difficulty to choose refactoring
+  review, a grouping extension, or the first NumPy lesson.
 - Do not use a lengthy derivation as the central lesson activity or advancement gate.
 - On Fridays, default to catch-up, review, or schedule maintenance rather than publishing a brand-new lesson unless the project state clearly warrants it.

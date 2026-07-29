@@ -42,6 +42,12 @@ one unfamiliar layer introduced at a time.
 - [lesson-08-coding-prediction-evaluator.md](lesson-08-coding-prediction-evaluator.md): current coding-first prediction-evaluator project
 - [lesson-08-transformation-example.py](lesson-08-transformation-example.py): complete loop-transformation pattern
 - [lesson-08-prediction-evaluator-starter.py](lesson-08-prediction-evaluator-starter.py): four-checkpoint coding scaffold
+- [lesson-08-student-data.csv](lesson-08-student-data.csv): input data for the active pipeline assignment
+- `lesson_08_student_pipeline_starter.py` and
+  `test_lesson_08_student_pipeline.py`: retired support artifacts; use only if
+  the student explicitly requests scaffolding
+- [lesson-09-single-pass-csv-pipelines.md](lesson-09-single-pass-csv-pipelines.md): current lesson on structured, single-pass CSV programs
+- [lesson-09-streaming-example.py](lesson-09-streaming-example.py): executable aggregation and presentation example
 
 ## Current Status
 
@@ -60,6 +66,13 @@ As of Monday, July 27, 2026:
 - The current Lesson 8 is a coding-first mini-project. The math is supplied;
   the student implements data extraction, prediction generation, report
   construction, validation, and a linear maximum scan.
+- The initial two functions were completed in about three minutes and now count
+  only as a warm-up. The active assignment is a larger core-Python CSV pipeline
+  given as a behavioral specification. The student chooses the architecture;
+  scaffolding and tests are withheld until requested.
+- `lesson_2_csv.py` now demonstrates successful basic CSV extraction,
+  conversion, and filtering. Lesson 9 builds directly on that evidence with
+  functions, validation, and single-pass aggregation.
 
 ## Suggested Workflow
 

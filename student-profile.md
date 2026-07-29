@@ -123,6 +123,19 @@ Preferred progression:
   implementation tasks in every lesson, revisit the same coding patterns in new
   contexts, and introduce libraries progressively rather than combining several
   unfamiliar APIs at once.
+- Two small list-transformation functions took the student about three minutes
+  and were judged insufficient practice. Do not equate heavy scaffolding or
+  numerous tiny TODOs with meaningful coding repetition. Target roughly 30–60
+  minutes of actual implementation per core lesson through cohesive programs,
+  multiple interacting functions, realistic input/output, supplied acceptance
+  tests, and debugging. Use tiny functions as warm-ups only.
+- The student does not want starter architecture, function signatures, TODO
+  blocks, or supplied tests at the beginning of an assignment. Give a behavioral
+  specification, sample input/output, constraints, and acceptance criteria
+  first. Let the student decide how to structure the program. Provide staged
+  hints, scaffolding, signatures, or tests only when the student asks for them.
+  This assignment-first preference overrides earlier guidance to provide
+  substantial scaffolding by default.
 - Add depth only after checking how the first project-based lesson lands; do not interpret willingness to try it as prior mastery.
 - The student does not want substantial mathematical instruction formatted inside the daily lesson files and has a separate book available for mathematics.
 - Center lessons on building Python, data-science, and machine-learning capability through runnable work.

@@ -1,3 +1,5 @@
+import math
+
 def calc_mean(values):
     """Return the arithmetic mean of a non-empty list."""
     if not values:
@@ -23,6 +25,24 @@ def linear_search(values, target):
         if values[i] == target:
             return i
     return -1
+
+def standard_dev(values):
+    """Return standard deviation"""
+    variance = population_variance(values)
+    return math.sqrt(variance)
+
+def median_val(values):
+    if not values:
+        return -1
+    sorted_values = sorted(values)
+    n = len(sorted_values)
+    mid = n // 2
+
+    if n % 2 == 0:
+        # Even num of values
+        return (sorted_values[mid - 1] + sorted_values[mid] / 2)
+    else:
+        return sorted_values[mid]
 
 """Func must contain:
 - the original scores,
@@ -73,3 +93,4 @@ if __name__ == "__main__":
     print(calc_mean([1,2,3]))
     print(population_variance(SAMPLE_SCORES))
     print(score_report(SAMPLE_SCORES, SAMPLE_TARGET))
+    print("Standard Deviation:",standard_dev(SAMPLE_SCORES))

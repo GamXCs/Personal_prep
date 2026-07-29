@@ -1,7 +1,7 @@
 # Lesson 8 — Code a Prediction Evaluator
 
 **Module:** Week 2 — Python problem solving for machine learning  
-**Estimated time:** 70–90 minutes  
+**Estimated time:** 75–90 minutes
 **Difficulty:** Intermediate Python, gentle ML
 
 ## Why this lesson
@@ -10,8 +10,10 @@ You already understand mean and mean squared error. This lesson supplies those
 calculations and puts the challenge where you want it: turning requirements into
 working Python.
 
-You will build a small prediction-evaluation program using functions, loops,
-lists, dictionaries, validation, and a linear scan. No Pandas, NumPy,
+The original two-function reduced path took about three minutes and is now
+classified as a warm-up, not the main assignment. You will build a complete
+CSV-to-report prediction pipeline using functions, loops, lists, dictionaries,
+file I/O, validation, aggregation, and a linear scan. No Pandas, NumPy,
 scikit-learn, or model fitting is required.
 
 ## Learning objectives
@@ -168,7 +170,63 @@ Guiding questions:
 2. Why must actual and predicted values stay paired?
 3. Why does squared error emphasize a large miss?
 
-## Integrated coding assignment
+## Completed warm-up
+
+You have completed `extract_values` and `make_predictions` in
+`lesson-08-prediction-evaluator-starter.py`. Preserve that file as evidence of
+the warm-up. Checkpoints 3 and 4 in that file are retired; you do not need to
+finish them.
+
+## Main integrated coding assignment
+
+Create a new Python program of your own design. Use
+`lesson-08-student-data.csv` as its input. Do not use the retired starter or
+test file unless you later request scaffolding.
+
+Your program must:
+
+1. read every row from the CSV;
+2. represent each student in a sensible Python data structure;
+3. convert `hours`, `attendance`, and `actual_score` to numeric values;
+4. calculate a prediction for every student using
+   `30 + 6 * hours + 0.25 * attendance`;
+5. calculate each prediction's error and squared error;
+6. calculate overall MSE and mean error;
+7. count predictions whose absolute error is at most five points;
+8. identify the student with the largest squared error;
+9. print one readable detail line per student followed by a summary.
+
+You decide the filename, function decomposition, variable names, and control
+flow. You may use Python's standard library, including `csv`, but not Pandas,
+NumPy, or scikit-learn for this assignment.
+
+Handle these edge cases deliberately:
+
+- the CSV contains no student rows;
+- a required column is absent;
+- a numeric field cannot be converted.
+
+For each case, either raise a clear exception or print a clear error and exit.
+
+### Acceptance criteria
+
+- The complete program prints eight student rows and a summary.
+- Numeric calculations match the stated formula.
+- The summary includes count, MSE, mean error, within-five count, and the name
+  attached to the largest squared error.
+- Invalid CSV structure, empty input, and invalid numbers are handled clearly.
+- The program contains at least three meaningful functions chosen by you.
+- No Pandas, NumPy, or scikit-learn is added.
+- Save a short reflection identifying the hardest bug, what caused it, and how
+  you diagnosed it.
+
+### Hints policy
+
+Spend approximately 10 focused minutes on a blocker, then ask a specific
+question. Help will progress from conceptual hint to pseudocode to partial
+scaffold only as requested.
+
+## Earlier assignment specification (reference only)
 
 Open `lesson-08-prediction-evaluator-starter.py`. The math helper and printing
 code are provided. Implement four functions in order.
@@ -270,10 +328,10 @@ Use these only when stuck:
 4. `find_worst_prediction`: initialize the candidate from the first row, then
    compare each remaining row.
 
-### Reduced path
+### Former reduced path
 
-If four functions are too much, submit Checkpoints 1 and 2 only. They form a
-complete first coding block; the next lesson can continue from them.
+Checkpoints 1 and 2 are complete. They are now treated as the warm-up that
+established readiness for the CSV pipeline.
 
 ### Stretch goals
 
@@ -300,20 +358,19 @@ complete first coding block; the next lesson can continue from them.
 
 </details>
 
-## Suggested 70–90 minute plan
+## Suggested 75–90 minute plan
 
-- 0–8: warm-up and run the transformation example
-- 8–18: write contracts and hand-worked examples
-- 18–30: Checkpoint 1
-- 30–42: Checkpoint 2 and run partial checks
-- 42–60: Checkpoint 3
-- 60–72: Checkpoint 4
-- 72–80: run the whole program and debug
-- 80–90: reading, quiz, and reflection
+- 0–10: inspect the CSV, starter contracts, and supplied tests
+- 10–30: implement and debug `load_students`
+- 30–45: implement `add_predictions`
+- 45–62: implement `summarize`
+- 62–75: implement `format_report`
+- 75–83: run the whole program and resolve integration failures
+- 83–90: reflection and commit/save
 
 ## Submit
 
-- `lesson-08-prediction-evaluator-starter.py`
-- terminal output from the completed or reduced path
+- `lesson_08_student_pipeline_starter.py`
+- output showing seven passing tests
+- terminal output from the complete pipeline
 - `lesson-08-reflection.md`
-

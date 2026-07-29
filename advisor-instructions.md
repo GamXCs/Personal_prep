@@ -160,6 +160,21 @@ Until project evidence supports changing this emphasis:
   debugging habits;
 - keep optional theory depth available without letting it displace coding reps.
 
+For assignment delivery, do not initially provide a starter implementation,
+function signatures, TODO blocks, or acceptance-test code. Begin with:
+
+- the problem and its purpose;
+- input and required output;
+- required behaviors and edge cases;
+- implementation constraints;
+- sample input/output;
+- acceptance criteria.
+
+The student should choose the program structure. Reveal help progressively only
+after a request: conceptual hint, pseudocode, suggested decomposition, partial
+scaffold, and finally tests or code review. Do not reveal later levels
+automatically.
+
 ## Weekly module structure
 
 Organize the curriculum into weekly modules whenever possible.
