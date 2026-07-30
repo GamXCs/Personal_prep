@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-07-28
+Last updated: 2026-07-29
 
 ## Current module
 
@@ -68,6 +68,17 @@ Last updated: 2026-07-28
   validation, and single-pass aggregation without supplying architecture.
 - Current state: "Lesson 9 published; working CSV basics evidenced, structured
   pipeline assignment active."
+- By July 29, `lesson_2_csv.py` had been improved to open the CSV once and
+  compute mean, median, variance, and standard deviation from aligned values.
+- A new `lesson_3_numpy_intro.py` correctly creates a one-dimensional NumPy
+  array and confirms that `ndarray.mean()` matches a manual mean calculation.
+- The full Lesson 9 pipeline artifact, malformed-input evidence, and reflection
+  are still absent, so reusable decomposition and validation remain unverified.
+- Lesson 10 makes a calibrated first NumPy step: array metadata, elementwise
+  operations, Boolean masks, alignment, and standardization. It cumulatively
+  retains CSV validation instead of treating Lesson 9 as mastered.
+- Current state: "Lesson 10 published; basic array creation evidenced, NumPy
+  masking and structured CSV-to-array analysis active."
 
 ## Concepts introduced so far
 
@@ -104,6 +115,13 @@ Last updated: 2026-07-28
 - non-mutating report construction
 - input validation
 - linear maximum scan
+- one-pass CSV extraction with several statistical summaries
+- NumPy one-dimensional array creation
+- NumPy mean calculation checked against a manual calculation
+- array shape, dimensionality, size, and dtype
+- elementwise arithmetic and Boolean masking
+- population standardization
+- aligned multi-array filtering
 
 ## Concepts with evidence of mastery
 
@@ -119,6 +137,9 @@ Last updated: 2026-07-28
   list-comprehension prediction transformation.
 - The student can use `csv.reader`, skip a header, convert score strings to
   integers, preserve input order, and filter values with a condition.
+- The revised CSV script opens the file once and reuses the collected scores
+  for mean, median, variance, and standard-deviation calculations.
+- The student can create a one-dimensional NumPy array and compute its mean.
 
 ## Concepts awaiting evidence of mastery
 
@@ -139,6 +160,12 @@ Last updated: 2026-07-28
   presentation functions
 - schema and row validation with `csv.DictReader`
 - single-pass aggregation without repeated file reads
+- organizing CSV work into reusable functions
+- explicit CSV schema and row validation
+- inspecting NumPy array metadata
+- vectorized arithmetic and Boolean-mask selection
+- preserving alignment across multiple NumPy arrays
+- handling zero variance during standardization
 
 ## Lesson sequence
 
@@ -258,6 +285,28 @@ Last updated: 2026-07-28
 - Artifact: [lesson-09-single-pass-csv-pipelines.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-single-pass-csv-pipelines.md>)
 - Executable example: [lesson-09-streaming-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-streaming-example.py>)
 - Evidence used: [lesson_2_csv.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_2_csv.py>)
+
+### Lesson 10 - NumPy Arrays and Boolean Masks
+
+- Status: active
+- Date published: 2026-07-29
+- Artifact: [lesson-10-numpy-arrays-and-boolean-masks.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-10-numpy-arrays-and-boolean-masks.md>)
+- Executable example: [lesson-10-array-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-10-array-example.py>)
+- Evidence used: [lesson_3_numpy_intro.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_3_numpy_intro.py>)
+- Required submission:
+  - `lesson_10_numpy_scores.py`;
+  - valid terminal output;
+  - `lesson-10-reflection.md` with malformed-input and zero-variance evidence.
+- Focus:
+  - inspect array metadata and reason about homogeneous dtypes;
+  - replace scalar loops with elementwise operations and Boolean masks;
+  - preserve name/score alignment with a shared mask;
+  - standardize numeric values and handle zero variance;
+  - connect feature scaling to distance and optimization behavior;
+  - retain CSV parsing and validation as cumulative practice.
+- Recommended next lesson: review the submitted NumPy program first. Advance to
+  two-dimensional arrays and axes only if masking, alignment, decomposition,
+  and edge-case handling are sound; otherwise reinforce those specific gaps.
 - Focus:
   - refactor repeated top-level CSV work into a cohesive program,
   - use header-based records and deliberate validation,

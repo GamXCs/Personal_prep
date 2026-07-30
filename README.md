@@ -48,6 +48,8 @@ one unfamiliar layer introduced at a time.
   the student explicitly requests scaffolding
 - [lesson-09-single-pass-csv-pipelines.md](lesson-09-single-pass-csv-pipelines.md): current lesson on structured, single-pass CSV programs
 - [lesson-09-streaming-example.py](lesson-09-streaming-example.py): executable aggregation and presentation example
+- [lesson-10-numpy-arrays-and-boolean-masks.md](lesson-10-numpy-arrays-and-boolean-masks.md): current NumPy lesson on arrays, masks, alignment, and standardization
+- [lesson-10-array-example.py](lesson-10-array-example.py): executable NumPy masking and standardization example
 
 ## Current Status
 
@@ -73,6 +75,11 @@ As of Monday, July 27, 2026:
 - `lesson_2_csv.py` now demonstrates successful basic CSV extraction,
   conversion, and filtering. Lesson 9 builds directly on that evidence with
   functions, validation, and single-pass aggregation.
+- The updated CSV script now reads once and computes several statistics, while
+  `lesson_3_numpy_intro.py` demonstrates basic array construction and mean
+  calculation. Lesson 10 introduces one NumPy layer—metadata, elementwise
+  operations, Boolean masks, and standardization—without assuming the missing
+  Lesson 9 validation work is complete.
 
 ## Suggested Workflow
 
@@ -91,3 +98,7 @@ The curriculum is currently working on:
 - maintaining alignment between records and predictions
 - constructing evaluation reports without mutating inputs
 - validation and linear maximum scans
+- NumPy array metadata and homogeneous numeric data
+- elementwise transformations and Boolean-mask filtering
+- aligned names and scores
+- feature standardization and zero-variance handling

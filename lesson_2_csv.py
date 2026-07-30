@@ -34,9 +34,8 @@ print("Scores over 85:",score_over_85)
 print("\n------Summary Statistics------")
 print("Mean:", calc_mean(score_vals))
 print("Median:", median_val(score_vals))
-print("Variance:", population_variance(score_vals:.2f))
+print("Variance:", population_variance(score_vals))
 print("Standard Deviation:", standard_dev(score_vals))
 
 
 
-# Run mean, median, variance, std_dev over the csv 
