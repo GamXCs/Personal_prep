@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-07-29
+Last updated: 2026-07-30
 
 ## Current module
 
@@ -79,6 +79,23 @@ Last updated: 2026-07-29
   retains CSV validation instead of treating Lesson 9 as mastered.
 - Current state: "Lesson 10 published; basic array creation evidenced, NumPy
   masking and structured CSV-to-array analysis active."
+- By July 30, `lesson_4_numpy.py` correctly demonstrated three Boolean mask
+  patterns, including a compound inclusive-range condition. The expanded
+  `lesson_3_numpy_intro.py` also created a 2-D array and correctly inspected
+  shape `(3, 3)`, integer dtype, and `ndim == 2`.
+- `lesson_4_numpy_asgn.py` contains only the assignment description, so
+  aggregation, aligned reporting, and edge-case behavior are not yet evidenced.
+- Lesson 11 advances narrowly to 2-D axes and indexed reductions while
+  retaining CSV validation, aligned masking, and column standardization.
+- Current state: "Lesson 11 published; Boolean masking and 2-D metadata
+  evidenced, axis-wise aggregation and argmax assignment active."
+- Student pacing update on July 30: stop publishing lessons for the remainder
+  of this week. The student is also completing assignments in the separate
+  scheduled weekly Python/data-science/ML project and plans to work on Lessons
+  9–11 over the weekend.
+- Friday, July 31 is explicitly a flex/recovery day. Do not publish Lesson 12.
+- Resume on Monday, August 3 by inspecting the submitted Lesson 9–11 artifacts
+  first. Reinforce incomplete work rather than advancing automatically.
 
 ## Concepts introduced so far
 
@@ -118,6 +135,10 @@ Last updated: 2026-07-29
 - one-pass CSV extraction with several statistical summaries
 - NumPy one-dimensional array creation
 - NumPy mean calculation checked against a manual calculation
+- simple and compound NumPy Boolean masks
+- two-dimensional array construction and metadata inspection
+- row-wise and column-wise aggregation
+- indexed reductions with `argmax`
 - array shape, dimensionality, size, and dtype
 - elementwise arithmetic and Boolean masking
 - population standardization
@@ -140,6 +161,10 @@ Last updated: 2026-07-29
 - The revised CSV script opens the file once and reuses the collected scores
   for mean, median, variance, and standard-deviation calculations.
 - The student can create a one-dimensional NumPy array and compute its mean.
+- The student can construct Boolean masks with `<`, `>=`, and a compound
+  inclusive interval.
+- The student can construct a 2-D NumPy array and inspect its shape, dtype, and
+  number of dimensions.
 
 ## Concepts awaiting evidence of mastery
 
@@ -166,6 +191,9 @@ Last updated: 2026-07-29
 - vectorized arithmetic and Boolean-mask selection
 - preserving alignment across multiple NumPy arrays
 - handling zero variance during standardization
+- choosing the correct axis for row-wise versus column-wise aggregation
+- preserving row/name alignment through a mask
+- recovering record identity with `argmax`
 
 ## Lesson sequence
 
@@ -304,6 +332,26 @@ Last updated: 2026-07-29
   - standardize numeric values and handle zero variance;
   - connect feature scaling to distance and optimization behavior;
   - retain CSV parsing and validation as cumulative practice.
+
+### Lesson 11 - 2-D NumPy Arrays, Axes, and `argmax`
+
+- Status: active
+- Date published: 2026-07-30
+- Artifact: [lesson-11-2d-arrays-axes-and-argmax.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-11-2d-arrays-axes-and-argmax.md>)
+- Executable example: [lesson-11-axis-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-11-axis-example.py>)
+- Evidence used:
+  - [lesson_4_numpy.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_4_numpy.py>)
+  - [lesson_3_numpy_intro.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_3_numpy_intro.py>)
+- Required submission:
+  - `lesson_11_exam_matrix.py`;
+  - valid terminal output;
+  - `lesson-11-reflection.md` with malformed-input evidence.
+- Focus:
+  - interpret 2-D rows, columns, shape, and axes;
+  - compute row-wise and column-wise statistics;
+  - use `argmax` to preserve identity during an extreme-value scan;
+  - apply a shared row mask to names and score rows;
+  - standardize columns and reject zero-variance features.
 - Recommended next lesson: review the submitted NumPy program first. Advance to
   two-dimensional arrays and axes only if masking, alignment, decomposition,
   and edge-case handling are sound; otherwise reinforce those specific gaps.
@@ -344,10 +392,16 @@ Last updated: 2026-07-29
   NumPy arrays and vectorized transformations; Pandas selection, filtering, and
   grouped aggregation; then scikit-learn dataset splitting, fitting, prediction,
   and evaluation. Do not introduce multiple stages in the same first exposure.
+- Review the Lesson 11 submission before introducing Pandas. Advance only if
+  the output demonstrates correct axis selection, alignment, and column-wise
+  standardization; otherwise reinforce the specific failed operation.
 
 ## Next-run guidance
 
 - Inspect this log first.
+- Do not publish another lesson before Monday, August 3, 2026.
+- On Monday, inspect all new Lesson 9–11 code, outputs, and reflections before
+  deciding whether Lesson 12 is justified.
 - Do not resume the analyzer verification sequence merely because its artifacts are incomplete.
 - Inspect for the Lesson 9 program, valid output, malformed-input output, and
   reflection.
@@ -355,3 +409,6 @@ Last updated: 2026-07-29
   review, a grouping extension, or the first NumPy lesson.
 - Do not use a lengthy derivation as the central lesson activity or advancement gate.
 - On Fridays, default to catch-up, review, or schedule maintenance rather than publishing a brand-new lesson unless the project state clearly warrants it.
+- Inspect for `lesson_11_exam_matrix.py`, valid output, malformed-input
+  evidence, and `lesson-11-reflection.md`. Use the recorded difficulty to
+  decide between an axes review and a first Pandas selection lesson.

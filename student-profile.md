@@ -167,6 +167,11 @@ Current scheduling preference:
 - Use a 4-day academic-week cadence for now.
 - Treat one weekday each week as a lighter flex/catch-up day rather than automatically assigning a full new lesson.
 - Favor sustainable pacing during the school term over maintaining a rigid 5-day lesson schedule.
+- For the week ending July 31, 2026, Lesson 11 is the stopping point. The
+  student plans to complete Lessons 9–11 over the weekend while also working
+  through a separate scheduled weekly Python/data-science/ML project.
+- Resume curriculum decisions on Monday, August 3 only after reviewing the new
+  weekend artifacts.
 
 ## Pacing and difficulty
 

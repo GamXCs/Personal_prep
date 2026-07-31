@@ -1,8 +1,8 @@
 import math
 
 def calc_mean(values):
-    """Return the arithmetic mean of a non-empty list."""
-    if not values:
+    """Return the arithmetic mean of a non-empty sequence."""
+    if len(values) == 0:
         raise ValueError("Values must not be empty")
     total = 0
     for num in values:
@@ -32,7 +32,7 @@ def standard_dev(values):
     return math.sqrt(variance)
 
 def median_val(values):
-    if not values:
+    if len(values) == 0:
         return -1
     sorted_values = sorted(values)
     n = len(sorted_values)

@@ -50,6 +50,8 @@ one unfamiliar layer introduced at a time.
 - [lesson-09-streaming-example.py](lesson-09-streaming-example.py): executable aggregation and presentation example
 - [lesson-10-numpy-arrays-and-boolean-masks.md](lesson-10-numpy-arrays-and-boolean-masks.md): current NumPy lesson on arrays, masks, alignment, and standardization
 - [lesson-10-array-example.py](lesson-10-array-example.py): executable NumPy masking and standardization example
+- [lesson-11-2d-arrays-axes-and-argmax.md](lesson-11-2d-arrays-axes-and-argmax.md): current lesson on 2-D axes, reductions, and record identity
+- [lesson-11-axis-example.py](lesson-11-axis-example.py): executable row-wise and column-wise aggregation example
 
 ## Current Status
 
@@ -80,6 +82,10 @@ As of Monday, July 27, 2026:
   calculation. Lesson 10 introduces one NumPy layer—metadata, elementwise
   operations, Boolean masks, and standardization—without assuming the missing
   Lesson 9 validation work is complete.
+- `lesson_4_numpy.py` now demonstrates correct simple and compound Boolean
+  masks, and `lesson_3_numpy_intro.py` constructs and inspects a 2-D array.
+  Lesson 11 builds narrowly on that evidence with axes, row/column reductions,
+  `argmax`, and aligned row filtering.
 
 ## Suggested Workflow
 
@@ -102,3 +108,5 @@ The curriculum is currently working on:
 - elementwise transformations and Boolean-mask filtering
 - aligned names and scores
 - feature standardization and zero-variance handling
+- 2-D row/column semantics and axis-wise aggregation
+- indexed maximum reductions that preserve record identity

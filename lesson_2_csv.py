@@ -37,5 +37,7 @@ print("Median:", median_val(score_vals))
 print("Variance:", population_variance(score_vals))
 print("Standard Deviation:", standard_dev(score_vals))
 
+print(population_variance([18,22,25,29,31]))
+
 
 
