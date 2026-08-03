@@ -15,6 +15,10 @@ The project emphasizes cumulative learning rather than isolated practice. Each l
 
 The current pacing is a 4-day lesson week during the school term, with one built-in flex/catch-up day for sustainability.
 
+**Current scheduling status:** new lessons are paused for finals week as of
+August 2, 2026. Lessons 9–13 remain the catch-up queue. Publication resumes
+only when the student explicitly asks to continue.
+
 The current near-term emphasis is coding fluency: repeated, cumulative practice
 in core Python followed by NumPy, Pandas, and machine-learning libraries, with
 one unfamiliar layer introduced at a time.
@@ -52,10 +56,14 @@ one unfamiliar layer introduced at a time.
 - [lesson-10-array-example.py](lesson-10-array-example.py): executable NumPy masking and standardization example
 - [lesson-11-2d-arrays-axes-and-argmax.md](lesson-11-2d-arrays-axes-and-argmax.md): current lesson on 2-D axes, reductions, and record identity
 - [lesson-11-axis-example.py](lesson-11-axis-example.py): executable row-wise and column-wise aggregation example
+- [lesson-12-functions-validation-and-axis-reductions.md](lesson-12-functions-validation-and-axis-reductions.md): current reinforcement lesson on reliable function boundaries, validation, axes, and standardization
+- [lesson-12-reliable-array-example.py](lesson-12-reliable-array-example.py): executable computation-boundary example
+- [lesson-13-schema-driven-csv-and-residual-bias.md](lesson-13-schema-driven-csv-and-residual-bias.md): current core-Python lesson on schema parsing, validation, and residual bias
+- [lesson-13-schema-example.py](lesson-13-schema-example.py): executable parser-dispatch example
 
 ## Current Status
 
-As of Monday, July 27, 2026:
+As of Friday, July 31, 2026:
 
 - Week 1 has begun.
 - Lesson 1 covers descriptive statistics, mean baselines, and linear search.
@@ -86,6 +94,21 @@ As of Monday, July 27, 2026:
   masks, and `lesson_3_numpy_intro.py` constructs and inspects a 2-D array.
   Lesson 11 builds narrowly on that evidence with axes, row/column reductions,
   `argmax`, and aligned row filtering.
+- `lesson_4_numpy_asgn.py` is now a runnable partial Lesson 11 submission. It
+  loads the supplied exam data into a `(5, 2)` array, uses aligned Boolean
+  masks, and reports correct descriptive statistics. Axis-based row means,
+  `argmax`, standardization, validation, and function decomposition remain.
+- July 31 is intentionally a flex/recovery day, so Lesson 12 is deferred until
+  the Monday review of the remaining Lesson 9–11 evidence.
+- The Monday review found a new partial CSV submission that fails when `Hours`
+  contains `3.5`, plus the still-present syntax error and incomplete function,
+  validation, axis, `argmax`, and standardization work. Lesson 12 reinforces
+  those exact gaps before Pandas.
+- The August 2 review found no newer completion evidence. Lesson 13 builds
+  directly on the failing CSV attempt with a parser-function schema,
+  `DictReader`, contextual validation, and fixed-rule prediction evaluation.
+  Lesson 12 remains active for the unfinished NumPy refactor; Pandas is still
+  deferred.
 
 ## Suggested Workflow
 

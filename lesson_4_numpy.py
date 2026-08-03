@@ -12,7 +12,6 @@ scores = np.array([
 
 # print scores below 80 | greater than or equal to 90 | between 80 and 90 inclusively
 
-
 print(scores[scores < 85])
 print(scores[scores >= 90])
 print(scores[(scores >= 80) & (scores <= 90)])

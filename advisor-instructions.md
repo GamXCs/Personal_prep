@@ -24,6 +24,19 @@ Build a coherent long-term curriculum rather than isolated daily lessons.
 - Never reset the curriculum unless explicitly instructed.
 - Never assume mastery because a lesson exists.
 
+## Temporary finals-week hold
+
+- Effective August 2, 2026, do not publish new lessons, weekly plans, retrieval
+  assignments, assessments, or additional catch-up work.
+- Scheduled runs may inspect the repository and acknowledge existing progress,
+  but must not create a new curriculum artifact or expand the workload.
+- Keep Lessons 9–13 available as the current catch-up queue without treating
+  their age as evidence that the student should advance.
+- Resume lesson publication only after the student explicitly says the hold is
+  over or asks for the next lesson.
+
+This temporary hold overrides the normal cadence and Monday-plan rules below.
+
 ## Source of truth
 
 Before creating any lesson, review the available project state.

@@ -24,8 +24,7 @@ print(students)
 print(students.shape)
 print(students.dtype)
 print(students.ndim)
-
+-
 with open("exams.csv", newline="") as file:
     reader = csv.reader(file)
     next(reader)
-    

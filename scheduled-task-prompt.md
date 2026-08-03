@@ -46,6 +46,21 @@ Never assume progress simply because a lesson exists.
 
 Only advance when previous work demonstrates mastery.
 
+Temporary hold
+
+As of August 2, 2026, the student is in finals week and has explicitly paused
+new curriculum publication. Until the student explicitly ends the hold or asks
+for the next lesson:
+
+- do not publish a Monday plan or a new lesson;
+- do not assign a new review, quiz, assessment, project, or catch-up task;
+- do not interpret a scheduled run as permission to add workload;
+- preserve the existing Lessons 9–13 catch-up queue;
+- update the progress log only when there is meaningful new student work or a
+  changed instruction to record.
+
+This hold overrides all normal scheduling and lesson-generation rules below.
+
 Choose today's action
 
 Select exactly one of these paths:
@@ -59,7 +74,7 @@ Select exactly one of these paths:
 
 Choose whichever path best matches the student's demonstrated progress.
 
-If today is Monday, begin by publishing the week's plan for the current module before giving the day's detailed work. The weekly plan should outline the intended 4-day lesson arc plus one flex/catch-up day, while still allowing adaptation later in the week if submitted work shows the student needs review or remediation.
+If today is Monday and no explicit hold is active, begin by publishing the week's plan for the current module before giving the day's detailed work. The weekly plan should outline the intended 4-day lesson arc plus one flex/catch-up day, while still allowing adaptation later in the week if submitted work shows the student needs review or remediation.
 
 Lesson generation
 
