@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-08-02
+Last updated: 2026-08-05
 
 ## Current module
 
@@ -22,6 +22,20 @@ Last updated: 2026-08-02
   catch-up, with no new curriculum publication until explicit student release."
 - The hold reflects workload constraints rather than lack of progress or a
   change in long-term goals.
+- August 3 scheduled review: no new student lesson artifacts appeared after
+  the August 2 review. In accordance with the finals-week hold, no Monday plan,
+  Lesson 14, replacement quiz, or additional assignment was published.
+- August 4 scheduled review: `lesson_8_csv_code.py` now parses the decimal
+  numeric fields with `float`, builds one dictionary per student, preserves
+  input order in a list, and runs successfully. This is meaningful progress on
+  the active schema-driven CSV assignment. The prediction, validation,
+  residual metrics, reusable functions, and reflection are not yet present.
+  The finals-week hold remains active, so no new lesson or catch-up work was
+  published.
+- August 5 scheduled review: no project files changed after the August 4
+  inspection, and no explicit request to end the finals-week hold is present.
+  No Lesson 14, weekly plan, quiz, assessment, or additional catch-up work was
+  published. Lessons 9–13 remain available at the student's existing pace.
 
 - Lesson 1 was published on Monday, July 20, 2026.
 - The starter now contains implementations of `calc_mean`, `population_variance`, `linear_search`, and `score_report`.
@@ -247,6 +261,21 @@ Last updated: 2026-08-02
 - schema-driven numeric conversion with parser-function dictionaries
 - contextual row and field validation with `csv.DictReader`
 - residual sign and mean residual as a directional-bias diagnostic
+
+## Latest hold-period evidence
+
+- The August 5 repository review found no new student-authored artifacts or
+  edits since the August 4 review. The hold remains active.
+- The August 4 run of `lesson_8_csv_code.py` succeeds and prints Chen's parsed
+  record with decimal-valued numeric fields.
+- Newly evidenced: correct decimal parsing, per-row dictionary construction,
+  ordered record collection, and successful CSV traversal.
+- Still unevidenced for Lesson 13: the fixed prediction formula, schema lookup,
+  contextual validation, residual calculations, worst-error scan, reusable
+  function boundaries, exact acceptance values, and reflection.
+- No action is required during the hold. When the student explicitly resumes,
+  review this partial submission before deciding whether to reinforce Lesson 13
+  or advance.
 
 ## Lesson sequence
 
