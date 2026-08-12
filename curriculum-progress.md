@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-08-06
+Last updated: 2026-08-11
 
 ## Current module
 
@@ -40,6 +40,21 @@ Last updated: 2026-08-06
   explicit request to end the finals-week hold appeared. In accordance with
   the hold, no Lesson 14, quiz, assessment, or additional catch-up work was
   published. The partial Lesson 13 CSV submission remains the newest evidence.
+- August 8 scheduled review: no project artifacts changed after the August 7
+  automation run, and no explicit request to end the finals-week hold is
+  present. No Lesson 14, quiz, assessment, or additional catch-up work was
+  published. Lessons 9–13 remain the available catch-up queue.
+- August 10 scheduled review: no student-authored project artifacts changed
+  after the previous review, and no explicit request to end the finals-week
+  hold is present. No Lesson 14, weekly plan, quiz, assessment, or additional
+  catch-up work was published. Lessons 9–13 remain available without a new
+  deadline.
+- August 11 scheduled review: no student-authored project artifacts changed
+  after the August 10 review, and no explicit request to end the finals-week
+  hold is present. In accordance with the hold, no Lesson 14, quiz, assessment,
+  or additional catch-up work was published. The partial Lesson 13 CSV
+  submission remains the newest evidence, and Lessons 9–13 remain available
+  without a new deadline.
 
 - Lesson 1 was published on Monday, July 20, 2026.
 - The starter now contains implementations of `calc_mean`, `population_variance`, `linear_search`, and `score_report`.
@@ -268,6 +283,12 @@ Last updated: 2026-08-06
 
 ## Latest hold-period evidence
 
+- The August 10 repository review found no new student-authored artifacts and
+  no explicit release from the finals-week hold. The partial Lesson 13 CSV
+  submission remains the newest evidence; no new lesson was assigned.
+- The August 8 repository review found no project changes after the August 7
+  automation run and no explicit release from the finals-week hold. No new
+  lesson was assigned.
 - The August 6 repository review found no new student-authored artifacts or
   explicit release from the finals-week hold. No new lesson was assigned.
 - The August 5 repository review found no new student-authored artifacts or
