@@ -82,6 +82,9 @@ As of Friday, July 31, 2026:
   only as a warm-up. The active assignment is a larger core-Python CSV pipeline
   given as a behavioral specification. The student chooses the architecture;
   scaffolding and tests are withheld until requested.
+- The unscaffolded Lesson 8 CSV evaluator is now complete. Its iterative,
+  assignment-first debugging process is the preferred model for future coding
+  practice.
 - `lesson_2_csv.py` now demonstrates successful basic CSV extraction,
   conversion, and filtering. Lesson 9 builds directly on that evidence with
   functions, validation, and single-pass aggregation.

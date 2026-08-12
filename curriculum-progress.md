@@ -102,6 +102,15 @@ Last updated: 2026-08-11
   used unless the student later requests scaffolding.
 - Current state: "Lesson 8 warm-up complete; unscaffolded CSV pipeline
   specification active."
+- August 11 interactive review: `lesson_8_csv_code.py` now completes the active
+  unscaffolded Lesson 8 pipeline. Verified output is mean error `-1.75`, MSE
+  `4.234375`, eight predictions within five points, and Ben as the largest
+  squared error at `10.5625`.
+- The student confirmed that this assignment's intensity and iterative
+  debugging were exactly the desired methodology. Productive difficulty came
+  from designing a list-of-dictionaries representation, separating record-level
+  transformations from dataset-level aggregation, correcting indentation and
+  accumulator scope, and tracking a maximum record.
 - On July 28, `lesson_2_csv.py` provided new completion evidence: it correctly
   reads `scores.csv`, converts scores to integers, extracts names, and filters
   scores above 85.
@@ -229,6 +238,9 @@ Last updated: 2026-08-11
   interpretation are submitted.
 - The student correctly implemented ordered dictionary-value extraction and a
   list-comprehension prediction transformation.
+- The student completed the Lesson 8 CSV prediction evaluator using numeric
+  conversion, record dictionaries, prediction/error fields, aggregation,
+  conditional counting, and a linear maximum scan.
 - The student can use `csv.reader`, skip a header, convert score strings to
   integers, preserve input order, and filter values with a condition.
 - The revised CSV script opens the file once and reuses the collected scores
@@ -399,12 +411,13 @@ Last updated: 2026-08-11
 
 ### Lesson 8 - Code a Prediction Evaluator
 
-- Status: warm-up complete; substantial CSV pipeline active
+- Status: completed and interactively verified on 2026-08-11
 - Date published: 2026-07-27
 - Artifact: [lesson-08-coding-prediction-evaluator.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-coding-prediction-evaluator.md>)
 - Complete example: [lesson-08-transformation-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-transformation-example.py>)
 - Starter scaffold: [lesson-08-prediction-evaluator-starter.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-prediction-evaluator-starter.py>)
 - Dataset: [lesson-08-student-data.csv](</Users/gamlielibn/Documents/Grad School Prep/lesson-08-student-data.csv>)
+- Completed submission: [lesson_8_csv_code.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_8_csv_code.py>)
 - Retired support artifacts: `lesson_08_student_pipeline_starter.py` and
   `test_lesson_08_student_pipeline.py`; do not direct the student to them unless
   scaffolding or tests are explicitly requested.

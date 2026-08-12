@@ -54,8 +54,8 @@ with open("lesson-08-student-data.csv", newline="") as file:
         # identify student with largest squared error
         if student["squared_error"] > worst_student["squared_error"]:
             worst_student = student
-        worst_student_name = worst_student["name"]
-        worst_student_value = worst_student["squared_error"]
+    worst_student_name = worst_student["name"]
+    worst_student_value = worst_student["squared_error"]
 
     mean_error = total_error / n
     mse = total_squared_error / n    

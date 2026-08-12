@@ -136,6 +136,12 @@ Preferred progression:
   hints, scaffolding, signatures, or tests only when the student asks for them.
   This assignment-first preference overrides earlier guidance to provide
   substantial scaffolding by default.
+- Lesson 8 confirmed the preferred difficulty and teaching loop: give a
+  cohesive behavioral specification, let the student design and implement it,
+  inspect their actual code when they ask for help, diagnose one blocker at a
+  time, and preserve ownership of the solution. Repeat comparable data-flow,
+  aggregation, debugging, and state-management challenges in new Python,
+  NumPy, Pandas, and ML contexts so fluency develops through variation.
 - Add depth only after checking how the first project-based lesson lands; do not interpret willingness to try it as prior mastery.
 - The student does not want substantial mathematical instruction formatted inside the daily lesson files and has a separate book available for mathematics.
 - Center lessons on building Python, data-science, and machine-learning capability through runnable work.
