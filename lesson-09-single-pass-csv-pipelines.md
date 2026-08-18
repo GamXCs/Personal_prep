@@ -6,13 +6,20 @@
 
 ## Why this is the next lesson
 
-Your `lesson_2_csv.py` is valid completion evidence: it reads `scores.csv`,
-converts score strings to integers, extracts names, and filters high scores.
-The next skill is not another CSV syntax exercise. It is turning repeated
-top-level code into a program whose parts can be reused, reasoned about, and
-changed independently.
+Your completed `lesson_8_csv_code.py` is strong evidence that you can read CSV
+rows, convert numeric fields, build a list of dictionaries, calculate
+record-level values, and derive dataset-level summaries. You also confirmed
+that an assignment-first program with iterative debugging is the right lesson
+format.
 
-Do not modify `lesson_2_csv.py`; keep it as a before-refactoring artifact.
+The next skill is not another prediction formula. It is designing a reusable
+program whose loading, validation, analysis, and presentation responsibilities
+are separated clearly. This repeats the data-pipeline pattern in a new context
+while adding one major coding layer: meaningful functions with explicit data
+flow.
+
+Do not modify `lesson_8_csv_code.py`; keep it as your completed before-refactoring
+artifact.
 
 ## Learning objectives
 
@@ -154,6 +161,10 @@ Create a new file named `lesson_09_score_pipeline.py`. Do not begin from a
 provided starter, signatures, TODO list, or supplied tests. Choose your own
 functions and control flow.
 
+Unlike Lesson 8, do not place the whole pipeline at module level. You decide the
+function boundaries, but the final design must make file loading, calculation,
+and printing separable.
+
 Input: the existing `scores.csv`.
 
 Required behavior:
@@ -199,6 +210,8 @@ Below 70: 1
 - Computation functions return values; they do not depend on global mutable
   lists.
 - Existing Lesson 8 and earlier artifacts are not overwritten.
+- Do not consult or use a generated starter or test file unless you explicitly
+  ask for that level of help.
 
 ### Optional stretch goals
 
@@ -252,4 +265,3 @@ Save:
      avoids that repetition;
   3. one malformed-input case you ran and its output;
   4. whether the implementation time felt too short, appropriate, or too long.
-

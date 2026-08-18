@@ -13,11 +13,15 @@ This repository is a long-term study curriculum designed to prepare for graduate
 
 The project emphasizes cumulative learning rather than isolated practice. Each lesson is meant to connect programming, mathematical reasoning, algorithmic thinking, and machine-learning theory.
 
-The current pacing is a 4-day lesson week during the school term, with one built-in flex/catch-up day for sustainability.
+The current pacing is three substantial assignments per week—Monday,
+Wednesday, and Friday—with Tuesday and Thursday reserved for completion,
+debugging, questions, and recovery.
 
-**Current scheduling status:** new lessons are paused for finals week as of
-August 2, 2026. Lessons 9–13 remain the catch-up queue. Publication resumes
-only when the student explicitly asks to continue.
+**Current scheduling status:** Lesson 9 remains the active assignment. Lesson
+14 is a bounded Monday reinforcement that helps design the same pipeline; it
+does not add a second project. Tuesday and Thursday remain completion and
+support days, and later lessons do not count as completed merely because their
+files already exist.
 
 The current near-term emphasis is coding fluency: repeated, cumulative practice
 in core Python followed by NumPy, Pandas, and machine-learning libraries, with
@@ -60,10 +64,20 @@ one unfamiliar layer introduced at a time.
 - [lesson-12-reliable-array-example.py](lesson-12-reliable-array-example.py): executable computation-boundary example
 - [lesson-13-schema-driven-csv-and-residual-bias.md](lesson-13-schema-driven-csv-and-residual-bias.md): current core-Python lesson on schema parsing, validation, and residual bias
 - [lesson-13-schema-example.py](lesson-13-schema-example.py): executable parser-dispatch example
+- [lesson-14-pipeline-state-and-invariants.md](lesson-14-pipeline-state-and-invariants.md): active reinforcement on accumulator design and loop invariants
+- [lesson-14-state-example.py](lesson-14-state-example.py): executable state-update example
 
 ## Current Status
 
-As of Friday, July 31, 2026:
+As of Monday, August 17, 2026:
+
+- Lesson 9 is the active assignment. No `lesson_09_score_pipeline.py`, saved
+  valid/malformed run, or `lesson-09-reflection.md` is present yet. Lesson 14
+  reinforces accumulator planning and continues that exact deliverable rather
+  than adding another assignment.
+- The next advancement decision should be based on the Lesson 9 implementation,
+  validation behavior, output, and reflection—not on the existence of the
+  prepublished Lessons 10–13.
 
 - Week 1 has begun.
 - Lesson 1 covers descriptive statistics, mean baselines, and linear search.

@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-08-11
+Last updated: 2026-08-17
 
 ## Current module
 
@@ -8,20 +8,68 @@ Last updated: 2026-08-11
 
 ## Schedule policy
 
-- **Finals-week hold active as of August 2, 2026:** publish no new lesson or
-  weekly plan on August 3 or on later scheduled runs. Add no replacement quiz,
-  assessment, or catch-up assignment. Resume only when the student explicitly
-  ends the hold or asks for the next lesson.
-- As of Friday, July 24, 2026, the curriculum is moving to a 4-day-per-week lesson cadence for sustainability during the school term.
-- Friday is now the default flex/catch-up/recovery day rather than an automatic new-lesson day.
-- Weekly plans should still be published on Mondays, but they should assume four core lesson days and one lighter buffer day.
+- As of August 12, 2026, the active cadence is three substantial assignments per
+  week: Monday, Wednesday, and Friday.
+- Tuesday and Thursday are reserved for implementation, debugging, review, and
+  recovery. Scheduled runs on those days must not publish new assignments.
+- Assignments may be more robust to support deeper coding practice, but Friday
+  should become catch-up when the earlier work is incomplete.
+- Increase frequency only after explicit student feedback or sustained evidence
+  that the current cadence is comfortably manageable.
+- Historical note: the August 2 finals-week hold ended on August 11 when the
+  student explicitly requested Lesson 9. The July 24 four-day cadence is also
+  superseded by the active three-assignment schedule above.
+- Later prepublished lessons remain reference material and should not be treated
+  as completed merely because they exist.
 
 ## Current status
 
-- Current state: "Finals-week hold active; Lessons 9–13 remain available for
-  catch-up, with no new curriculum publication until explicit student release."
-- The hold reflects workload constraints rather than lack of progress or a
-  change in long-term goals.
+- August 17 scheduled lesson: no student-authored artifact changed after the
+  August 16 checkpoint, and the Lesson 9 implementation, outputs, and
+  reflection remain absent. Published Lesson 14 as a bounded Monday
+  reinforcement on accumulator state, loop invariants, and the distinction
+  between opening a file once and traversing stored records twice. It continues
+  the same `lesson_09_score_pipeline.py` deliverable rather than adding a
+  second project or advancing to NumPy/Pandas.
+
+- Current state: "Lesson 9 active; Monday/Wednesday/Friday assignment cadence in
+  effect, with Tuesday/Thursday reserved for completion and support."
+- August 16 scheduled review: no student-authored artifact changed after the
+  August 15 checkpoint. `lesson_09_score_pipeline.py`, the reflection, and
+  saved valid/malformed-input evidence remain absent. Sunday is outside the
+  Monday/Wednesday/Friday assignment cadence, so no duplicate lesson or new
+  workload was published. The existing Lesson 9 remains the active,
+  self-contained 75–90 minute assignment and already includes all required
+  curriculum components. Monday's decision should begin by reviewing any new
+  Lesson 9 evidence; without it, keep reinforcement focused and bounded.
+- August 15 scheduled review: no student-authored artifact changed after the
+  August 14 checkpoint. `lesson_09_score_pipeline.py`, the reflection, and
+  saved valid/malformed-input evidence remain absent. Saturday is outside the
+  Monday/Wednesday/Friday assignment cadence, so no duplicate lesson or new
+  workload was published. The existing Lesson 9 remains the active,
+  self-contained 75–90 minute assignment, and its executable example was
+  rerun successfully. The next scheduled assignment decision should review
+  Lesson 9 completion evidence before advancing.
+- August 14 scheduled review: no student-authored artifact changed after the
+  August 13 checkpoint. `lesson_09_score_pipeline.py`, the reflection, and
+  saved valid/malformed-input evidence remain absent. Friday is therefore a
+  catch-up day under the active schedule rather than a third new assignment.
+  The existing Lesson 9 remains the self-contained 75–90 minute lesson; its
+  executable example was rerun successfully. Do not advance until the
+  implementation demonstrates meaningful function boundaries, `DictReader`,
+  contextual validation, the exact report facts, and a malformed-input run.
+- August 13 scheduled review: no student-authored artifact changed after the
+  August 12 review. The Lesson 9 implementation, reflection, and saved valid
+  and malformed-input runs remain absent. Because Thursday is an explicit
+  completion/support day, no duplicate lesson or new assignment was published.
+  Friday should remain catch-up unless complete Lesson 9 evidence appears.
+- August 12 scheduled review: the finals-week hold is confirmed ended, but no
+  Lesson 9 submission artifact is present yet: `lesson_09_score_pipeline.py`,
+  valid and malformed-input runs, and `lesson-09-reflection.md` are all absent.
+  Lesson 9 was activated only on August 11, so no additional lesson was
+  published today. Continue the existing 75–90 minute Lesson 9 assignment and
+  review its evidence before advancing; prepublished Lessons 10–13 are not
+  completion evidence.
 - August 3 scheduled review: no new student lesson artifacts appeared after
   the August 2 review. In accordance with the finals-week hold, no Monday plan,
   Lesson 14, replacement quiz, or additional assignment was published.
@@ -430,11 +478,25 @@ Last updated: 2026-08-11
 
 ### Lesson 9 - From a Working Script to a Single-Pass CSV Pipeline
 
-- Status: active
+- Status: active by explicit student request on 2026-08-11
 - Date published: 2026-07-28
 - Artifact: [lesson-09-single-pass-csv-pipelines.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-single-pass-csv-pipelines.md>)
 - Executable example: [lesson-09-streaming-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-streaming-example.py>)
 - Evidence used: [lesson_2_csv.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_2_csv.py>)
+- Updated evidence: completed [lesson_8_csv_code.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_8_csv_code.py>)
+- Current assignment: create `lesson_09_score_pipeline.py` from the behavioral
+  specification without an initial scaffold.
+
+### Lesson 14 - Designing Pipeline State Before Writing the Loop
+
+- Status: active reinforcement of Lesson 9
+- Date published: 2026-08-17
+- Artifact: [lesson-14-pipeline-state-and-invariants.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-14-pipeline-state-and-invariants.md>)
+- Executable example: [lesson-14-state-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-14-state-example.py>)
+- Current assignment remains `lesson_09_score_pipeline.py`; Lesson 14 adds a
+  state-design method, not another submission.
+- Focus: accumulator contracts, loop invariants, dependency-aware traversal,
+  validation boundaries, and the time/space tradeoff of retaining records.
 
 ### Lesson 10 - NumPy Arrays and Boolean Masks
 
@@ -549,6 +611,10 @@ Last updated: 2026-08-11
 
 ## Next-run guidance
 
+- The student explicitly requested that the August 18 assignment revisit the
+  difficult Lesson 9 pattern: traverse a list of dictionaries, access fields
+  on one record, and maintain the whole best record as a maximum/minimum
+  candidate. Use a new dataset/context and do not pre-supply the completed scan.
 - The finals-week hold is authoritative. Do not publish Lesson 14, a Monday
   plan, a review day, or any substitute assignment until the student explicitly
   asks to resume.

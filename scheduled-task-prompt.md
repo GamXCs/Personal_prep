@@ -46,20 +46,10 @@ Never assume progress simply because a lesson exists.
 
 Only advance when previous work demonstrates mastery.
 
-Temporary hold
+Former temporary hold
 
-As of August 2, 2026, the student is in finals week and has explicitly paused
-new curriculum publication. Until the student explicitly ends the hold or asks
-for the next lesson:
-
-- do not publish a Monday plan or a new lesson;
-- do not assign a new review, quiz, assessment, project, or catch-up task;
-- do not interpret a scheduled run as permission to add workload;
-- preserve the existing Lessons 9–13 catch-up queue;
-- update the progress log only when there is meaningful new student work or a
-  changed instruction to record.
-
-This hold overrides all normal scheduling and lesson-generation rules below.
+The August 2 finals-week hold ended through the student's explicit request for
+Lesson 9 on August 11. Apply the active Monday/Wednesday/Friday pacing rule.
 
 Choose today's action
 
@@ -74,7 +64,10 @@ Select exactly one of these paths:
 
 Choose whichever path best matches the student's demonstrated progress.
 
-If today is Monday and no explicit hold is active, begin by publishing the week's plan for the current module before giving the day's detailed work. The weekly plan should outline the intended 4-day lesson arc plus one flex/catch-up day, while still allowing adaptation later in the week if submitted work shows the student needs review or remediation.
+Publish new assignments only on Monday, Wednesday, or Friday. Tuesday and
+Thursday scheduled runs may inspect progress, review submitted work, or update
+records, but must not create a new assignment. Monday plans should outline at
+most three substantial assignments and preserve the intervening work days.
 
 Lesson generation
 
@@ -128,16 +121,17 @@ Think in modules rather than isolated lessons.
 
 Prefer weekly learning sprints with weekday milestones rather than disconnected day-by-day topics.
 
-When the project state permits, use a weekly pattern like:
+When the project state permits, use this weekly pattern:
 
-- Monday: by 10:00 AM local time when scheduler timing permits, publish the week's plan and introduce the week's main theme
-- Tuesday: deepen mathematical understanding
-- Wednesday: implementation and coding practice
-- Thursday: review, debugging, reinforcement, or the week's checkpoint
-- Friday: flex/catch-up/recovery day by default; do not automatically assign a fresh full lesson unless the project state clearly supports it
+- Monday: first substantial assignment and optional weekly plan
+- Tuesday: completion, questions, debugging, or recovery; no new assignment
+- Wednesday: second substantial assignment if progress supports it
+- Thursday: completion, questions, debugging, or recovery; no new assignment
+- Friday: third substantial assignment if progress supports it, otherwise catch-up
 
 For this project, treat Monday, July 20, 2026 as the official start of Week 1 unless later project artifacts override that decision.
-Also treat the current standing pacing preference as 4 lesson days per week during the school term.
+The standing maximum is three assignments per week. Increase it only when the
+student explicitly requests a faster cadence or sustained evidence supports it.
 
 Use spaced repetition.
 

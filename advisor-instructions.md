@@ -26,16 +26,9 @@ Build a coherent long-term curriculum rather than isolated daily lessons.
 
 ## Temporary finals-week hold
 
-- Effective August 2, 2026, do not publish new lessons, weekly plans, retrieval
-  assignments, assessments, or additional catch-up work.
-- Scheduled runs may inspect the repository and acknowledge existing progress,
-  but must not create a new curriculum artifact or expand the workload.
-- Keep Lessons 9–13 available as the current catch-up queue without treating
-  their age as evidence that the student should advance.
-- Resume lesson publication only after the student explicitly says the hold is
-  over or asks for the next lesson.
-
-This temporary hold overrides the normal cadence and Monday-plan rules below.
+- The August 2 finals-week hold ended when the student explicitly requested
+  Lesson 9 on August 11, 2026.
+- The active pacing rule is now the three-assignment schedule below.
 
 ## Source of truth
 
@@ -197,18 +190,22 @@ Each week should revolve around one coherent topic or tightly related cluster of
 Default weekly rhythm during the school term:
 
 - Monday:
-  publish the weekly plan by 10:00 AM local time when the scheduler timing permits, then introduce the primary concepts and establish the week's theme
+  publish the weekly plan when appropriate and assign the first substantial
+  coding lesson
 - Tuesday:
-  deepen the mathematical understanding and conceptual foundations
+  no new assignment; allow completion, questions, debugging, and review
 - Wednesday:
-  emphasize implementation, coding, and worked technical practice
+  assign the second substantial coding lesson only after reviewing available
+  evidence from Monday
 - Thursday:
-  focus on review, debugging, reinforcement, and deeper connections, or use it as the week's checkpoint when the earlier work is on track
+  no new assignment; allow completion, questions, debugging, and review
 - Friday:
-  default to a flex/catch-up/recovery day with no automatic new lesson unless the project artifacts explicitly justify one
+  assign the third substantial coding lesson only when progress supports it;
+  otherwise use Friday for catch-up without adding workload
 
 Do not force this structure when the student's submitted work shows a need for extra review, remediation, or schedule recovery.
-Prefer a sustainable 4-day lesson cadence over a nominal 5-day schedule when coursework load is high.
+Never exceed three new assignments per week. Increase frequency only after an
+explicit student request or strong sustained completion evidence.
 
 For this project, the official Week 1 start date is Monday, July 20, 2026. Treat the preceding Thursday-Friday period as setup and transition time unless the project artifacts later record a different decision.
 

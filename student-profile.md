@@ -144,6 +144,13 @@ Preferred progression:
   NumPy, Pandas, and ML contexts so fluency develops through variation.
 - Add depth only after checking how the first project-based lesson lands; do not interpret willingness to try it as prior mastery.
 - The student does not want substantial mathematical instruction formatted inside the daily lesson files and has a separate book available for mathematics.
+- On August 17, hands-on Lesson 9 work showed that the student needs more
+  repetition distinguishing a list of record dictionaries from an individual
+  dictionary. The next assignment should include a fresh linear scan in which
+  the student keeps an entire record as the current best candidate, compares a
+  numeric field, and replaces the candidate without changing its type. Use a
+  different context and data so this is retrieval practice rather than a copy
+  of the highest-student solution.
 - Center lessons on building Python, data-science, and machine-learning capability through runnable work.
 - When mathematics is necessary, state the exact prerequisite and direct the student to a specific book section, problem set, or high-quality video. Include only the brief intuition needed to continue the coding work.
 - Do not make a long derivation the main obstacle to completing a programming or ML lesson unless the student explicitly asks for mathematical instruction.
@@ -170,9 +177,16 @@ The curriculum should include:
 
 Current scheduling preference:
 
-- Use a 4-day academic-week cadence for now.
-- Treat one weekday each week as a lighter flex/catch-up day rather than automatically assigning a full new lesson.
-- Favor sustainable pacing during the school term over maintaining a rigid 5-day lesson schedule.
+- As of August 12, 2026, assign at most three substantial lessons per week:
+  Monday, Wednesday, and Friday.
+- Tuesday and Thursday are completion, debugging, review, or recovery days. Do
+  not publish a new assignment on those days.
+- Robust assignments are welcome, but each should allow the intervening day for
+  implementation and questions.
+- Increase assignment frequency only after the student explicitly requests it
+  or sustained completion evidence shows the current pace is comfortably
+  manageable.
+- Favor sustainable progress over maintaining a faster nominal schedule.
 - For the week ending July 31, 2026, Lesson 11 is the stopping point. The
   student plans to complete Lessons 9–11 over the weekend while also working
   through a separate scheduled weekly Python/data-science/ML project.
