@@ -17,11 +17,13 @@ The current pacing is three substantial assignments per week—Monday,
 Wednesday, and Friday—with Tuesday and Thursday reserved for completion,
 debugging, questions, and recovery.
 
-**Current scheduling status:** Lesson 9 remains the active assignment. Lesson
-14 is a bounded Monday reinforcement that helps design the same pipeline; it
-does not add a second project. Tuesday and Thursday remain completion and
-support days, and later lessons do not count as completed merely because their
-files already exist.
+**Current scheduling status:** Lesson 9 remains the active assignment, now with
+a nearly complete report computation and a started presentation function.
+Lessons 14–15 are bounded reinforcements that help complete the same pipeline;
+they do not add a second project. Friday, August 21 is a catch-up day because
+the current formatter has a syntax error and the required validation and
+submission evidence remain incomplete. Later lessons do not count as completed
+merely because their files already exist.
 
 The current near-term emphasis is coding fluency: repeated, cumulative practice
 in core Python followed by NumPy, Pandas, and machine-learning libraries, with
@@ -66,18 +68,30 @@ one unfamiliar layer introduced at a time.
 - [lesson-13-schema-example.py](lesson-13-schema-example.py): executable parser-dispatch example
 - [lesson-14-pipeline-state-and-invariants.md](lesson-14-pipeline-state-and-invariants.md): active reinforcement on accumulator design and loop invariants
 - [lesson-14-state-example.py](lesson-14-state-example.py): executable state-update example
+- [lesson-15-return-contracts-and-validation.md](lesson-15-return-contracts-and-validation.md): active reinforcement on structured returns, presentation boundaries, and contextual validation
+- [lesson-15-contract-example.py](lesson-15-contract-example.py): executable computation-versus-presentation example
 
 ## Current Status
 
-As of Monday, August 17, 2026:
+As of Friday, August 21, 2026:
 
-- Lesson 9 is the active assignment. No `lesson_09_score_pipeline.py`, saved
-  valid/malformed run, or `lesson-09-reflection.md` is present yet. Lesson 14
-  reinforces accumulator planning and continues that exact deliverable rather
-  than adding another assignment.
+- Lesson 9 is the active assignment. `lesson_09_score_pipeline.py` now loads and
+  validates the basic CSV structure, preserves record identity, calculates the
+  mean, and correctly maintains an entire student dictionary as the maximum
+  candidate. `report()` now returns the complete summary dictionary and a third
+  formatting function has been started. The current file does not compile
+  because its first formatting f-string uses conflicting nested quotes; the
+  formatter also ignores its argument and refers to an unavailable `records`
+  name. It still needs to format the returned report, reject out-of-range
+  scores, identify bad data rows, and save the reflection plus valid/malformed
+  runs. No new Friday assignment was added.
 - The next advancement decision should be based on the Lesson 9 implementation,
   validation behavior, output, and reflection—not on the existence of the
   prepublished Lessons 10–13.
+- Lesson 15 now targets the exact remaining boundary errors in that partial
+  submission: return the complete structured report, present it separately,
+  and add range checks plus physical-row context. It continues the existing
+  deliverable rather than assigning another program.
 
 - Week 1 has begun.
 - Lesson 1 covers descriptive statistics, mean baselines, and linear search.

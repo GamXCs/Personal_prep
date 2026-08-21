@@ -79,9 +79,32 @@ def report(records):
         # get names of students scoring above mean in input order
         if score > mean_score:
             students_above_mean.append(name)
-    print(students_above_mean)
+
+    #create summary 
+    display_dict = {"Count": valid_students,
+                        "Mean": mean_score,
+                        "Highest Scorers Name": highest_score_name,
+                        "Highest Score": highest_score,
+                        "Scorers Above Mean": students_above_mean,
+                        "Students From 90 - 100": students_90_to_100,
+                        "Students From 80 - 89":students_80_to_89,
+                        "Students From 70 - 79":students_70_to_79,
+                        "Students Below 70":students_below_70}
+        
+    return display_dict
 
 
+# formatted output function
+def format_output(results):
+    print(f"Student Score Report\n-------------------")
+    print(f"Count:{results['Count']}")
+    print(f"Mean:{results['Mean']:.2f}")
+    print(f"Highest: {results['Highest Scorers Name']} ({results['Highest Score']})")
+    print(f"Above mean: {', '.join(results['Scorers Above Mean'])}")
+    print(f"90-100: {results['Students From 90 - 100']}")
+    print(f"80-89: {results['Students From 80 - 89']}")
+    print(f"70-79: {results['Students From 70 - 79']}")
+    print(f"Below 70: {results['Students Below 70']}")
 
 
 if __name__ == "__main__":
@@ -89,4 +112,4 @@ if __name__ == "__main__":
     # print(load_scores("empty_test_file.csv"))
     # print(load_scores("emp_test2.csv"))
     test_records = (load_scores("scores.csv"))
-    print(report(test_records))
+    format_output(results=report(test_records))

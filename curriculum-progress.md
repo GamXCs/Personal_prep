@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-08-17
+Last updated: 2026-08-21
 
 ## Current module
 
@@ -24,6 +24,57 @@ Last updated: 2026-08-17
 
 ## Current status
 
+- August 21 scheduled review: new student work meaningfully improves the Lesson
+  9 contract. `report()` now returns a complete dictionary containing the count,
+  mean, highest-scoring record fields, above-mean names, and all four score-band
+  counts, and a third `format_output()` boundary has been started. The program
+  currently does not compile: the first formatting line nests double quotes
+  inside a double-quoted f-string (`results["Count"]`), producing
+  `SyntaxError: f-string: unmatched '['`. The formatter also refers to
+  `records`, which is not one of its parameters, and overwrites the supplied
+  `results` rather than formatting that argument. Score-range validation,
+  physical-row context for malformed values, valid/malformed saved output, and
+  `lesson-09-reflection.md` remain absent. Friday is therefore a focused
+  catch-up day rather than a new Lesson 16. Preserve the student's code for
+  debugging; after it compiles, review the full formatted report and validation
+  behavior before advancing.
+
+- August 20 scheduled review: no student-authored artifact changed after the
+  August 19 lesson. The current pipeline still prints the correct above-mean
+  names followed by `None`; it does not expose the full report, validate the
+  `0..100` score range with row context, or provide the required reflection and
+  saved valid/malformed runs. Thursday is reserved for implementation,
+  debugging, and recovery, so no Lesson 16 or duplicate assignment was
+  published. Lesson 15 remains the active self-contained 75–90 minute lesson.
+  Its executable contract example and the student pipeline were rerun and
+  compiled successfully. Next review should inspect the same completion
+  evidence before deciding whether Friday is a new lesson or catch-up.
+
+- August 19 scheduled lesson: no student-authored artifact changed after the
+  August 18 review, so Lesson 9 remains partially complete. Published Lesson 15
+  as a focused Wednesday reinforcement on return-value contracts, structured
+  report dictionaries, computation/presentation separation, contextual row
+  validation, and correctness of a linear best-record scan. It edits the same
+  `lesson_09_score_pipeline.py` deliverable rather than opening a new project or
+  advancing to NumPy. Added an independent executable contract example. Next
+  review should require the complete returned report, a separate presentation
+  boundary, `0..100` validation with row context, valid/malformed output, and
+  the reflection before advancement.
+
+- August 18 scheduled review: `lesson_09_score_pipeline.py` is now a genuine
+  partial submission. It successfully uses `csv.DictReader`, validates required
+  columns and nonempty data, converts scores, preserves name/score pairing, and
+  correctly keeps an entire record dictionary as the maximum candidate. The
+  normal run exits successfully and finds the correct above-mean names. It does
+  not yet return or print the required report: it prints only the above-mean
+  list followed by `None`; count, rounded mean, highest student, and band counts
+  are computed or accumulated but never exposed. It currently has two
+  meaningful functions rather than three, does not reject scores outside
+  `0..100`, and conversion/blank-name failures do not identify the data row.
+  `lesson-09-reflection.md` and saved valid/malformed outputs remain absent.
+  Tuesday is reserved for completion and debugging, so no new lesson or second
+  assignment was published. Finish the existing Lesson 9 report boundary and
+  validation behavior before advancement.
 - August 17 scheduled lesson: no student-authored artifact changed after the
   August 16 checkpoint, and the Lesson 9 implementation, outputs, and
   reflection remain absent. Published Lesson 14 as a bounded Monday
@@ -478,14 +529,21 @@ Last updated: 2026-08-17
 
 ### Lesson 9 - From a Working Script to a Single-Pass CSV Pipeline
 
-- Status: active by explicit student request on 2026-08-11
+- Status: active; partial implementation submitted on 2026-08-18
 - Date published: 2026-07-28
 - Artifact: [lesson-09-single-pass-csv-pipelines.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-single-pass-csv-pipelines.md>)
 - Executable example: [lesson-09-streaming-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-streaming-example.py>)
 - Evidence used: [lesson_2_csv.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_2_csv.py>)
 - Updated evidence: completed [lesson_8_csv_code.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_8_csv_code.py>)
-- Current assignment: create `lesson_09_score_pipeline.py` from the behavioral
-  specification without an initial scaffold.
+- Current assignment: finish the existing `lesson_09_score_pipeline.py` from
+  the behavioral specification without replacing the student's design.
+- Demonstrated: `DictReader`, required-column and empty-data checks, integer
+  conversion, aligned record dictionaries, mean calculation, two-pass analysis
+  of retained records, and a correct whole-record maximum scan.
+- Remaining: return a complete report value, separate formatting/presentation
+  into a third meaningful function, print every required fact, validate the
+  `0..100` range, add data-row context to row errors, save valid and malformed
+  runs, and write `lesson-09-reflection.md`.
 
 ### Lesson 14 - Designing Pipeline State Before Writing the Loop
 
