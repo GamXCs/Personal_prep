@@ -24,6 +24,23 @@ Last updated: 2026-08-21
 
 ## Current status
 
+- August 22 learning evidence: `lesson_10_candidate_practice.py` correctly
+  rejects empty input, initializes from the first record, compares the numeric
+  `validation_mse` field, and replaces the candidate with the whole model
+  dictionary. The remaining small contract fix is to return the candidate and
+  print it only in the main block. The student reports that this pattern is
+  beginning to click and explicitly requests several more varied repetitions
+  in future lessons. Preserve this as a spiral-review requirement.
+- August 21 student-directed advancement: the Lesson 9 normal-input pipeline
+  now runs successfully with three meaningful boundaries: CSV loading, report
+  calculation, and formatted presentation. It prints the required count,
+  two-decimal mean, highest student, input-ordered above-mean names, and correct
+  score-band counts. The student explicitly requested advancement to Lesson 10
+  and additional practice with the hardest pattern: maintaining a whole record
+  while comparing one numeric field. Activated the existing Lesson 10 NumPy
+  lesson and added a required, fresh minimum-record scan over model-result
+  dictionaries. Lesson 9 contextual row/range validation and reflection remain
+  cumulative evidence gaps rather than blockers to this requested advancement.
 - August 21 scheduled review: new student work meaningfully improves the Lesson
   9 contract. `report()` now returns a complete dictionary containing the count,
   mean, highest-scoring record fields, above-mean names, and all four score-band
@@ -529,7 +546,8 @@ Last updated: 2026-08-21
 
 ### Lesson 9 - From a Working Script to a Single-Pass CSV Pipeline
 
-- Status: active; partial implementation submitted on 2026-08-18
+- Status: core normal-input pipeline complete; validation/reflection evidence
+  remains cumulative
 - Date published: 2026-07-28
 - Artifact: [lesson-09-single-pass-csv-pipelines.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-single-pass-csv-pipelines.md>)
 - Executable example: [lesson-09-streaming-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-streaming-example.py>)
@@ -558,12 +576,13 @@ Last updated: 2026-08-21
 
 ### Lesson 10 - NumPy Arrays and Boolean Masks
 
-- Status: active
+- Status: active by explicit student request on 2026-08-21
 - Date published: 2026-07-29
 - Artifact: [lesson-10-numpy-arrays-and-boolean-masks.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-10-numpy-arrays-and-boolean-masks.md>)
 - Executable example: [lesson-10-array-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-10-array-example.py>)
 - Evidence used: [lesson_3_numpy_intro.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_3_numpy_intro.py>)
 - Required submission:
+  - `lesson_10_candidate_practice.py`;
   - `lesson_10_numpy_scores.py`;
   - valid terminal output;
   - `lesson-10-reflection.md` with malformed-input and zero-variance evidence.
@@ -669,6 +688,10 @@ Last updated: 2026-08-21
 
 ## Next-run guidance
 
+- Continue whole-record candidate scans across the next several lessons using
+  varied tasks such as minimum loss, maximum residual, closest value, or worst
+  validation case. Require the candidate to remain a complete record while one
+  numeric field drives comparison; do not supply the completed loop initially.
 - The student explicitly requested that the August 18 assignment revisit the
   difficult Lesson 9 pattern: traverse a list of dictionaries, access fields
   on one record, and maintain the whole best record as a maximum/minimum

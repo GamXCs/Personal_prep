@@ -1,20 +1,21 @@
 # Lesson 10 — NumPy Arrays and Boolean Masks
 
 **Module:** Week 2 — From core Python data pipelines to NumPy  
-**Estimated time:** 75–90 minutes  
+**Estimated time:** 80–90 minutes
 **Difficulty:** Introductory NumPy, intermediate Python
 
 ## Why this is the next lesson
 
-Your updated `lesson_2_csv.py` now reads the file once and computes several
-statistics, and `lesson_3_numpy_intro.py` correctly creates an array and checks
-that `temperatures.mean()` agrees with a manual mean. That is enough evidence
-to introduce one new layer: NumPy array operations.
+Your completed core Lesson 9 pipeline now loads header-named CSV records,
+separates loading, calculation, and presentation, maintains a whole student
+record during a maximum scan, and prints the required report facts correctly.
+That is enough evidence to introduce one new layer: NumPy array operations.
 
-Lesson 9's structured pipeline submission and malformed-input handling are
-still incomplete. This lesson does not pretend those skills are mastered. It
-reuses CSV loading, but concentrates on what changes after numeric values enter
-an array.
+The list-versus-dictionary distinction and whole-record candidate update were
+the hardest parts of Lesson 9, so this lesson begins with a short required
+retrieval exercise in a new context. Lesson 9's remaining contextual validation
+and reflection evidence carry forward; they are not treated as mastered merely
+because the normal input works.
 
 ## Learning objectives
 
@@ -27,6 +28,8 @@ By the end of this lesson, you should be able to:
 4. standardize values with a mean and standard deviation;
 5. explain how feature scale affects distance-based and gradient-based models;
 6. compare a vectorized scan with a Python loop using asymptotic complexity.
+7. reinforce a whole-record minimum scan over a list of dictionaries without
+   changing the candidate's type.
 
 ## Prerequisites
 
@@ -42,6 +45,43 @@ Before running any code, answer:
 1. Why is `score = int(row[1])` necessary after reading a CSV?
 2. What state is sufficient to find a maximum in one pass?
 3. What problem occurs if names are filtered separately from scores?
+
+### Required coding reinforcement: keep the whole candidate record
+
+Before beginning the NumPy work, write a small independent program named
+`lesson_10_candidate_practice.py`.
+
+Use this data:
+
+```python
+model_runs = [
+    {"model": "linear", "validation_mse": 18.4},
+    {"model": "tree", "validation_mse": 12.7},
+    {"model": "knn", "validation_mse": 14.1},
+]
+```
+
+Write a function that returns the entire record with the smallest
+`validation_mse`.
+
+Requirements:
+
+- reject an empty list with `ValueError`;
+- do not use `min()`, `sorted()`, or `.sort()`;
+- initialize the candidate from the first record;
+- compare numeric fields but replace the candidate with the whole record;
+- return a dictionary, not only the numeric loss;
+- print the winning model and loss only in the program's main block.
+
+For the supplied records, the returned candidate must be:
+
+```python
+{"model": "tree", "validation_mse": 12.7}
+```
+
+This is a minimum scan instead of a maximum scan. The data and comparison
+direction are different, but the candidate-state pattern is the same one you
+used successfully in Lesson 9.
 
 ## Python instruction and executable example
 
@@ -273,13 +313,14 @@ be approximately `1.0`.
 7. That would leak evaluation-set information into preprocessing and make the
    evaluation less honest.
 
-## Suggested 75–90 minute study plan
+## Suggested 80–90 minute study plan
 
-- 0–8 minutes: answer the retrieval warm-up.
-- 8–20 minutes: run and modify the executable example.
-- 20–30 minutes: read the NumPy sections and inspect array metadata.
-- 30–38 minutes: sketch the program's data flow and responsibilities.
-- 38–70 minutes: implement the integrated exercise.
+- 0–5 minutes: answer the retrieval questions.
+- 5–15 minutes: complete and run the whole-record candidate reinforcement.
+- 15–25 minutes: run and modify the NumPy example.
+- 25–33 minutes: read the NumPy sections and inspect array metadata.
+- 33–40 minutes: sketch the main program's data flow and responsibilities.
+- 40–70 minutes: implement the integrated NumPy exercise.
 - 70–78 minutes: check the expected valid output.
 - 78–84 minutes: run one malformed case and one zero-variance case.
 - 84–90 minutes: complete the quiz and reflection.
@@ -288,6 +329,8 @@ be approximately `1.0`.
 
 Save:
 
+- `lesson_10_candidate_practice.py` with the successful whole-record minimum
+  scan and empty-input behavior;
 - `lesson_10_numpy_scores.py`;
 - valid terminal output;
 - `lesson-10-reflection.md` containing:
@@ -296,4 +339,3 @@ Save:
   3. an explanation of how the mask preserves alignment;
   4. answers to the five reading questions;
   5. whether the coding workload felt too short, appropriate, or too long.
-

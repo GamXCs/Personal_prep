@@ -151,6 +151,12 @@ Preferred progression:
   numeric field, and replaces the candidate without changing its type. Use a
   different context and data so this is retrieval practice rather than a copy
   of the highest-student solution.
+- On August 22, the student completed the core comparison-and-replacement logic
+  correctly on the first Lesson 10 minimum-record variation and reported that
+  the pattern is beginning to click. Continue including short, unscaffolded
+  whole-record scans in several upcoming lessons—for example minimum, maximum,
+  closest, or largest-error records—with changing field names and contexts.
+  Space and vary the practice; do not turn every lesson into the same exercise.
 - Center lessons on building Python, data-science, and machine-learning capability through runnable work.
 - When mathematics is necessary, state the exact prerequisite and direct the student to a specific book section, problem set, or high-quality video. Include only the brief intuition needed to continue the coding work.
 - Do not make a long derivation the main obstacle to completing a programming or ML lesson unless the student explicitly asks for mathematical instruction.
