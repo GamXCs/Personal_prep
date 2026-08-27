@@ -17,13 +17,18 @@ The current pacing is three substantial assignments per week—Monday,
 Wednesday, and Friday—with Tuesday and Thursday reserved for completion,
 debugging, questions, and recovery.
 
-**Current scheduling status:** Lesson 9 remains the active assignment, now with
-a nearly complete report computation and a started presentation function.
-Lessons 14–15 are bounded reinforcements that help complete the same pipeline;
-they do not add a second project. Friday, August 21 is a catch-up day because
-the current formatter has a syntax error and the required validation and
-submission evidence remain incomplete. Later lessons do not count as completed
-merely because their files already exist.
+**Current scheduling status:** Lesson 10 is the active assignment after the
+student-directed August 21 advancement. Its required whole-record minimum scan
+is complete; the main NumPy score-analysis program and reflection remain to be
+submitted. Lesson 16 is the focused August 24 reinforcement: it adds array
+contracts, shared-mask invariants, incremental checks, and `argmax` identity
+recovery while retaining the same Lesson 10 deliverable.
+Lesson 9 is complete by the student's August 26 confirmation; its previously
+listed contextual-validation and reflection items are no longer active gates.
+The August 26 Wednesday review found no new submission evidence. Lesson 17 is a
+focused reinforcement on vectorized transformations and diagnostic checks; it
+continues the same Lesson 10 analyzer instead of introducing 2-D arrays or
+Pandas.
 
 The current near-term emphasis is coding fluency: repeated, cumulative practice
 in core Python followed by NumPy, Pandas, and machine-learning libraries, with
@@ -70,28 +75,36 @@ one unfamiliar layer introduced at a time.
 - [lesson-14-state-example.py](lesson-14-state-example.py): executable state-update example
 - [lesson-15-return-contracts-and-validation.md](lesson-15-return-contracts-and-validation.md): active reinforcement on structured returns, presentation boundaries, and contextual validation
 - [lesson-15-contract-example.py](lesson-15-contract-example.py): executable computation-versus-presentation example
+- [lesson-16-array-contracts-and-mask-invariants.md](lesson-16-array-contracts-and-mask-invariants.md): focused reinforcement on aligned arrays, masks, and indexed extreme selection
+- [lesson-16-mask-contract-example.py](lesson-16-mask-contract-example.py): executable shared-mask contract example
+- [lesson-17-vectorized-transformations-and-diagnostic-checks.md](lesson-17-vectorized-transformations-and-diagnostic-checks.md): active reinforcement on broadcasting, standardization, and diagnostic checks
+- [lesson-17-diagnostic-example.py](lesson-17-diagnostic-example.py): executable vectorization and invariant-check example
 
 ## Current Status
 
-As of Friday, August 21, 2026:
+As of Wednesday, August 26, 2026:
 
-- Lesson 9 is the active assignment. `lesson_09_score_pipeline.py` now loads and
-  validates the basic CSV structure, preserves record identity, calculates the
-  mean, and correctly maintains an entire student dictionary as the maximum
-  candidate. `report()` now returns the complete summary dictionary and a third
-  formatting function has been started. The current file does not compile
-  because its first formatting f-string uses conflicting nested quotes; the
-  formatter also ignores its argument and refers to an unavailable `records`
-  name. It still needs to format the returned report, reject out-of-range
-  scores, identify bad data rows, and save the reflection plus valid/malformed
-  runs. No new Friday assignment was added.
-- The next advancement decision should be based on the Lesson 9 implementation,
-  validation behavior, output, and reflection—not on the existence of the
-  prepublished Lessons 10–13.
-- Lesson 15 now targets the exact remaining boundary errors in that partial
-  submission: return the complete structured report, present it separately,
-  and add range checks plus physical-row context. It continues the existing
-  deliverable rather than assigning another program.
+- No new Lesson 10 submission evidence appeared. Lesson 17 continues the same
+  analyzer with broadcasting, vectorized standardization, and `np.isclose`
+  diagnostics. The current malformed CSV row is retained as validation evidence;
+  2-D arrays and Pandas remain deferred.
+
+- No new Lesson 10 implementation evidence appeared. Lesson 16 now provides a
+  narrower checkpoint-based path through the same analyzer assignment; 2-D
+  arrays and Pandas remain deferred.
+- Tuesday's checkpoint found the analyzer and reflection still absent. No
+  Lesson 17 was published because Tuesday is an implementation/debugging day.
+
+- Lesson 9 is complete by explicit student confirmation. Loading, computation,
+  and presentation are separated, and the required report facts print
+  correctly. Do not block Lesson 10 on additional Lesson 9 evidence.
+- Lesson 10 is active. The separate minimum-record scan is complete and returns
+  the full model record correctly. The next evidence to review is
+  `lesson_10_numpy_scores.py`, its valid/edge-case output, and the Lesson 10
+  reflection.
+- No Sunday assignment was added; the existing Lesson 10 already provides a
+  self-contained 80–90 minute lesson. The NumPy program and reflection remain
+  absent, so Monday's decision should begin with another evidence review.
 
 - Week 1 has begun.
 - Lesson 1 covers descriptive statistics, mean baselines, and linear search.

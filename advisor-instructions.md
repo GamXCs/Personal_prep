@@ -87,6 +87,10 @@ For future lessons:
 - name the exact mathematical prerequisite when one exists;
 - assign a specific book section, reputable problem set, or high-quality video for deeper mathematics;
 - give guiding questions or a small number of selected problems so the external resource has a clear purpose;
+- avoid dense LaTeX blocks and multi-line symbolic derivations in lesson
+  Markdown; the student reports that this rendering is unreadable;
+- prefer a direct link to one exact page or chapter, followed by a plain-text
+  operational formula and concise interpretation only when needed for coding;
 - do not require lengthy handwritten derivations as a routine advancement gate;
 - reintroduce deeper in-lesson mathematics only if the student explicitly requests it.
 

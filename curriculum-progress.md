@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-08-21
+Last updated: 2026-08-26
 
 ## Current module
 
@@ -24,6 +24,73 @@ Last updated: 2026-08-21
 
 ## Current status
 
+- August 26 student correction: Lesson 9 was already finished before beginning
+  Lesson 10. Record Lesson 9 as complete and stop carrying its optional
+  contextual-validation/reflection items as active gaps or advancement gates.
+  Lesson 10 is the active assignment.
+
+- August 26 scheduled lesson: no student-authored artifact changed after the
+  August 25 checkpoint; `lesson_10_numpy_scores.py` and
+  `lesson-10-reflection.md` remain absent. Published Lesson 17 as Wednesday's
+  focused reinforcement on scalar broadcasting, vectorized standardization,
+  `np.isclose` diagnostics, shape contracts, and linear transformation-pipeline
+  complexity. It retains the single Lesson 10 analyzer deliverable and uses the
+  current `Gam,eight` row as malformed-input evidence rather than advancing to
+  2-D arrays or Pandas. Added an independent executable diagnostic example.
+  Next review should inspect the analyzer, valid/malformed/constant-score runs,
+  contextual row errors, and reflection before advancement.
+
+- August 25 scheduled review: no student-authored artifact changed after the
+  August 24 lesson. `lesson_10_numpy_scores.py` and
+  `lesson-10-reflection.md` remain absent. Honored Tuesday's explicit
+  implementation/debugging role by publishing no Lesson 17 or duplicate
+  assignment; Lesson 16 remains the active, self-contained 75–90 minute route
+  through the Lesson 10 analyzer. Re-ran and compiled its executable example
+  successfully. Wednesday should inspect the analyzer, valid/malformed/
+  constant-score evidence, contextual row errors, and reflection before
+  deciding whether to reinforce or advance.
+
+- August 24 scheduled lesson: no student-authored artifact changed after the
+  August 23 review, so the Lesson 10 NumPy analyzer and reflection remain
+  absent. Published Lesson 16 as a focused Monday reinforcement on array
+  boundary contracts, shared-mask invariants, incremental verification,
+  standardization output checks, and identity recovery with `argmax`. It keeps
+  `lesson_10_numpy_scores.py` as the single integrated deliverable rather than
+  advancing to 2-D arrays or creating a competing project. Added and ran an
+  independent executable mask-contract example. Next review should inspect the
+  analyzer, valid/malformed/constant-data evidence, and reflection before
+  advancing.
+
+- August 23 scheduled review: no student-authored artifact changed after the
+  August 22 review. `lesson_10_numpy_scores.py` and
+  `lesson-10-reflection.md` are still absent, while the completed
+  `lesson_10_candidate_practice.py` and the Lesson 10 teaching example both
+  compile and run successfully. Sunday is outside the active
+  Monday/Wednesday/Friday assignment cadence, so no duplicate lesson or new
+  exercise was published. Lesson 10 remains the active self-contained
+  80–90 minute assignment. Monday should first inspect for the NumPy program,
+  valid and malformed-input output, aligned-mask and zero-variance evidence,
+  and the reflection; use that evidence to decide whether to reinforce Lesson
+  10 or advance to two-dimensional arrays and axes.
+- August 22 mathematics-format update: the student reports that dense notation
+  and rendered equation blocks in assignment Markdown are unreadable. Replaced
+  Lesson 10's embedded standardization derivation with a direct Penn State STAT
+  200 z-score section, a plain-text operational rule, a small numeric check,
+  and three guiding questions. Future lessons should link one exact external
+  page or chapter and keep only concise plain-language mathematical intuition
+  in the project artifact.
+- August 22 scheduled review: no new Saturday lesson was published because the
+  active cadence assigns substantial work only on Monday, Wednesday, and
+  Friday. Verified that `lesson_10_candidate_practice.py` now fully satisfies
+  its whole-record minimum-scan contract: it rejects empty input, initializes
+  from the first record, compares `validation_mse`, returns the complete model
+  dictionary, and prints only in the main block. The current `scores.csv`
+  deliberately contains `Gam,eight` on physical row 9; the Lesson 9 pipeline
+  rejects it with `ValueError`, but the message still lacks row/value context.
+  Lesson 10 remains the active self-contained assignment. Next review should
+  inspect `lesson_10_numpy_scores.py` and the Lesson 10 reflection/output
+  evidence, while retaining contextual CSV errors as a cumulative validation
+  gap.
 - August 22 learning evidence: `lesson_10_candidate_practice.py` correctly
   rejects empty input, initializes from the first record, compares the numeric
   `validation_mse` field, and replaces the candidate with the whole model
@@ -546,22 +613,19 @@ Last updated: 2026-08-21
 
 ### Lesson 9 - From a Working Script to a Single-Pass CSV Pipeline
 
-- Status: core normal-input pipeline complete; validation/reflection evidence
-  remains cumulative
+- Status: complete, confirmed by the student on 2026-08-26
 - Date published: 2026-07-28
 - Artifact: [lesson-09-single-pass-csv-pipelines.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-single-pass-csv-pipelines.md>)
 - Executable example: [lesson-09-streaming-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-09-streaming-example.py>)
 - Evidence used: [lesson_2_csv.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_2_csv.py>)
 - Updated evidence: completed [lesson_8_csv_code.py](</Users/gamlielibn/Documents/Grad School Prep/lesson_8_csv_code.py>)
-- Current assignment: finish the existing `lesson_09_score_pipeline.py` from
-  the behavioral specification without replacing the student's design.
 - Demonstrated: `DictReader`, required-column and empty-data checks, integer
   conversion, aligned record dictionaries, mean calculation, two-pass analysis
-  of retained records, and a correct whole-record maximum scan.
-- Remaining: return a complete report value, separate formatting/presentation
-  into a third meaningful function, print every required fact, validate the
-  `0..100` range, add data-row context to row errors, save valid and malformed
-  runs, and write `lesson-09-reflection.md`.
+  of retained records, a correct whole-record maximum scan, a complete returned
+  report, and separate formatted presentation.
+- Historical note: stronger row-context validation and a reflection were once
+  requested, but they are retired as Lesson 9 completion gates after the
+  student's explicit completion confirmation.
 
 ### Lesson 14 - Designing Pipeline State Before Writing the Loop
 
@@ -593,6 +657,17 @@ Last updated: 2026-08-21
   - standardize numeric values and handle zero variance;
   - connect feature scaling to distance and optimization behavior;
   - retain CSV parsing and validation as cumulative practice.
+
+### Lesson 17 - Vectorized Transformations and Diagnostic Checks
+
+- Status: active Wednesday reinforcement of Lesson 10
+- Date published: 2026-08-26
+- Artifact: [lesson-17-vectorized-transformations-and-diagnostic-checks.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-17-vectorized-transformations-and-diagnostic-checks.md>)
+- Executable example: [lesson-17-diagnostic-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-17-diagnostic-example.py>)
+- Current assignment remains `lesson_10_numpy_scores.py`; Lesson 17 adds a
+  vectorization-and-diagnostics method, not another submission.
+- Focus: scalar broadcasting, transformation verification with `np.isclose`,
+  aligned shape contracts, preprocessing behavior, and linear-pass complexity.
 
 ### Lesson 11 - 2-D NumPy Arrays, Axes, and `argmax`
 

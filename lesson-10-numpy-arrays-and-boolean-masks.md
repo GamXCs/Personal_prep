@@ -107,9 +107,7 @@ A comparison also acts element by element:
 mask = temperatures > temperatures.mean()
 ```
 
-The mask is an array of `True` and `False` values. Indexing with it selects
-values at the `True` positions. If two aligned arrays use the same mask, their
-pairing is preserved:
+The mask is an array of `True` and `False` values. Indexing with it selects values at the `True` positions. If two aligned arrays use the same mask, their pairing is preserved:
 
 ```python
 names[mask]
@@ -123,46 +121,41 @@ Inspect array metadata whenever a result surprises you:
 - `size`: total element count;
 - `dtype`: the common stored data type.
 
-## Mathematics: standardization
+## Mathematics reading: standardization
 
-For observations \(x_1,\ldots,x_n\), define the population mean and standard
-deviation:
+Read Penn State STAT 200,
+[Section 2.2.8 — z-scores](https://online.stat.psu.edu/stat200/lesson/2/2.2/2.2.8).
+It defines a standardized score, explains the formula, and interprets the
+result as distance from the mean measured in standard-deviation units.
 
-\[
-\mu=\frac{1}{n}\sum_{i=1}^n x_i,\qquad
-\sigma=\sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2}.
-\]
+For this coding lesson, retain only this operational rule:
 
-The standardized value is:
+```text
+standardized value = (original value - mean) / population standard deviation
+```
 
-\[
-z_i=\frac{x_i-\mu}{\sigma}.
-\]
+Plain-language interpretation:
 
-For the small array \([2,4,6]\), \(\mu=4\). The squared deviations are
-\(4,0,4\), so:
+- a negative result is below the mean;
+- zero is at the mean;
+- a positive result is above the mean;
+- larger absolute values are farther from the mean relative to the dataset's
+  spread.
 
-\[
-\sigma=\sqrt{\frac{8}{3}}\approx1.633.
-\]
+Small check: for `[2, 4, 6]`, the mean is `4` and the population standard
+deviation is about `1.633`. The standardized values are approximately
+`[-1.225, 0, 1.225]`. NumPy should then report a standardized mean near `0`
+and a population standard deviation near `1`.
 
-Therefore the standardized array is approximately:
+Important edge case: if every value is equal, the standard deviation is zero.
+The division is undefined, so your program must reject that case instead of
+silently accepting `nan`.
 
-\[
-[-1.225,\ 0,\ 1.225].
-\]
+Guiding questions for the reading:
 
-Its mean is approximately zero. Its population standard deviation is
-approximately one:
-
-\[
-\frac{1}{n}\sum_i z_i
-=\frac{1}{n\sigma}\sum_i(x_i-\mu)=0.
-\]
-
-This derivation also exposes an edge case: if every value is equal, then
-\(\sigma=0\), and division by zero makes standardization undefined. Production
-code must choose an explicit behavior instead of silently accepting `nan`.
+1. What does a standardized value of `-1.5` mean in plain language?
+2. Why does subtracting the mean center the transformed values near zero?
+3. Why is standardization impossible when the standard deviation is zero?
 
 ## Machine-learning connection
 
@@ -179,24 +172,23 @@ different.
 
 Standardization does not make data “better” automatically. It changes the
 representation so that scale-sensitive algorithms do not interpret units as
-importance. In a real ML workflow, calculate \(\mu\) and \(\sigma\) from the
-training set only, then reuse them on validation and test data; otherwise
+importance. In a real ML workflow, calculate the mean and standard deviation from the training set only, then reuse them on validation and test data; otherwise
 evaluation information leaks into preprocessing.
 
 ## Algorithms and data structures: vectorized filtering
 
-For an array of \(n\) scores, `scores > scores.mean()` requires:
+For an array of `n` scores, `scores > scores.mean()` requires:
 
-1. a reduction over \(n\) values to compute the mean;
-2. a comparison of each of the \(n\) values;
-3. storage for an \(n\)-element Boolean mask.
+1. a reduction over `n` values to compute the mean;
+2. a comparison of each of the `n` values;
+3. storage for an `n`-element Boolean mask.
 
-Therefore the operation is \(O(n)\) time and \(O(n)\) additional space for the
-mask. A carefully written Python loop can also be \(O(n)\); vectorization does
+Therefore the operation is `O(n)` time and `O(n)` additional space for the
+mask. A carefully written Python loop can also be `O(n)`; vectorization does
 not change the Big-O class. It often improves constant factors because the loop
 over homogeneous numeric data runs in compiled NumPy code.
 
-**Correctness argument:** mask position \(i\) is `True` exactly when
+**Correctness argument:** mask position `i` is `True` exactly when
 `scores[i] > mean`. Applying that same mask to both `names` and `scores`
 selects exactly the above-mean records while preserving their original order
 and pairing.
@@ -298,8 +290,8 @@ be approximately `1.0`.
 2. What is returned by `scores > scores.mean()`?
 3. Why must the same mask be applied to aligned names and scores?
 4. State the standardization formula.
-5. What happens mathematically when \(\sigma=0\)?
-6. Does vectorization change this filtering problem from \(O(n)\) to \(O(1)\)?
+5. What happens mathematically when the standard deviation is zero?
+6. Does vectorization change this filtering problem from `O(n)` to `O(1)`?
 7. Why must an ML test set not determine the standardization mean?
 
 ## Quiz answers
@@ -307,9 +299,9 @@ be approximately `1.0`.
 1. Axis lengths, total elements, number of axes, and stored element type.
 2. A Boolean array with one truth value per score.
 3. It preserves the identity of each selected record.
-4. \(z=(x-\mu)/\sigma\).
+4. `standardized = (value - mean) / standard deviation`.
 5. Division by zero is undefined, so the program needs an explicit policy.
-6. No. It remains \(O(n)\), though compiled operations can reduce overhead.
+6. No. It remains `O(n)`, though compiled operations can reduce overhead.
 7. That would leak evaluation-set information into preprocessing and make the
    evaluation less honest.
 

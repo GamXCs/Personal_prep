@@ -143,7 +143,13 @@ Preferred progression:
   aggregation, debugging, and state-management challenges in new Python,
   NumPy, Pandas, and ML contexts so fluency develops through variation.
 - Add depth only after checking how the first project-based lesson lands; do not interpret willingness to try it as prior mastery.
-- The student does not want substantial mathematical instruction formatted inside the daily lesson files and has a separate book available for mathematics.
+- The student does not want substantial mathematical instruction formatted
+  inside daily lesson files and has a separate book available for mathematics.
+  On August 22, the student clarified that dense notation and rendered equation
+  blocks are unreadable in this format. Default to a specific linked book
+  section, open course page, problem set, or high-quality video. In the lesson
+  itself, include only a short plain-language interpretation, an operational
+  text formula when necessary, and two or three guiding questions.
 - On August 17, hands-on Lesson 9 work showed that the student needs more
   repetition distinguishing a list of record dictionaries from an individual
   dictionary. The next assignment should include a fresh linear scan in which

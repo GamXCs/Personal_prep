@@ -1,3 +1,6 @@
+import csv
+
+
 model_runs = [
     {"model": "linear", "validation_mse": 18.4},
     {"model": "tree", "validation_mse": 12.7},
@@ -16,25 +19,12 @@ def rerun_func(list_in):
 
     return lowest_min
 
+
+
+
+
+
+
 if __name__ == "__main__":
     print(rerun_func(model_runs))
     
-
-
-"""Write a function that returns the entire record with the smallest
-`validation_mse`.
-
-Requirements:
-
-- reject an empty list with `ValueError`;
-- do not use `min()`, `sorted()`, or `.sort()`;
-- initialize the candidate from the first record;
-- compare numeric fields but replace the candidate with the whole record;
-- return a dictionary, not only the numeric loss;
-- print the winning model and loss only in the program's main block.
-
-For the supplied records, the returned candidate must be:
-
-```python
-{"model": "tree", "validation_mse": 12.7}
-```"""
