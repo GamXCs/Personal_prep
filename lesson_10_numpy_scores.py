@@ -51,8 +51,10 @@ print(f"Ndim: {scores_arr.ndim}")
 print(f"Dtype: {scores_arr.dtype}")
 
 # compute mean and population std dev
-print(f"Mean: {scores_arr.mean()}")
-print(f"Standard deviation: {scores_arr.std()}")
+mean_val = scores_arr.mean()
+std_dev_val = scores_arr.std()
+print(f"Mean: {mean_val}")
+print(f"Standard deviation: {std_dev_val}")
 
 # print above mean names and scores in input order (mask)
 above_mean  = scores_arr > scores_arr.mean()
@@ -62,3 +64,11 @@ abv_mn_scores = scores_arr[above_mean]
 
 for name, score in zip(abv_mn_names, abv_mn_scores):
     print(f"{name}:{score}")
+# TODO: turn the output into a one line
+
+# calculate the standardized score without Py loop
+# formula: original data value - mean of orig dist / std dev of orig dist
+standardized_score = (scores_arr - mean_val) / std_dev_val
+print(standardized_score)
+print(f"Standardized mean: {standardized_score.mean()}")
+print(f"Standardized standard deviation: {standardized_score.std()}")
