@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-08-26
+Last updated: 2026-08-31
 
 ## Current module
 
@@ -23,6 +23,70 @@ Last updated: 2026-08-26
   as completed merely because they exist.
 
 ## Current status
+
+- August 31 scheduled lesson: new student work in
+  `lesson_10_numpy_scores.py` now rejects zero spread and uses `argmax` to
+  recover `Emma 98`; the valid program compiles and produces the expected
+  facts. Published Lesson 18 as Monday's focused refactoring lesson on
+  loading/analysis/presentation boundaries, structured return contracts,
+  executable shape and floating-point invariants, and reusable preprocessing.
+  It preserves the Lesson 10 analyzer rather than creating another exercise or
+  advancing to 2-D arrays. Remaining evidence is three meaningful functions,
+  explicit shape/mask and `np.isclose` checks, rejected-value context,
+  malformed/constant runs, and `lesson-10-reflection.md`.
+
+- August 30 scheduled review: no student-authored artifact changed after the
+  August 29 checkpoint. Recompiled and reran `lesson_10_numpy_scores.py` and
+  the Lesson 17 diagnostic example successfully. The analyzer still shows
+  correct aligned arrays, shared masking, and vectorized standardization, but
+  the remaining acceptance evidence is unchanged: function/presentation
+  boundaries, explicit shape and `np.isclose` checks, zero-spread rejection,
+  `argmax` identity recovery, bad-value context, malformed/constant-data runs,
+  and `lesson-10-reflection.md`. Sunday is outside the active
+  Monday/Wednesday/Friday assignment cadence, so no Lesson 18 or duplicate
+  exercise was published. Monday should review any new evidence first; if none
+  appears, keep the work focused on completing this contract rather than
+  advancing to two-dimensional arrays or Pandas.
+
+- August 29 scheduled review: no student-authored artifact changed after the
+  August 28 checkpoint. Re-ran and compiled `lesson_10_numpy_scores.py`
+  successfully on `scores_valid.csv`; its valid output still demonstrates
+  aligned one-dimensional arrays, a shared Boolean mask, and vectorized
+  standardization with mean approximately zero and population standard
+  deviation one. `lesson-10-reflection.md` remains absent, and the code still
+  lacks function/presentation boundaries, explicit shape/mask and `np.isclose`
+  diagnostics, zero-spread rejection, `argmax` identity recovery, bad-value
+  context, and saved malformed/constant-data evidence. Saturday is outside the
+  active Monday/Wednesday/Friday assignment cadence, so no Lesson 18 or
+  duplicate exercise was published. The next scheduled decision should review
+  this same evidence before advancing to two-dimensional arrays.
+
+- August 28 scheduled review: no student-authored artifact changed after the
+  August 27 review. Re-ran `lesson_10_numpy_scores.py` successfully on
+  `scores_valid.csv`; it still demonstrates correct aligned one-dimensional
+  arrays, Boolean masking, and vectorized standardization. The remaining
+  Lesson 10 criteria are unchanged: meaningful function and presentation
+  boundaries, explicit shape/mask and `np.isclose` diagnostics, zero-spread
+  rejection, `argmax` identity recovery, inclusion of the bad value in
+  conversion errors, malformed/constant-data run evidence, and
+  `lesson-10-reflection.md`. Honored the Friday catch-up rule by publishing no
+  Lesson 18 or second integrated exercise. Lesson 17 remains the self-contained
+  75–90 minute teaching and completion route for the active Lesson 10 analyzer.
+
+- August 27 scheduled review: a genuine partial Lesson 10 submission now exists
+  in `lesson_10_numpy_scores.py`. It compiles and runs successfully on
+  `scores_valid.csv`, validates headers, blank names, integer conversion, score
+  range, and empty input with physical row numbers; constructs aligned
+  one-dimensional arrays; reports the expected `(7,)` metadata, mean, and
+  population standard deviation; applies one aligned above-mean mask; and uses
+  a vectorized expression to produce standardized mean approximately zero and
+  population standard deviation exactly one. Remaining acceptance criteria are
+  function decomposition and a presentation boundary, explicit shape/mask
+  diagnostics with `np.isclose`, zero-spread rejection, `argmax` identity
+  recovery, bad-value text in conversion errors, malformed/constant-data run
+  evidence, and `lesson-10-reflection.md`. Honored Thursday's completion/support
+  role by publishing no Lesson 18 or duplicate assignment. Friday should remain
+  a focused Lesson 10 completion day rather than an advance to 2-D arrays.
 
 - August 26 student correction: Lesson 9 was already finished before beginning
   Lesson 10. Record Lesson 9 as complete and stop carrying its optional
@@ -668,6 +732,17 @@ Last updated: 2026-08-26
   vectorization-and-diagnostics method, not another submission.
 - Focus: scalar broadcasting, transformation verification with `np.isclose`,
   aligned shape contracts, preprocessing behavior, and linear-pass complexity.
+
+### Lesson 18 - From a Working NumPy Script to a Reusable Pipeline
+
+- Status: active Monday reinforcement of Lesson 10
+- Date published: 2026-08-31
+- Artifact: [lesson-18-array-pipeline-boundaries.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-18-array-pipeline-boundaries.md>)
+- Executable example: [lesson-18-boundary-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-18-boundary-example.py>)
+- Current assignment remains `lesson_10_numpy_scores.py`; Lesson 18 adds
+  function contracts and executable invariants, not another submission.
+- Focus: loading/analysis/presentation separation, structured reports, shape
+  and floating-point checks, contextual conversion errors, and pipeline reuse.
 
 ### Lesson 11 - 2-D NumPy Arrays, Axes, and `argmax`
 

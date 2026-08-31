@@ -19,16 +19,19 @@ debugging, questions, and recovery.
 
 **Current scheduling status:** Lesson 10 is the active assignment after the
 student-directed August 21 advancement. Its required whole-record minimum scan
-is complete; the main NumPy score-analysis program and reflection remain to be
-submitted. Lesson 16 is the focused August 24 reinforcement: it adds array
+is complete, and the main NumPy analyzer is now a working partial submission:
+it validates and loads the valid CSV, preserves array alignment, masks above-
+mean records, standardizes scores correctly, rejects zero spread, and recovers
+the maximum identity with `argmax`. It still needs function boundaries,
+explicit diagnostic assertions, contextual failure evidence, and the
+reflection. Lesson 16 adds array
 contracts, shared-mask invariants, incremental checks, and `argmax` identity
 recovery while retaining the same Lesson 10 deliverable.
 Lesson 9 is complete by the student's August 26 confirmation; its previously
 listed contextual-validation and reflection items are no longer active gates.
-The August 26 Wednesday review found no new submission evidence. Lesson 17 is a
-focused reinforcement on vectorized transformations and diagnostic checks; it
-continues the same Lesson 10 analyzer instead of introducing 2-D arrays or
-Pandas.
+Lesson 18 is the active Monday reinforcement on reusable function boundaries,
+structured reports, and executable invariants. It keeps the same analyzer and
+does not introduce 2-D arrays or Pandas.
 
 The current near-term emphasis is coding fluency: repeated, cumulative practice
 in core Python followed by NumPy, Pandas, and machine-learning libraries, with
@@ -79,10 +82,36 @@ one unfamiliar layer introduced at a time.
 - [lesson-16-mask-contract-example.py](lesson-16-mask-contract-example.py): executable shared-mask contract example
 - [lesson-17-vectorized-transformations-and-diagnostic-checks.md](lesson-17-vectorized-transformations-and-diagnostic-checks.md): active reinforcement on broadcasting, standardization, and diagnostic checks
 - [lesson-17-diagnostic-example.py](lesson-17-diagnostic-example.py): executable vectorization and invariant-check example
+- [lesson-18-array-pipeline-boundaries.md](lesson-18-array-pipeline-boundaries.md): active reinforcement on reusable NumPy pipeline boundaries
+- [lesson-18-boundary-example.py](lesson-18-boundary-example.py): executable structured-analysis example
 
 ## Current Status
 
-As of Wednesday, August 26, 2026:
+As of Monday, August 31, 2026:
+
+- New analyzer work now rejects zero spread and uses `argmax` to recover
+  `Emma 98`. Lesson 18 targets the remaining function-boundary, explicit
+  invariant, contextual-error, and saved-evidence requirements without adding
+  a second integrated assignment.
+
+- No student-authored artifact changed after the August 29 checkpoint. The
+  analyzer and Lesson 17 diagnostic example both compile and run successfully,
+  and no new Sunday assignment was added. Lesson 17 remains the active
+  self-contained completion route; Monday should review the same outstanding
+  Lesson 10 evidence before advancing.
+
+- No student-authored artifact changed after the August 27 review. The current
+  analyzer was rerun successfully, and Lesson 17 remains the self-contained
+  teaching and completion route for the active Lesson 10 deliverable.
+- Saturday is outside the active Monday/Wednesday/Friday assignment cadence, so
+  no Lesson 18 or second integrated exercise was added.
+
+- `lesson_10_numpy_scores.py` is a meaningful partial submission. Its valid run
+  produces the expected metadata, four aligned above-mean records, and correct
+  standardization diagnostics. Remaining work is function decomposition,
+  explicit invariant checks, zero-spread rejection, `argmax` identity recovery,
+  malformed/constant-data evidence, and `lesson-10-reflection.md`.
+- Thursday remains a completion/support day, so no Lesson 18 was added.
 
 - No new Lesson 10 submission evidence appeared. Lesson 17 continues the same
   analyzer with broadcasting, vectorized standardization, and `np.isclose`
