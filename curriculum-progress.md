@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-08-31
+Last updated: 2026-09-03
 
 ## Current module
 
@@ -23,6 +23,55 @@ Last updated: 2026-08-31
   as completed merely because they exist.
 
 ## Current status
+
+- September 3 implementation review: `lesson_11_exam_matrix.py` now contains a
+  working `load_data` function. It reads `exams.csv` with `csv.DictReader`,
+  returns five aligned names and score pairs, identifies physical row numbers,
+  and rejects the six supplied malformed fixtures for missing headers, missing
+  columns, blank names, nonnumeric scores, out-of-range scores, and empty data.
+  The program compiles and its valid output is correct. This is meaningful
+  partial Lesson 11 evidence, not completion: it still needs 2-D NumPy array
+  construction, explicit alignment and dimensionality checks, `mean(axis=0)`
+  and `mean(axis=1)`, `argmax`, a shared Boolean row mask, column-wise
+  standardization with zero-spread rejection, `np.allclose` diagnostics, an
+  analysis/presentation boundary with a structured report, rejected-value text
+  in conversion errors, and `lesson-11-reflection.md`. Thursday remains an
+  implementation/debugging day, so no new lesson was published. Continue the
+  existing Lesson 11 specification before advancing to fitted preprocessing or
+  Pandas.
+
+- September 2 student status update: Lesson 11 is now the active curriculum
+  lesson, and the student plans to begin it on Thursday, September 3. Treat
+  Lesson 19 as the cumulative publication number for the Lesson 11 topic
+  (2-D matrix axes and feature-wise scaling), not as evidence that nineteen
+  student lessons have been completed. Do not publish another lesson before
+  reviewing the student's Lesson 11 work or receiving a completion update.
+
+- September 2 scheduled lesson: the committed Lesson 10 analyzer demonstrates
+  enough mastery to advance: it has meaningful loading, analysis, and
+  presentation functions; returns a structured report; preserves aligned
+  masking; vectorizes standardization; rejects zero spread; and uses `argmax`
+  to recover `Emma 98`. Published Lesson 19 on 2-D matrix axes and
+  feature-wise scaling. Its `lesson_11_exam_matrix.py` exercise carries the
+  remaining explicit shape, Boolean-mask, contextual-error, and floating-point
+  diagnostics into the new matrix setting. The next review should inspect the
+  matrix program, valid and malformed runs, axis output shapes, column-scaling
+  checks, and `lesson-11-reflection.md` before advancing to fitted train/test
+  preprocessing.
+
+- September 1 scheduled review: meaningful refactoring evidence now exists in
+  `lesson_10_numpy_scores.py`. The program has separate loading, analysis, and
+  presentation functions; analysis returns a structured dictionary without
+  printing; presentation uses that report; and the valid run still produces
+  all expected results, including `Emma 98`. Independent temporary fixtures
+  confirm that malformed integer input and constant scores are rejected. The
+  malformed error identifies physical row 2 but does not yet include the
+  rejected text. Explicit aligned-shape, Boolean-mask-dtype, and `np.isclose`
+  checks are also still absent, as is `lesson-10-reflection.md` with saved run,
+  reading, and quiz evidence. Honored Tuesday's implementation/debugging role
+  by publishing no new lesson; Lesson 18 remains the active completion path.
+  Wednesday should review these final contract items before deciding whether
+  to advance to two-dimensional arrays.
 
 - August 31 scheduled lesson: new student work in
   `lesson_10_numpy_scores.py` now rejects zero spread and uses `argmax` to

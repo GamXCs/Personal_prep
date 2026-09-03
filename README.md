@@ -17,21 +17,27 @@ The current pacing is three substantial assignments per week—Monday,
 Wednesday, and Friday—with Tuesday and Thursday reserved for completion,
 debugging, questions, and recovery.
 
-**Current scheduling status:** Lesson 10 is the active assignment after the
-student-directed August 21 advancement. Its required whole-record minimum scan
+**Current scheduling status:** Lesson 11 is the active curriculum lesson, and
+the student began its CSV-loading stage on Thursday, September 3. Its published artifact
+uses cumulative file number 19, but the student's course position is Lesson 11.
+Its required whole-record minimum scan
 is complete, and the main NumPy analyzer is now a working partial submission:
 it validates and loads the valid CSV, preserves array alignment, masks above-
 mean records, standardizes scores correctly, rejects zero spread, and recovers
-the maximum identity with `argmax`. It still needs function boundaries,
-explicit diagnostic assertions, contextual failure evidence, and the
-reflection. Lesson 16 adds array
+the maximum identity with `argmax`. It now also has separate loading, analysis,
+and presentation boundaries with a structured returned report. It still needs
+explicit shape/mask and `np.isclose` checks, the rejected value in conversion
+errors, and the reflection. Lesson 16 adds array
 contracts, shared-mask invariants, incremental checks, and `argmax` identity
 recovery while retaining the same Lesson 10 deliverable.
 Lesson 9 is complete by the student's August 26 confirmation; its previously
 listed contextual-validation and reflection items are no longer active gates.
-Lesson 18 is the active Monday reinforcement on reusable function boundaries,
-structured reports, and executable invariants. It keeps the same analyzer and
-does not introduce 2-D arrays or Pandas.
+Lesson 19 advances to 2-D matrix axes and feature-wise scaling while carrying
+forward explicit shape, mask, contextual-error, and floating-point contracts.
+Its integrated deliverable is `lesson_11_exam_matrix.py`. The loader now works
+on the valid file and all six focused malformed fixtures; the NumPy analysis,
+axis reductions, shared mask, feature scaling, report boundary, and reflection
+remain to be completed.
 
 The current near-term emphasis is coding fluency: repeated, cumulative practice
 in core Python followed by NumPy, Pandas, and machine-learning libraries, with
@@ -84,8 +90,40 @@ one unfamiliar layer introduced at a time.
 - [lesson-17-diagnostic-example.py](lesson-17-diagnostic-example.py): executable vectorization and invariant-check example
 - [lesson-18-array-pipeline-boundaries.md](lesson-18-array-pipeline-boundaries.md): active reinforcement on reusable NumPy pipeline boundaries
 - [lesson-18-boundary-example.py](lesson-18-boundary-example.py): executable structured-analysis example
+- [lesson-19-matrix-axes-and-feature-scaling.md](lesson-19-matrix-axes-and-feature-scaling.md): active lesson on 2-D axes and feature-wise scaling
+- [lesson-19-axis-contract-example.py](lesson-19-axis-contract-example.py): executable axis and matrix-contract example
 
 ## Current Status
+
+As of Thursday, September 3, 2026:
+
+- `lesson_11_exam_matrix.py` now has a working CSV loader with physical-row
+  validation. Its valid run returns all five aligned records, and each supplied
+  malformed fixture reaches its intended validation check. No new lesson was
+  added on this completion day. Finish the existing Lesson 11 matrix-analysis
+  requirements and `lesson-11-reflection.md` before advancing.
+
+As of Wednesday, September 2, 2026:
+
+- The student confirmed that Lesson 11 is current and will begin it on
+  September 3. Do not publish another lesson until that work is reviewed or the
+  student reports completion. The Lesson 19 filename is only the cumulative
+  publication number for the Lesson 11 matrix topic.
+
+- Lesson 10's committed implementation is sufficient to advance. Lesson 19 is
+  now active, with a new 2-D exam-matrix exercise that requires explicit axis,
+  alignment, mask, and column-standardization contracts. The next evidence is
+  `lesson_11_exam_matrix.py`, valid and malformed output, and
+  `lesson-11-reflection.md`.
+
+As of Tuesday, September 1, 2026:
+
+- The Lesson 10 analyzer now satisfies Lesson 18's three-boundary refactoring
+  requirement and preserves all valid-output facts. Temporary malformed and
+  constant-score checks both fail as intended. Tuesday remains a completion
+  day: add the explicit array/mask and floating-point checks, include rejected
+  score text in conversion errors, and save `lesson-10-reflection.md`; no new
+  assignment was added.
 
 As of Monday, August 31, 2026:
 
