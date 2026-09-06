@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-09-03
+Last updated: 2026-09-05
 
 ## Current module
 
@@ -23,6 +23,31 @@ Last updated: 2026-09-03
   as completed merely because they exist.
 
 ## Current status
+
+- September 5 scheduled review: no student-authored artifact changed after the
+  September 4 review. Recompiled and reran `lesson_11_exam_matrix.py`; it still
+  produces shapes `(5,)` and `(5, 2)`, followed by name count `5`, score axis-1
+  size `2`, and `None`. This confirms that the immediate correction remains
+  using score axis `0` for the row-alignment contract and returning analysis
+  data instead of printing it. All six malformed loader fixtures still reach
+  their intended checks. Saturday is outside the Monday/Wednesday/Friday
+  assignment cadence, so no new lesson or duplicate exercise was published.
+  Lesson 11 remains active; finish the existing matrix-analysis requirements
+  and reflection before advancing.
+
+- September 4 Friday review: `lesson_11_exam_matrix.py` now includes a new
+  `analyze_data` function that converts the loaded records into aligned NumPy
+  arrays. The valid run shows the correct shapes, `(5,)` for names and `(5, 2)`
+  for scores, and all six malformed CSV fixtures still reach their intended
+  loader checks. The current row-count comparison is not yet correct:
+  `np.size(scores_array, axis=1)` returns the two exam columns, while the score
+  row count is axis `0` and must equal `len(names_array)`. The function also
+  prints internally and therefore returns `None`; a later presentation function
+  should consume a structured analysis result. Friday is being used for
+  catch-up, so no new lesson was published. Next, finish the explicit 2-D and
+  alignment contracts, then add both axis means, `argmax`, the shared row mask,
+  column standardization, and `np.allclose` diagnostics before writing the
+  reflection or advancing.
 
 - September 3 implementation review: `lesson_11_exam_matrix.py` now contains a
   working `load_data` function. It reads `exams.csv` with `csv.DictReader`,

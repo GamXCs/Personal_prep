@@ -18,7 +18,12 @@ Wednesday, and Friday—with Tuesday and Thursday reserved for completion,
 debugging, questions, and recovery.
 
 **Current scheduling status:** Lesson 11 is the active curriculum lesson, and
-the student began its CSV-loading stage on Thursday, September 3. Its published artifact
+the student began its CSV-loading stage on Thursday, September 3. On Friday,
+September 4, the student added the first NumPy analysis step and correctly
+produced name shape `(5,)` and score shape `(5, 2)`. The current use of score
+axis `1` counts the two exam columns rather than the five student rows; finish
+the axis/alignment contracts and remaining matrix analysis before advancing.
+Its published artifact
 uses cumulative file number 19, but the student's course position is Lesson 11.
 Its required whole-record minimum scan
 is complete, and the main NumPy analyzer is now a working partial submission:
@@ -94,6 +99,26 @@ one unfamiliar layer introduced at a time.
 - [lesson-19-axis-contract-example.py](lesson-19-axis-contract-example.py): executable axis and matrix-contract example
 
 ## Current Status
+
+As of Saturday, September 5, 2026:
+
+- No student-authored artifact changed after Friday's review. The Lesson 11
+  program still compiles and runs, and all six malformed loader fixtures still
+  reach their intended checks. Its next coding checkpoint is unchanged: use
+  score axis `0` for row alignment, then return a structured analysis result
+  before adding the remaining reductions, mask, scaling, and diagnostics.
+  Saturday is outside the active lesson cadence, so no new assignment was
+  added.
+
+As of Friday, September 4, 2026:
+
+- `lesson_11_exam_matrix.py` now converts the valid loader output into aligned
+  NumPy arrays with the correct visible shapes. The next correction is to
+  compare the name count with score axis `0`, not axis `1`; the latter is the
+  feature count. The loader still rejects all six malformed fixtures. Friday
+  remains catch-up, so no new lesson was added. Continue with both axis means,
+  `argmax`, a shared row mask, column-wise standardization, explicit diagnostics,
+  a structured returned report, and the reflection.
 
 As of Thursday, September 3, 2026:
 
