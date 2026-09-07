@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-09-05
+Last updated: 2026-09-06
 
 ## Current module
 
@@ -23,6 +23,21 @@ Last updated: 2026-09-05
   as completed merely because they exist.
 
 ## Current status
+
+- September 6 scheduled review: new work in `lesson_11_exam_matrix.py` now
+  correctly computes both exam means with `axis=0`, student means with
+  `axis=1`, the top student (`Sarah`, `97.0`), and the aligned qualifying names
+  (`Alice`, `Sarah`, and `Emma`). The valid run currently stops during
+  standardization: both spreads and means use `axis=1`, producing one value per
+  student, and `if exam1_std_dev == 0` compares an array in a scalar condition.
+  Feature-wise scaling needs one mean and spread per exam column (`axis=0`), a
+  zero-spread check before division, and one broadcasted standardized matrix.
+  Still required are explicit shape/Boolean/`np.allclose` checks, applying the
+  shared row mask to score rows as well as names, a structured analysis return
+  consumed by `format_output`, rejected-value context, saved edge-case output,
+  and `lesson-11-reflection.md`. All six malformed loader fixtures still reach
+  their intended checks. Sunday is outside the Monday/Wednesday/Friday cadence,
+  so no competing lesson was published; Lesson 11 remains active.
 
 - September 5 scheduled review: no student-authored artifact changed after the
   September 4 review. Recompiled and reran `lesson_11_exam_matrix.py`; it still

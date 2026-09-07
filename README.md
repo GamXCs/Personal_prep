@@ -17,12 +17,15 @@ The current pacing is three substantial assignments per week—Monday,
 Wednesday, and Friday—with Tuesday and Thursday reserved for completion,
 debugging, questions, and recovery.
 
-**Current scheduling status:** Lesson 11 is the active curriculum lesson, and
-the student began its CSV-loading stage on Thursday, September 3. On Friday,
-September 4, the student added the first NumPy analysis step and correctly
-produced name shape `(5,)` and score shape `(5, 2)`. The current use of score
-axis `1` counts the two exam columns rather than the five student rows; finish
-the axis/alignment contracts and remaining matrix analysis before advancing.
+**Current scheduling status:** Lesson 11 is the active curriculum lesson. The
+loader passes all six focused malformed fixtures, and the analysis now computes
+the correct exam means, student means, top student, and qualifying identities.
+The valid run currently stops in feature standardization because row-wise
+statistics (`axis=1`) produce arrays that are then used in a scalar `if`.
+Compute one mean and spread per exam column (`axis=0`), reject any zero-spread
+column before division, and broadcast once across the full matrix. Then finish
+the explicit contracts, structured return/presentation boundary, edge-case
+evidence, and reflection before advancing.
 Its published artifact
 uses cumulative file number 19, but the student's course position is Lesson 11.
 Its required whole-record minimum scan
