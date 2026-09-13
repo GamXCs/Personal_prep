@@ -64,10 +64,9 @@ Select exactly one of these paths:
 
 Choose whichever path best matches the student's demonstrated progress.
 
-Publish new assignments only on Monday, Wednesday, or Friday. Tuesday and
-Thursday scheduled runs may inspect progress, review submitted work, or update
-records, but must not create a new assignment. Monday plans should outline at
-most three substantial assignments and preserve the intervening work days.
+The automation runs only Monday, Wednesday, and Friday. Use the day-specific
+role below. Never create parallel assignments when the active work is
+unfinished.
 
 Lesson generation
 
@@ -121,13 +120,26 @@ Think in modules rather than isolated lessons.
 
 Prefer weekly learning sprints with weekday milestones rather than disconnected day-by-day topics.
 
-When the project state permits, use this weekly pattern:
+Use this weekly pattern:
 
-- Monday: first substantial assignment and optional weekly plan
-- Tuesday: completion, questions, debugging, or recovery; no new assignment
-- Wednesday: second substantial assignment if progress supports it
-- Thursday: completion, questions, debugging, or recovery; no new assignment
-- Friday: third substantial assignment if progress supports it, otherwise catch-up
+- Monday: teach one focused concept in 60–90 minutes.
+- Wednesday: provide 60–90 minutes of independent practice, debugging, and
+  review after inspecting Monday's work.
+- Friday: apply the week's skills to the ongoing project in 90–120 minutes. If
+  the prerequisite work is incomplete, support the same project milestone.
+
+Integrate pandas into the sessions in small increments and connect assignments
+to the student's AI and database classes. Follow this ordered path:
+Python/NumPy/pandas/SQL; statistics and classical ML; APIs/Docker/AWS; deep
+learning; evaluated AI applications; specialization and portfolio.
+
+Maintain one monthly objective. Weeks 1–3 build toward it; every fourth week is
+an independent checkpoint with limited scaffolding and no new major concept.
+Review the checkpoint before setting the next monthly objective.
+
+The canonical active lesson comes from `curriculum-progress.md` and submitted
+code, not the highest-numbered lesson file. Lessons 16–18 are historical Lesson
+10 reinforcement records, and Lesson 19 is companion material for Lesson 11.
 
 For this project, treat Monday, July 20, 2026 as the official start of Week 1 unless later project artifacts override that decision.
 The standing maximum is three assignments per week. Increase it only when the

@@ -131,24 +131,27 @@ Each lesson must be coherent and centered on one main theme. Every lesson must i
 
 ## Curriculum priorities
 
-Use these as the long-term curriculum spine, revisiting earlier topics whenever reinforcement is needed:
+Use this ordered long-term path, revisiting earlier topics whenever evidence
+shows reinforcement is needed:
 
-- Python for data science
-- NumPy
-- Pandas
-- data cleaning and exploratory analysis
-- probability and statistics
-- linear algebra
-- calculus and optimization
-- algorithms and complexity
-- supervised learning
-- unsupervised learning
-- model evaluation
-- feature engineering
-- neural-network foundations
-- reproducible technical projects
-- reading technical documentation
-- reading research papers
+1. Python, NumPy, pandas, and SQL.
+2. Statistics and classical machine learning.
+3. APIs, Docker, and AWS.
+4. Deep learning.
+5. Evaluated AI applications, including explicit evaluation datasets, metrics,
+   baselines, failure analysis, and reproducibility.
+6. Specialization and portfolio development.
+
+Connect exercises to the student's current AI and database classes whenever a
+natural connection exists. Examples include feature matrices and evaluation in
+AI, and schemas, joins, aggregation, validation, and query planning in database
+work. Do not force a class connection that distracts from the focused concept.
+
+Pandas is part of the current foundation rather than a future isolated unit.
+Integrate it into weekly work in small, purposeful increments while retaining
+NumPy and core-Python reasoning: inspect/load tabular data, validate schema and
+dtypes, filter rows, aggregate, join, and compare a pandas operation with its
+underlying array or SQL interpretation.
 
 ## Current coding-practice emphasis
 
@@ -194,22 +197,41 @@ Each week should revolve around one coherent topic or tightly related cluster of
 Default weekly rhythm during the school term:
 
 - Monday:
-  publish the weekly plan when appropriate and assign the first substantial
-  coding lesson
-- Tuesday:
-  no new assignment; allow completion, questions, debugging, and review
+  teach one focused concept in a 60–90 minute session. Introduce only the
+  minimum new material needed for the week's work and include an executable
+  example.
 - Wednesday:
-  assign the second substantial coding lesson only after reviewing available
-  evidence from Monday
-- Thursday:
-  no new assignment; allow completion, questions, debugging, and review
+  provide 60–90 minutes of independent practice, debugging, and retrieval
+  review based on Monday's submitted work. Review evidence before deciding
+  whether to deepen the concept or support unfinished work.
 - Friday:
-  assign the third substantial coding lesson only when progress supports it;
-  otherwise use Friday for catch-up without adding workload
+  spend 90–120 minutes applying the week's skills to one ongoing project. If
+  earlier work is unfinished, Friday supports and extends that same work rather
+  than creating another project or backlog item.
+
+Do not schedule routine curriculum runs on Tuesday, Thursday, Saturday, or
+Sunday. Those days remain available for student-led work and questions.
 
 Do not force this structure when the student's submitted work shows a need for extra review, remediation, or schedule recovery.
 Never exceed three new assignments per week. Increase frequency only after an
 explicit student request or strong sustained completion evidence.
+
+## Monthly objectives and independent checkpoints
+
+- At the beginning of each four-week cycle, record one concrete monthly
+  objective, its prerequisite skills, a tangible artifact, and observable
+  completion evidence in `curriculum-progress.md`.
+- Weeks 1–3 use the Monday/Wednesday/Friday rhythm to build toward that
+  objective through the same cumulative project.
+- Every fourth week is an independent checkpoint. Do not introduce a new major
+  concept that week. Ask the student to plan, implement, test, explain, and
+  reflect with limited scaffolding, using a fresh dataset or problem connected
+  to AI or databases.
+- Review the checkpoint artifact before beginning the next cycle. Use the
+  result to mark skills as demonstrated, developing, or needing support and to
+  set the next monthly objective.
+- A missed checkpoint becomes the next support target; it must not create a
+  parallel backlog.
 
 For this project, the official Week 1 start date is Monday, July 20, 2026. Treat the preceding Thursday-Friday period as setup and transition time unless the project artifacts later record a different decision.
 
@@ -222,6 +244,12 @@ For this project, the official Week 1 start date is Monday, July 20, 2026. Treat
 - Identify misconceptions explicitly when evidence shows them.
 - Periodically schedule cumulative review.
 - Every major module should end with a substantial project or assessment.
+- Unfinished assignments receive debugging, narrower practice, or a revised
+  milestone. Never publish a new numbered student lesson merely because a
+  scheduled day arrived.
+- Separate publication filenames from student progress. Reinforcement files
+  may retain historical numbers, but the canonical active lesson is the lesson
+  named in `curriculum-progress.md` and evidenced by the student's code.
 
 ## Project maintenance
 

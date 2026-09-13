@@ -1,5 +1,9 @@
 # Lesson 17 — Vectorized Transformations and Diagnostic Checks
 
+> **Historical support record:** This was a reinforcement publication for
+> student Lesson 10. It is not the active student lesson and does not represent
+> advancement beyond Lesson 11.
+
 **Module:** Week 2 — From core Python pipelines to NumPy  
 **Estimated time:** 70–85 minutes  
 **Difficulty:** Introductory NumPy, intermediate debugging

@@ -1,28 +1,112 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-09-06
+Last updated: 2026-09-11
 
 ## Current module
 
-- Week 2 - Regression workflow and honest evaluation
+- Foundation path — Python, NumPy, pandas, and SQL
 
 ## Schedule policy
 
-- As of August 12, 2026, the active cadence is three substantial assignments per
-  week: Monday, Wednesday, and Friday.
-- Tuesday and Thursday are reserved for implementation, debugging, review, and
-  recovery. Scheduled runs on those days must not publish new assignments.
-- Assignments may be more robust to support deeper coding practice, but Friday
-  should become catch-up when the earlier work is incomplete.
-- Increase frequency only after explicit student feedback or sustained evidence
-  that the current cadence is comfortably manageable.
-- Historical note: the August 2 finals-week hold ended on August 11 when the
-  student explicitly requested Lesson 9. The July 24 four-day cadence is also
-  superseded by the active three-assignment schedule above.
-- Later prepublished lessons remain reference material and should not be treated
-  as completed merely because they exist.
+- Monday: one focused concept, 60–90 minutes.
+- Wednesday: independent practice, debugging, and review, 60–90 minutes.
+- Friday: application to the ongoing project, 90–120 minutes.
+- Each session should integrate pandas where it genuinely supports the same
+  concept, while preserving core Python/NumPy understanding.
+- Advance only after reviewing completed work. Unfinished work receives support
+  and a narrower milestone, not another assignment.
+- Use one monthly objective across a four-week cycle. Every fourth week is an
+  independent checkpoint with limited scaffolding and no new major concept.
+- Routine automation runs occur only Monday, Wednesday, and Friday. There are
+  no overlapping project automations as of the September 7 reconciliation.
+
+## Canonical lesson state
+
+- **Active student lesson: Lesson 11 — 2-D arrays, axes, masks, and
+  feature-wise scaling.**
+- `lesson_11_exam_matrix.py` is the active submission. Historical files named
+  Lessons 16–18 are reinforcement publications for Lesson 10, not evidence of
+  separate completed student lessons. Lesson 19 is a companion publication for
+  the Lesson 11 topic, not a later course position.
+- Preserve those files as historical support material, but do not use their
+  publication numbers to advance or calculate student progress.
+- Next advancement decision occurs only after Lesson 11's remaining evidence is
+  reviewed.
+- Current code-review note: `rows_abv_85` is computed correctly, but the
+  returned `"qualifying score rows"` field currently stores
+  `student_score_abv_85` (filtered means) instead of the filtered 2-D rows.
+  Correct this report contract while implementing `format_output`.
+
+## Current monthly objective — September 2026
+
+Build a reliable tabular-analysis pipeline that expresses the same dataset in
+NumPy, pandas, and SQL-style operations, then connects the resulting feature
+table to an AI-class evaluation question.
+
+Cycle dates: Weeks 1–3 begin September 7, 14, and 21. The week beginning
+September 28 is the independent checkpoint week.
+
+Completion evidence:
+
+- finish and review the Lesson 11 NumPy matrix pipeline;
+- load and validate the same exam data with pandas;
+- reproduce filtering and aggregation with pandas and SQL;
+- explain rows, features, labels, grouping, and leakage in AI/database terms;
+- complete an independent fourth-week mini-project with a fresh dataset and a
+  short reflection comparing the three representations.
 
 ## Current status
+
+- September 11 Friday review: `lesson_11_exam_matrix.py` and its active
+  completion evidence are unchanged since the September 9 review;
+  `lesson-11-reflection.md` is still absent. The valid program compiles and
+  runs, all six malformed fixtures are rejected, and an independent
+  constant-column case still reaches the intended zero-spread guard. The new
+  `insertion_sort.c` file is separate algorithms-course practice and is not
+  evidence for advancing the active data curriculum. No new numbered lesson or
+  parallel pandas assignment was created. Today's 90–120 minute ongoing-project
+  application is to finish the existing Lesson 11 deliverable: (1) return the
+  already-computed `rows_abv_85` under `"qualifying score rows"`; (2) implement
+  `format_output(records)` as presentation only and call it from `main`; (3)
+  include the rejected Exam1 or Exam2 text in integer-conversion errors; and
+  (4) create `lesson-11-reflection.md` with valid, malformed, and
+  constant-column run evidence plus the reading and retrieval responses from
+  the Lesson 19 companion. Suggested allocation: 15 minutes retrieval and
+  output-contract tracing, 45–60 minutes implementation/debugging, 20 minutes
+  edge-case runs, and 15–25 minutes reflection. Review this evidence before
+  advancing to pandas.
+
+- September 9 Wednesday review: no student-authored artifact changed after the
+  September 7 review, so Lesson 11 remains active and no new numbered lesson or
+  pandas assignment was published. Recompiled and reran
+  `lesson_11_exam_matrix.py`: the valid data still produces the required matrix
+  shape, axis reductions, top student, aligned mask, and standardized-column
+  diagnostics. All six malformed fixtures are rejected at their intended
+  boundaries, and an independent constant-column check confirms the pre-scaling
+  zero-spread rejection. Today's 60–90 minute independent milestone is to (1)
+  return `rows_abv_85` under `"qualifying score rows"`, (2) implement and call
+  `format_output(records)` without recomputing analysis, (3) include the
+  rejected Exam1 or Exam2 text in conversion errors, and (4) create
+  `lesson-11-reflection.md` containing one valid run, one malformed run, one
+  constant-column run, brief reading answers, and quiz answers. Retrieval check:
+  explain why `axis=0` produces exam statistics, why one Boolean mask must index
+  both names and score rows, and why scaler parameters must come from training
+  data. Review that evidence before advancing to pandas.
+
+- September 7 scheduled review: the latest committed Lesson 11 work closes the
+  matrix-analysis blocker. `lesson_11_exam_matrix.py` now compiles and completes
+  its valid run; it uses column means and population standard deviations
+  (`axis=0`), rejects any zero-spread column before division, broadcasts across
+  the full matrix, and verifies standardized column means and spreads with
+  `np.allclose`. It also enforces the 2-D, name/row alignment, Boolean-mask, and
+  mask-shape contracts, and applies the mask to both identities and score rows.
+  All six malformed loader fixtures still reach their intended checks. The
+  remaining completion items are narrow: implement `format_output(records)` and
+  call it from `main`, include the rejected score text in conversion errors,
+  save valid/malformed/constant-column evidence, and add
+  `lesson-11-reflection.md`. Sunday is outside the Monday/Wednesday/Friday
+  assignment cadence, so no competing lesson was published and Lesson 11
+  remains active.
 
 - September 6 scheduled review: new work in `lesson_11_exam_matrix.py` now
   correctly computes both exam means with `axis=0`, student means with

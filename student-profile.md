@@ -189,12 +189,15 @@ The curriculum should include:
 
 Current scheduling preference:
 
-- As of August 12, 2026, assign at most three substantial lessons per week:
-  Monday, Wednesday, and Friday.
-- Tuesday and Thursday are completion, debugging, review, or recovery days. Do
-  not publish a new assignment on those days.
-- Robust assignments are welcome, but each should allow the intervening day for
-  implementation and questions.
+- Monday: one focused-concept session, 60–90 minutes.
+- Wednesday: independent practice, debugging, and review, 60–90 minutes.
+- Friday: apply the week's skills to an ongoing project, 90–120 minutes.
+- Integrate pandas into these sessions while preserving core Python and NumPy
+  reasoning; connect work to current AI and database classes when useful.
+- Use monthly objectives and make every fourth week an independent checkpoint.
+- Do not schedule routine curriculum runs on the other days.
+- Review completed work before advancing. If the active assignment is
+  unfinished, support that assignment instead of adding backlog.
 - Increase assignment frequency only after the student explicitly requests it
   or sustained completion evidence shows the current pace is comfortably
   manageable.
@@ -215,9 +218,15 @@ Current scheduling preference:
 
 ## Current project state assumptions
 
-- Lesson 1 has now been officially published in this project.
-- There is not yet verified completion evidence for Lesson 1 in the project files.
-- Until such evidence exists, future runs should reinforce or continue Lesson 1 rather than assume advancement.
+- Lesson 11 is the canonical active lesson as of September 7, 2026.
+- The active submission is `lesson_11_exam_matrix.py`; inspect it before every
+  advancement decision.
+- Lessons 16–18 are historical reinforcement publications attached to Lesson
+  10. Lesson 19 is companion material for Lesson 11. Their filenames do not
+  indicate the student's completed-lesson count.
+- Lesson 11's NumPy analysis is substantially complete, but presentation,
+  rejected-value context, saved edge-case evidence, and reflection remain to
+  be reviewed before advancement.
 
 ## How the scheduler should use this file
 

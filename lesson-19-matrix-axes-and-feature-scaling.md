@@ -1,5 +1,9 @@
 # Lesson 19 — Matrix Axes and Feature-Wise Scaling
 
+> **Lesson 11 companion record:** The publication filename is cumulative, but
+> this material supports the active student Lesson 11. It is not evidence that
+> the student has completed nineteen lessons.
+
 **Module:** Week 2 — Regression workflow and honest evaluation  
 **Estimated time:** 75–90 minutes  
 **Difficulty:** Introductory/intermediate NumPy
@@ -221,4 +225,3 @@ Your program must:
 - 38–70 minutes: implement loading, analysis, and presentation checkpoints.
 - 70–80 minutes: run valid and malformed fixtures; inspect contracts.
 - 80–90 minutes: answer the quiz and save `lesson-11-reflection.md`.
-

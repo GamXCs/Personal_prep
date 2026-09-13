@@ -1,5 +1,9 @@
 # Lesson 16 — Array Contracts and Mask Invariants
 
+> **Historical support record:** This was a reinforcement publication for
+> student Lesson 10. It is not the active student lesson and does not represent
+> advancement beyond Lesson 11.
+
 **Module:** Week 2 — From core Python pipelines to NumPy  
 **Estimated time:** 75–90 minutes  
 **Difficulty:** Introductory NumPy, intermediate program design
@@ -199,4 +203,3 @@ use a supplied starter or supplied tests.
 Save `lesson_10_numpy_scores.py`, a valid terminal run, and
 `lesson-10-reflection.md` containing one malformed run, one zero-spread run,
 answers to the reading questions, quiz attempts, and a workload rating.
-

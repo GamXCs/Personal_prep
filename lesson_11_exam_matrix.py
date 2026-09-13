@@ -133,15 +133,28 @@ def analyze_data(names, scores):
             "top student": (top_student_name,top_student_score),
             "student at least 85": students_abv_85,
             "qualifying score rows":student_score_abv_85,
-            "standardized scores":exam_standardized_exam_scores
+            "standardized scores":exam_standardized_exam_scores,
+            "standardized column means":standardized_mean,
+            "standardized column std dev":standardized_std,
     }
 
 
 def format_output(records):
-    pass
+    print(f"Shape: {records['matrix_shape']}")
+    print(f"Dimensions: {records['dimensions']}")
+    print(f"Dtype: {records['data type']}\n")
+    print(f"Exam means: {records['exam mean scores']}")
+    print(f"Student means: {records['student mean scores']}\n")
+    top_name, top_mean = records["top student"]
+    print(f"Top student: {top_name} {top_mean}")
+    print(f"At least 85: {', '.join(records['student at least 85'])}\n")
+    print(f"Standardized column means: approximately {records['standardized column means']}")
+    print(f"Standardized column standard deviations: approximately {records['standardized column std dev']}")
+    print(f"Column-Standardized matrix:\n {records['standardized scores']}")
 
 if __name__ == "__main__":
     filename = "exams.csv"    
-    names, scores = load_data(filename)    
-    # print(load_data(filename=filename))
-    print(analyze_data(names, scores))
+    names, scores = load_data(filename)  
+    records = analyze_data(names, scores)  
+    # print(analyze_data(names, scores))
+    format_output(records)

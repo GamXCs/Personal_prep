@@ -13,21 +13,28 @@ This repository is a long-term study curriculum designed to prepare for graduate
 
 The project emphasizes cumulative learning rather than isolated practice. Each lesson is meant to connect programming, mathematical reasoning, algorithmic thinking, and machine-learning theory.
 
-The current pacing is three substantial assignments per week—Monday,
-Wednesday, and Friday—with Tuesday and Thursday reserved for completion,
-debugging, questions, and recovery.
+The current rhythm is Monday focused learning (60–90 minutes), Wednesday
+independent practice/debugging/review (60–90 minutes), and Friday application
+to the ongoing project (90–120 minutes). Work is organized around monthly
+objectives, with every fourth week used as an independent checkpoint.
 
 **Current scheduling status:** Lesson 11 is the active curriculum lesson. The
 loader passes all six focused malformed fixtures, and the analysis now computes
 the correct exam means, student means, top student, and qualifying identities.
-The valid run currently stops in feature standardization because row-wise
-statistics (`axis=1`) produce arrays that are then used in a scalar `if`.
-Compute one mean and spread per exam column (`axis=0`), reject any zero-spread
-column before division, and broadcast once across the full matrix. Then finish
-the explicit contracts, structured return/presentation boundary, edge-case
-evidence, and reflection before advancing.
+The matrix analysis now also standardizes each exam column correctly, rejects
+zero-spread columns before division, applies the shared mask to score rows, and
+checks its shape, Boolean, and floating-point invariants. Finish
+`format_output(records)`, route the returned report through it, include rejected
+score text in conversion errors, and save the edge-case/reflection evidence
+before advancing.
+The current report also computes the filtered 2-D score rows but returns the
+filtered student means under the `"qualifying score rows"` key; that contract
+should be corrected during the formatting step.
 Its published artifact
 uses cumulative file number 19, but the student's course position is Lesson 11.
+Historical Lessons 16–18 are Lesson 10 reinforcement records, not separate
+student advancement. Lesson 19 is Lesson 11 companion material. The curriculum
+tracker, not the largest filename, is the canonical course position.
 Its required whole-record minimum scan
 is complete, and the main NumPy analyzer is now a working partial submission:
 it validates and loads the valid CSV, preserves array alignment, masks above-
@@ -47,9 +54,11 @@ on the valid file and all six focused malformed fixtures; the NumPy analysis,
 axis reductions, shared mask, feature scaling, report boundary, and reflection
 remain to be completed.
 
-The current near-term emphasis is coding fluency: repeated, cumulative practice
-in core Python followed by NumPy, Pandas, and machine-learning libraries, with
-one unfamiliar layer introduced at a time.
+The curriculum path is Python/NumPy/pandas/SQL, then statistics and classical
+ML, APIs/Docker/AWS, deep learning, evaluated AI applications, and finally
+specialization plus portfolio development. Current assignments connect to AI
+and database coursework through feature matrices, evaluation, schemas,
+aggregation, and SQL-style data reasoning.
 
 ## How The Curriculum Works
 
@@ -102,6 +111,39 @@ one unfamiliar layer introduced at a time.
 - [lesson-19-axis-contract-example.py](lesson-19-axis-contract-example.py): executable axis and matrix-contract example
 
 ## Current Status
+
+As of Friday, September 11, 2026:
+
+- Lesson 11 remains active because its code and completion evidence have not
+  changed since Wednesday, and `lesson-11-reflection.md` is still absent. The
+  valid and edge-case runs continue to confirm that the core NumPy analysis is
+  sound. Friday's 90–120 minute project session is a bounded finish: correct
+  the qualifying-row report value, implement and call `format_output`, add the
+  rejected score text to conversion errors, and save valid, malformed, and
+  constant-column evidence plus the assigned reading and retrieval responses.
+  The new `insertion_sort.c` file is preserved as separate coursework and does
+  not change the active data-curriculum lesson. No new lesson or pandas backlog
+  was added.
+
+As of Wednesday, September 9, 2026:
+
+- No student-authored files changed after the September 7 review. Lesson 11
+  remains active; no new lesson or pandas assignment was added. The valid run,
+  six malformed fixtures, and an independent constant-column check still
+  confirm the completed NumPy analysis and validation behavior. Wednesday's
+  bounded completion milestone is to correct the qualifying-row report field,
+  implement and call `format_output`, add rejected score text to conversion
+  errors, and save valid/malformed/constant evidence plus retrieval answers in
+  `lesson-11-reflection.md`.
+
+As of Sunday, September 7, 2026:
+
+- The committed Lesson 11 analysis now completes successfully with correct
+  feature-wise standardization and explicit matrix, alignment, mask, and
+  `np.allclose` contracts. All six malformed loader fixtures still fail at the
+  intended boundaries. Only the presentation function, rejected-value error
+  context, saved edge-case evidence, and reflection remain. Sunday is outside
+  the active assignment cadence, so no new lesson was added.
 
 As of Saturday, September 5, 2026:
 
