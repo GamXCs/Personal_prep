@@ -218,15 +218,15 @@ Current scheduling preference:
 
 ## Current project state assumptions
 
-- Lesson 11 is the canonical active lesson as of September 7, 2026.
-- The active submission is `lesson_11_exam_matrix.py`; inspect it before every
-  advancement decision.
+- Lesson 12 is the canonical active lesson as of September 13, 2026.
+- The active submission is `lesson_12_pandas_exam_report.py`. Lesson 11's valid
+  NumPy matrix pipeline is complete by explicit student-requested advancement.
 - Lessons 16–18 are historical reinforcement publications attached to Lesson
   10. Lesson 19 is companion material for Lesson 11. Their filenames do not
   indicate the student's completed-lesson count.
-- Lesson 11's NumPy analysis is substantially complete, but presentation,
-  rejected-value context, saved edge-case evidence, and reflection remain to
-  be reviewed before advancement.
+- Review Lesson 12 for labeled selection, validation, derived columns,
+  complete-row filtering, top-row identity, grouped aggregation, and a short
+  NumPy-versus-pandas reflection.
 
 ## How the scheduler should use this file
 

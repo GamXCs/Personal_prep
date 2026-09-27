@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-09-11
+Last updated: 2026-09-25
 
 ## Current module
 
@@ -22,20 +22,24 @@ Last updated: 2026-09-11
 
 ## Canonical lesson state
 
-- **Active student lesson: Lesson 11 — 2-D arrays, axes, masks, and
-  feature-wise scaling.**
-- `lesson_11_exam_matrix.py` is the active submission. Historical files named
+- **Active student lesson: Lesson 12 — From NumPy Matrices to pandas
+  DataFrames.**
+- Lesson 11's valid NumPy pipeline is complete by student-requested advancement
+  on September 13. Its optional reflection and extra error-context write-up are
+  recommended documentation rather than advancement blockers.
+- The expected active submission is `lesson_12_pandas_exam_report.py`; it has
+  not yet been created. Historical files named
   Lessons 16–18 are reinforcement publications for Lesson 10, not evidence of
   separate completed student lessons. Lesson 19 is a companion publication for
   the Lesson 11 topic, not a later course position.
 - Preserve those files as historical support material, but do not use their
   publication numbers to advance or calculate student progress.
-- Next advancement decision occurs only after Lesson 11's remaining evidence is
-  reviewed.
-- Current code-review note: `rows_abv_85` is computed correctly, but the
-  returned `"qualifying score rows"` field currently stores
-  `student_score_abv_85` (filtered means) instead of the filtered 2-D rows.
-  Correct this report contract while implementing `format_output`.
+- Next advancement decision occurs only after the Lesson 12 implementation and
+  validation evidence are reviewed.
+- Optional Lesson 11 cleanup: `rows_abv_85` is computed correctly, but the
+  returned `"qualifying score rows"` field stores filtered student means rather
+  than those 2-D rows; conversion errors also omit the rejected score text.
+  These are useful documentation/contract improvements, not active blockers.
 
 ## Current monthly objective — September 2026
 
@@ -56,6 +60,113 @@ Completion evidence:
   short reflection comparing the three representations.
 
 ## Current status
+
+- September 25 Friday review: no Lesson 12 implementation or reflection is
+  present, so there is still no evidence supporting advancement. The Lesson 12
+  lesson file was modified after the September 23 review; that curriculum
+  material is preserved, but it is not a student submission. The independent
+  pandas example and completed Lesson 11 report compile, and the pandas example
+  runs with the expected complete-row filter and grouped means. Lesson 12
+  remains the sole active assignment. Use today's 90–120 minute project session
+  to finish one end-to-end valid-data report in
+  `lesson_12_pandas_exam_report.py`: load and validate the exact schema, inspect
+  shape/columns/dtypes, explicitly select `Exam1` and `Exam2`, derive
+  `StudentMean`, recover Sarah's complete row with `idxmax`, filter the complete
+  Alice/Sarah/Emma rows, assign the three performance bands, and produce the
+  count/mean grouped summary. Run after each stage and save the successful
+  output. If time remains, demonstrate one malformed-input rejection and begin
+  the reflection; otherwise those remain the next completion steps within this
+  same assignment. Because the September checkpoint week begins September 28,
+  an unfinished Lesson 12 becomes the checkpoint support target rather than
+  spawning a fresh checkpoint project.
+
+- September 23 Wednesday review: no student-authored artifact changed after the
+  September 21 review; `lesson_12_pandas_exam_report.py` and
+  `lesson-12-reflection.md` are still absent. The independent pandas example
+  and completed Lesson 11 report both compile and run with their expected
+  results. The repository-wide pytest run has five passing tests and seven
+  expected failures from the retired, intentionally unfinished Lesson 8
+  starter; those failures are historical and are not a Lesson 12 advancement
+  signal. Lesson 12 remains the sole active assignment, with no new lesson or
+  parallel SQL backlog. Use today's 60–90 minute independent session to create
+  one small runnable slice: load `exams.csv`, print shape/columns/dtypes,
+  require the exact three-column schema, explicitly select `Exam1` and
+  `Exam2`, create `StudentMean` with `mean(axis=1)`, and print Sarah's complete
+  row using `idxmax`. Debug from the first failing operation and rerun after
+  each change. If that slice works, add one Boolean Series that returns the
+  complete Alice/Sarah/Emma rows. Stop there if needed; performance bands,
+  grouping, malformed-data evidence, and reflection remain later parts of the
+  same Lesson 12 assignment. Before coding, answer from memory: what object
+  does one-column selection return, why is `axis=1` correct here, and why does
+  `idxmax` preserve row identity better than sorting for this task?
+
+- September 21 Monday review: no student-authored artifact changed after the
+  September 18 review, and `lesson_12_pandas_exam_report.py` and
+  `lesson-12-reflection.md` remain absent. The independent pandas example runs
+  successfully and the completed Lesson 11 submission compiles. Lesson 12
+  therefore remains the sole active assignment; no new numbered lesson or
+  parallel SQL work was opened. Today's 60–90 minute focused concept is
+  **label-safe vectorized row analysis**: load `exams.csv`, validate the exact
+  `Name`, `Exam1`, `Exam2` schema and required values, explicitly select the two
+  exam columns, create `StudentMean` with `mean(axis=1)`, use `idxmax` to retain
+  Sarah's complete row, and apply one Boolean Series to retain the complete
+  Alice/Sarah/Emma rows. First make that valid-data path run and print those
+  facts. Only then, if time remains, add performance bands and the grouped
+  summary. Save validation and reflection work for Wednesday if the focused
+  path uses the full session. This is a narrower milestone within Lesson 12,
+  not a replacement assignment.
+
+- September 18 Friday review: no student-authored file changed after the
+  September 16 review, and `lesson_12_pandas_exam_report.py` and
+  `lesson-12-reflection.md` are still absent. The independent pandas example
+  continues to run under pandas 2.3.1, and the completed Lesson 11 submission
+  still compiles. Lesson 12 therefore remains the only active assignment; no
+  later numbered lesson, SQL extension, or parallel backlog was opened. Use
+  today's 90–120 minute project session to produce one runnable vertical slice:
+  load `exams.csv`, deliberately validate the exact three-column schema and
+  required values, explicitly select `Exam1` and `Exam2`, create
+  `StudentMean`, recover Sarah's complete top row without sorting, and print the
+  complete rows for Alice, Sarah, and Emma. If that works, add performance
+  bands and the three-row grouped summary, then save one malformed-input run
+  and begin the reflection. Stop after the valid vertical slice if needed; it
+  is the minimum evidence for the next review and remains part of the same
+  Lesson 12 assignment.
+
+- September 16 Wednesday review: no Lesson 12 submission or reflection has
+  appeared since Monday. The published pandas example still runs under pandas
+  2.3.1 and demonstrates labeled tables, complete-row Boolean filtering, and
+  grouped aggregation. Lesson 12 remains the only active assignment; no new
+  numbered lesson or parallel backlog was added. Today's 60–90 minute
+  independent milestone is to implement a valid-data first pass in
+  `lesson_12_pandas_exam_report.py`: inspect shape/columns/dtypes, explicitly
+  select `Exam1` and `Exam2`, create `StudentMean` without a row loop, recover
+  Sarah's complete top row without sorting, and filter the complete Alice,
+  Sarah, and Emma rows. Then add the three performance bands and grouped
+  summary, run one supplied malformed fixture through deliberate validation,
+  and begin `lesson-12-reflection.md` with the five retrieval answers and a
+  brief NumPy-versus-pandas comparison. If time is tight, stop after the valid
+  first pass and save its output; schema and edge-case validation become
+  Friday's continuation rather than a second assignment.
+
+- September 14 Monday review: inspected the September 13 `Completed lesson 11`
+  commit and reran the completed NumPy report, all six malformed CSV fixtures,
+  and the independent pandas example. The valid matrix results and invariant
+  checks pass, every malformed fixture is rejected at its intended boundary,
+  and the pandas example runs successfully. No
+  `lesson_12_pandas_exam_report.py` or Lesson 12 reflection exists yet, so
+  Lesson 12 remains the single active 75–90 minute assignment. Today introduces
+  only the focused DataFrame/Series, labeled selection, Boolean filtering, and
+  grouped-summary concepts already published in the Lesson 12 artifact; no new
+  numbered lesson or parallel backlog was added.
+
+- September 13 student-directed release: activated Lesson 12 as the first
+  pandas lesson. Replaced the stale Lesson 12 NumPy-refactor draft, which
+  duplicated completed Lesson 11 work, with a self-contained DataFrame lesson
+  using the familiar `exams.csv` facts. The active assignment is
+  `lesson_12_pandas_exam_report.py`, covering labeled selection, derived
+  columns, complete-row Boolean filtering, label-preserving maximum lookup,
+  validation, performance bands, and grouped aggregation. Added an independent
+  executable response-time example without supplying the exam solution.
 
 - September 11 Friday review: `lesson_11_exam_matrix.py` and its active
   completion evidence are unchanged since the September 9 review;
@@ -919,7 +1030,7 @@ Completion evidence:
 
 ### Lesson 11 - 2-D NumPy Arrays, Axes, and `argmax`
 
-- Status: active
+- Status: complete by student-requested advancement on 2026-09-13
 - Date published: 2026-07-30
 - Artifact: [lesson-11-2d-arrays-axes-and-argmax.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-11-2d-arrays-axes-and-argmax.md>)
 - Executable example: [lesson-11-axis-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-11-axis-example.py>)
@@ -937,20 +1048,21 @@ Completion evidence:
   - apply a shared row mask to names and score rows;
   - standardize columns and reject zero-variance features.
 
-### Lesson 12 - From a Working Array Script to a Reliable Data Function
+### Lesson 12 - From NumPy Matrices to pandas DataFrames
 
-- Status: active reinforcement
+- Status: active by explicit student request on 2026-09-13
 - Date published: 2026-08-01
 - Artifact: [lesson-12-functions-validation-and-axis-reductions.md](</Users/gamlielibn/Documents/Grad School Prep/lesson-12-functions-validation-and-axis-reductions.md>)
 - Executable example: [lesson-12-reliable-array-example.py](</Users/gamlielibn/Documents/Grad School Prep/lesson-12-reliable-array-example.py>)
-- Evidence used: `lesson_4_numpy_asgn.py`, `lesson_8_csv_code.py`, and
-  `lesson_3_numpy_intro.py`.
 - Focus:
-  - separate loading, validation, computation, and presentation;
-  - select numeric types from explicit field contracts;
-  - finish axis-wise means, `argmax`, and aligned row masking;
-  - standardize feature columns and reject zero variance;
-  - validate a CSV-to-NumPy boundary before introducing Pandas.
+  - distinguish DataFrames from Series;
+  - select labeled columns and filter complete rows;
+  - add derived student means and performance bands;
+  - preserve row identity during maximum lookup;
+  - validate tabular schemas, values, and uniqueness;
+  - aggregate performance groups.
+- Current assignment: create `lesson_12_pandas_exam_report.py` from the
+  behavioral specification without an initial scaffold or supplied tests.
 
 ### Lesson 13 - Schema-Driven CSV Parsing and Residual Bias
 

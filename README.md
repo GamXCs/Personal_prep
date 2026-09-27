@@ -18,41 +18,26 @@ independent practice/debugging/review (60–90 minutes), and Friday application
 to the ongoing project (90–120 minutes). Work is organized around monthly
 objectives, with every fourth week used as an independent checkpoint.
 
-**Current scheduling status:** Lesson 11 is the active curriculum lesson. The
-loader passes all six focused malformed fixtures, and the analysis now computes
-the correct exam means, student means, top student, and qualifying identities.
-The matrix analysis now also standardizes each exam column correctly, rejects
-zero-spread columns before division, applies the shared mask to score rows, and
-checks its shape, Boolean, and floating-point invariants. Finish
-`format_output(records)`, route the returned report through it, include rejected
-score text in conversion errors, and save the edge-case/reflection evidence
-before advancing.
-The current report also computes the filtered 2-D score rows but returns the
-filtered student means under the `"qualifying score rows"` key; that contract
-should be corrected during the formatting step.
-Its published artifact
-uses cumulative file number 19, but the student's course position is Lesson 11.
+**Current scheduling status:** Lesson 12 is active by the student's September
+13 request. Lesson 11's valid NumPy pipeline is complete: it performs both axis
+reductions, aligned filtering, top-student identity recovery, column
+standardization, invariant checks, and formatted presentation. Lesson 12 now
+translates the familiar exam analysis into pandas DataFrames, labeled
+selection, derived columns, validation, and grouped performance summaries.
+No Lesson 12 submission was present at the September 25 Friday review. The
+current 90–120 minute project milestone is one end-to-end valid-data report:
+load and validate `exams.csv`, inspect shape/columns/dtypes, explicitly select
+the exam columns, derive `StudentMean`, recover Sarah's complete `idxmax` row,
+filter the complete Alice/Sarah/Emma rows, assign performance bands, and build
+the count/mean grouped summary. Save a successful run, then add one malformed
+case and the reflection if time remains. Lesson 12 stays the only assignment;
+if unfinished on September 28, it becomes the checkpoint support target rather
+than creating a second project.
+Lesson 11's companion artifact uses cumulative file number 19, but the
+student's current course position is Lesson 12.
 Historical Lessons 16–18 are Lesson 10 reinforcement records, not separate
 student advancement. Lesson 19 is Lesson 11 companion material. The curriculum
 tracker, not the largest filename, is the canonical course position.
-Its required whole-record minimum scan
-is complete, and the main NumPy analyzer is now a working partial submission:
-it validates and loads the valid CSV, preserves array alignment, masks above-
-mean records, standardizes scores correctly, rejects zero spread, and recovers
-the maximum identity with `argmax`. It now also has separate loading, analysis,
-and presentation boundaries with a structured returned report. It still needs
-explicit shape/mask and `np.isclose` checks, the rejected value in conversion
-errors, and the reflection. Lesson 16 adds array
-contracts, shared-mask invariants, incremental checks, and `argmax` identity
-recovery while retaining the same Lesson 10 deliverable.
-Lesson 9 is complete by the student's August 26 confirmation; its previously
-listed contextual-validation and reflection items are no longer active gates.
-Lesson 19 advances to 2-D matrix axes and feature-wise scaling while carrying
-forward explicit shape, mask, contextual-error, and floating-point contracts.
-Its integrated deliverable is `lesson_11_exam_matrix.py`. The loader now works
-on the valid file and all six focused malformed fixtures; the NumPy analysis,
-axis reductions, shared mask, feature scaling, report boundary, and reflection
-remain to be completed.
 
 The curriculum path is Python/NumPy/pandas/SQL, then statistics and classical
 ML, APIs/Docker/AWS, deep learning, evaluated AI applications, and finally
@@ -93,8 +78,8 @@ aggregation, and SQL-style data reasoning.
 - [lesson-10-array-example.py](lesson-10-array-example.py): executable NumPy masking and standardization example
 - [lesson-11-2d-arrays-axes-and-argmax.md](lesson-11-2d-arrays-axes-and-argmax.md): current lesson on 2-D axes, reductions, and record identity
 - [lesson-11-axis-example.py](lesson-11-axis-example.py): executable row-wise and column-wise aggregation example
-- [lesson-12-functions-validation-and-axis-reductions.md](lesson-12-functions-validation-and-axis-reductions.md): current reinforcement lesson on reliable function boundaries, validation, axes, and standardization
-- [lesson-12-reliable-array-example.py](lesson-12-reliable-array-example.py): executable computation-boundary example
+- [lesson-12-functions-validation-and-axis-reductions.md](lesson-12-functions-validation-and-axis-reductions.md): active pandas lesson on labeled tabular analysis and grouped summaries
+- [lesson-12-reliable-array-example.py](lesson-12-reliable-array-example.py): executable pandas DataFrame and filtering example
 - [lesson-13-schema-driven-csv-and-residual-bias.md](lesson-13-schema-driven-csv-and-residual-bias.md): current core-Python lesson on schema parsing, validation, and residual bias
 - [lesson-13-schema-example.py](lesson-13-schema-example.py): executable parser-dispatch example
 - [lesson-14-pipeline-state-and-invariants.md](lesson-14-pipeline-state-and-invariants.md): active reinforcement on accumulator design and loop invariants
@@ -111,6 +96,52 @@ aggregation, and SQL-style data reasoning.
 - [lesson-19-axis-contract-example.py](lesson-19-axis-contract-example.py): executable axis and matrix-contract example
 
 ## Current Status
+
+As of Friday, September 25, 2026:
+
+- The Lesson 12 program and reflection are still absent, so advancement is not
+  supported. The independent pandas example and completed Lesson 11 report
+  compile, and the example runs successfully. Friday's 90–120 minute project
+  session is an end-to-end valid-data report through schema/value validation,
+  labeled exam selection, `StudentMean`, Sarah's complete top row, complete-row
+  filtering, performance bands, and grouped counts/means. Save the successful
+  output before adding malformed-input evidence and reflection. No new lesson,
+  SQL extension, or separate checkpoint project was opened.
+
+As of Wednesday, September 23, 2026:
+
+- No student-authored artifact changed after Monday, and the expected Lesson 12
+  program and reflection remain absent. The pandas example and completed
+  Lesson 11 report compile and run successfully. Lesson 12 remains the only
+  active assignment. Wednesday's independent practice is narrowed to creating
+  and debugging the valid-data slice through `StudentMean` and Sarah's complete
+  `idxmax` row, followed by the complete qualifying rows only if time permits.
+  The seven repository-wide pytest failures come from a retired, intentionally
+  unfinished Lesson 8 starter and do not block the active curriculum.
+
+As of Monday, September 21, 2026:
+
+- No student-authored file changed after Friday, and the expected Lesson 12
+  program and reflection remain absent. The pandas example still runs and the
+  completed Lesson 11 program compiles. Lesson 12 remains the only active
+  assignment. Monday's single concept is label-safe vectorized row analysis:
+  explicit exam-column selection, `mean(axis=1)`, `idxmax`, and one aligned
+  Boolean Series applied to complete rows. Complete that valid-data path first;
+  add performance bands and grouping only if time remains. No new numbered
+  lesson or parallel SQL task was added.
+
+As of Friday, September 18, 2026:
+
+- No student-authored file changed after Wednesday, and the expected Lesson 12
+  program and reflection are still absent. The pandas example runs successfully
+  under pandas 2.3.1, and the completed Lesson 11 submission still compiles.
+  Lesson 12 remains the only active assignment. Friday's 90–120 minute project
+  session should first produce a runnable valid-data path with deliberate
+  schema/value checks, explicit exam-column selection, `StudentMean`, Sarah's
+  complete top row, and the complete qualifying rows for Alice, Sarah, and
+  Emma. Add performance bands, the grouped summary, one malformed-input run,
+  and reflection evidence only after that vertical slice works. No new lesson,
+  SQL extension, or parallel backlog was added.
 
 As of Friday, September 11, 2026:
 

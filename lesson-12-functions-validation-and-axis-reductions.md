@@ -1,36 +1,44 @@
-# Lesson 12 — From a Working Array Script to a Reliable Data Function
+# Lesson 12 — From NumPy Matrices to pandas DataFrames
 
-**Module:** Week 3 — Reliable NumPy data pipelines  
-**Estimated time:** 75–90 minutes  
-**Difficulty:** Introductory/intermediate
+**Module:** Foundation path — Python, NumPy, pandas, and SQL
+
+**Estimated time:** 75–90 minutes
+
+**Difficulty:** Introductory pandas, intermediate data reasoning
 
 ## Why this lesson is next
 
-Your exam script already loads a `(5, 2)` array, preserves name alignment, and
-computes correct per-exam summaries. That is real progress. Two current failure
-modes identify the next useful step: `lesson_8_csv_code.py` tries to parse the
-decimal value `3.5` with `int`, and `lesson_3_numpy_intro.py` contains a stray
-`-` that prevents compilation. The exam script also keeps all work at module
-level and has not yet used `axis`, `argmax`, or explicit validation.
+You completed Lesson 11's central matrix pipeline: two-dimensional data,
+axis-wise means, aligned filtering, `argmax`, and feature-wise standardization.
+Lesson 12 keeps the familiar `exams.csv` facts but introduces one new
+representation: a pandas `DataFrame` with labeled rows and columns.
 
-This lesson does not introduce Pandas. It turns the NumPy work you already have
-into a small, reliable pipeline with clear function boundaries.
+The assignment remains problem-first. No starter architecture, function
+signatures, solution, or tests are supplied.
 
 ## Learning objectives and prerequisites
 
 By the end, you should be able to:
 
-1. separate loading, validation, computation, and presentation;
-2. choose `int` versus `float` from a data contract rather than by guesswork;
-3. use `mean(axis=0)`, `mean(axis=1)`, and `argmax` correctly;
-4. validate shape and alignment before computing;
-5. standardize each feature column and verify the result;
-6. explain the time and space costs of a single-pass validation scan.
+1. load a CSV into a `DataFrame` and inspect shape, columns, and dtypes;
+2. distinguish a two-dimensional `DataFrame` from a one-dimensional `Series`;
+3. select numeric columns by label and reduce across columns or rows;
+4. create derived columns and filter complete rows with a Boolean Series;
+5. recover a complete extreme row while retaining its labels;
+6. validate schema, missing values, numeric types, ranges, and uniqueness;
+7. relate pandas filtering to NumPy masks and SQL `WHERE`.
 
-Prerequisites: CSV iteration, functions, exceptions, 2-D NumPy arrays, Boolean
-masks, arithmetic mean, and population standard deviation.
+Prerequisites: Lesson 11, Python functions and dictionaries, CSV validation,
+and the meaning of rows, columns, means, and standardization.
 
-## Python instruction and executable example
+## Retrieval review
+
+1. What did rows and columns represent in the Lesson 11 matrix?
+2. Why did one Boolean mask preserve name/score alignment?
+3. What did `axis=0` and `axis=1` compute?
+4. What did `argmax` return, and why was that position useful?
+
+## Python/pandas instruction and executable example
 
 Run:
 
@@ -38,157 +46,148 @@ Run:
 python3 lesson-12-reliable-array-example.py
 ```
 
-The example demonstrates a useful boundary: a computation function accepts
-already numeric arrays and either returns a result or raises a clear error. It
-does not open a file or print. The `main` function coordinates the program.
+The independent response-time example demonstrates the new objects:
 
-Notice these parsing contracts:
+- a `DataFrame` is a labeled two-dimensional table;
+- selecting one column normally returns a `Series`;
+- comparing a Series produces an index-aligned Boolean Series;
+- filtering the DataFrame keeps complete rows together;
+- `groupby` performs split–apply–combine aggregation.
 
-```python
-hours = float(text)       # accepts "3.5"
-exam_score = int(text)    # appropriate only if whole numbers are required
+Unlike parallel NumPy arrays, a DataFrame can store names and numeric columns
+in one table. Labels clarify intent, but you must still inspect `.shape`,
+`.columns`, `.dtypes`, missing values, and row identity.
+
+## Mathematics: familiar reductions with labels
+
+pandas does not change the mathematics. For Alice, the row mean remains
+`(88 + 91) / 2 = 89.5`. The complete student-mean sequence remains:
+
+```text
+89.5, 73.5, 97.0, 82.5, 91.0
 ```
 
-Conversion success is not enough. After conversion, validate the permitted
-range and reject non-finite floating-point values with `np.isfinite`.
-
-## Mathematics: column standardization
-
-For matrix \(X\in\mathbb{R}^{n\times d}\), define the mean and population
-standard deviation of column \(j\) by
-
-\[
-\mu_j=\frac{1}{n}\sum_{i=1}^n x_{ij},\qquad
-\sigma_j=\sqrt{\frac{1}{n}\sum_{i=1}^n(x_{ij}-\mu_j)^2}.
-\]
-
-The standardized entry is \(z_{ij}=(x_{ij}-\mu_j)/\sigma_j\). Its column mean
-is
-
-\[
-\frac{1}{n}\sum_i z_{ij}
-=\frac{1}{n\sigma_j}\sum_i(x_{ij}-\mu_j)
-=\frac{n\mu_j-n\mu_j}{n\sigma_j}=0.
-\]
-
-Also,
-
-\[
-\frac{1}{n}\sum_i z_{ij}^2
-=\frac{1}{n\sigma_j^2}\sum_i(x_{ij}-\mu_j)^2=1,
-\]
-
-so its population standard deviation is 1. This derivation assumes
-\(\sigma_j>0\); a constant column must be rejected or handled by an explicit
-policy.
-
-Intuition: centering moves each feature's balance point to zero; dividing by
-its spread expresses values in comparable “standard deviation” units.
+Reducing down rows produces one statistic per selected column. Reducing across
+selected columns produces one statistic per row. Explicitly name the numeric
+columns so an identifier such as `Name` is never included in arithmetic.
 
 ## Machine-learning connection
 
-An ML design matrix conventionally stores observations in rows and features in
-columns. Column standardization prevents a large-unit feature from dominating
-distance calculations or gradient updates merely because of its units.
+A DataFrame commonly stages data before creating feature matrix `X` and target
+vector `y`. Labels document feature meaning, but they do not prevent leakage.
+A derived column built from a future outcome could make evaluation look
+excellent while being unavailable at prediction time. Before fitting, separate
+identifiers, features, targets, and post-outcome data deliberately. Learn
+scaling or imputation parameters from training data only.
 
-The pipeline boundary matters too. If malformed rows silently shift or drop
-values, features can become paired with the wrong target. If means and standard
-deviations are later computed using test data, evaluation leaks information.
-For this exercise use the whole educational dataset; in a fitted workflow,
-learn preprocessing statistics from the training split only.
+## Algorithms and data structures
 
-## Algorithms and data structures: validation scan
-
-A validator can scan \(n\) rows with \(d\) numeric fields per row. It checks
-each field once, so its time complexity is \(O(nd)\). If it validates an
-already-built array in place, its auxiliary space is \(O(1)\). Building the
-array itself stores \(nd\) values and therefore uses \(O(nd)\) space.
-
-**Loop invariant:** after validating the first \(k\) rows, every accepted row
-among those \(k\) has the required width, numeric types, and ranges. Checking
-row \(k+1\) either preserves the invariant or raises an error. At termination,
-all rows satisfy the contract.
-
-`argmax` similarly scans an unsorted length-\(n\) vector in \(O(n)\) time.
-Sorting would cost \(O(n\log n)\) and is unnecessary for one maximum.
+A DataFrame combines column labels, an index, and column arrays. Filtering `n`
+rows remains `O(n)` time and uses an `O(n)` Boolean mask. Correctness requires
+one mask decision per row; applying the aligned mask to the whole DataFrame
+returns precisely the qualifying complete records. Sorting all rows for one
+maximum costs `O(n log n)`; a direct maximum-index scan is `O(n)`.
 
 ## Technical reading
 
-Read NumPy's accessible introductions to
-[array aggregation](https://numpy.org/doc/stable/user/absolute_beginners.html#more-useful-array-operations)
-and [broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html).
+Read the official pandas tutorials:
+
+- [What kind of data does pandas handle?](https://pandas.pydata.org/docs/getting_started/intro_tutorials/01_table_oriented.html)
+- [How do I select a subset of a DataFrame?](https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/03_subset_data.html)
 
 Guiding questions:
 
-1. In a shape `(5, 2)` matrix, which axis disappears under `mean(axis=0)`?
-2. Why can vectors of shape `(2,)` be subtracted from a `(5, 2)` matrix?
-3. What output does `argmax` return: a value or a position?
-4. Which shape mismatch should your validator reject before NumPy computes?
+1. What is the difference between a `Series` and a `DataFrame`?
+2. What does selecting a single column return?
+3. Why must a Boolean filter have one decision per row?
+4. How do column labels reduce—but not remove—alignment mistakes?
+5. Which inspection output reveals that numeric data loaded as text?
 
-## Integrated coding exercise: reliable exam analyzer
+## Integrated coding exercise: pandas exam report
 
-Refactor your existing `lesson_4_numpy_asgn.py`; do not rename it and do not
-discard working code. You choose the function names and architecture.
+Create `lesson_12_pandas_exam_report.py` using `exams.csv`. Design the program
+yourself; do not copy Lesson 11's architecture automatically.
 
-Required behavior:
+### Required behavior
 
-1. Remove the stray `-` from `lesson_3_numpy_intro.py`, then confirm both files
-   compile.
-2. Divide the exam analyzer into at least three meaningful functions covering
-   loading/validation, computation, and presentation.
-3. Require exactly `Name,Exam1,Exam2`; reject malformed widths, blank names,
-   empty data, non-integers, and scores outside 0–100 with clear errors.
-4. Return aligned name and score arrays, with scores shaped `(n, 2)`.
-5. Use `mean(axis=0)` for exam means and `mean(axis=1)` for student means.
-6. Use `argmax` on student means to recover the top student's name and score.
-7. Use one shared row mask to select names and rows with mean at least 85.
-8. Standardize columns without looping over matrix entries; reject a
-   zero-standard-deviation column.
-9. Keep printing behind `if __name__ == "__main__":`.
-10. Save a brief `lesson-12-reflection.md` containing one successful run, one
-    deliberate malformed-input error, and answers to the reading questions.
+1. Load with pandas and require exactly `Name`, `Exam1`, and `Exam2`.
+2. Reject empty data, blank/missing names, missing or nonnumeric exams,
+   duplicate names, and scores outside `0..100` with clear errors.
+3. Display shape, column labels, and dtypes after validation.
+4. Compute the two exam means using labeled column selection.
+5. Create `StudentMean` from Exam1 and Exam2 without a Python row loop.
+6. Identify the complete top-student row without sorting the entire table.
+7. Filter complete rows whose `StudentMean` is at least 85.
+8. Create `PerformanceBand`: `Excellent` for at least 90, `Strong` for at
+   least 85 but below 90, and `Developing` below 85.
+9. Produce a band summary with student count and mean `StudentMean` per band.
+10. Separate loading/validation, analysis, and presentation meaningfully; print
+    only when executed as a program.
 
-Acceptance criteria:
+Do not use a Python loop for row means, filtering, band assignment, or the top
+student. A short schema-validation or presentation loop is acceptable.
 
-- `python3 -m py_compile lesson_3_numpy_intro.py lesson_4_numpy_asgn.py` passes.
-- `python3 lesson_4_numpy_asgn.py` reports exam means `[85.4 88. ]`, student
-  means `[89.5 73.5 97.  82.5 91. ]`, and top student `Sarah` with `97.0`.
-- The at-least-85 selection contains Alice, Sarah, and Emma, with aligned rows.
-- Standardized column means are near 0 and population standard deviations near
-  1, checked with `np.allclose`.
-- A malformed file causes a clear error rather than a partial report.
-- Loading/computation functions return data and do not print.
+### Expected facts
 
-Optional stretch goals:
+```text
+Shape immediately after loading: (5, 3)
+Exam means: Exam1 85.4, Exam2 88.0
+Top student: Sarah 97.0
+At least 85: Alice, Sarah, Emma
+Bands: Excellent 2, Strong 1, Developing 2
+```
 
-- Generalize validation and standardization to any positive number of exam
+The analyzed table has five columns after adding `StudentMean` and
+`PerformanceBand`.
+
+### Acceptance criteria
+
+- `python3 lesson_12_pandas_exam_report.py` succeeds on `exams.csv`.
+- All expected facts above are correct.
+- Numeric calculations explicitly select `Exam1` and `Exam2`.
+- The qualifying result contains complete rows, not independently filtered
   columns.
-- Add one small `unittest` for a valid matrix and one for a constant column.
-- Repair `lesson_8_csv_code.py` by giving each field an explicit type contract;
-  `Hours` must accept decimals such as `3.5`.
+- The top row retains Sarah's name and both original scores.
+- The band summary has exactly three rows and correct counts.
+- Analysis does not mutate a caller's input DataFrame.
+- One malformed-input run demonstrates deliberate validation.
+
+### Optional stretch goals
+
+- Reproduce the at-least-85 filter as a SQLite query.
+- Compare label-preserving maximum lookup with NumPy `argmax`.
+- Add `Exam3` and identify which operations generalize automatically.
 
 ## Retrieval-practice quiz
 
-1. What does `scores.mean(axis=1)` return for a `(5, 2)` matrix?
-2. Why is `float("3.5")` valid while `int("3.5")` fails?
-3. What condition makes z-score standardization undefined?
-4. Why use `argmax` rather than sorting to find one top student?
-5. Why should computation functions normally return rather than print results?
+1. What does selecting one DataFrame column normally return?
+2. Why select exam columns explicitly before calculating a mean?
+3. What is the pandas analogue of a NumPy Boolean row mask?
+4. Why is sorting unnecessary for one maximum row?
+5. How can a derived column cause ML leakage?
 
 ## Quiz answers
 
-1. Five values: one mean per row/student.
-2. `3.5` is a valid floating-point literal but not an integer literal.
-3. A standard deviation of zero, caused by a constant column.
-4. `argmax` preserves the index in `O(n)` time; sorting costs `O(n log n)`.
-5. Returned values can be tested and reused independently of presentation.
+1. A one-dimensional `Series`.
+2. To exclude identifiers and unrelated columns and preserve meaning.
+3. An index-aligned Boolean Series.
+4. Direct maximum-index lookup is `O(n)` rather than `O(n log n)` sorting.
+5. It may encode target or post-outcome information unavailable at prediction
+   time.
 
-## Suggested 80-minute study plan
+## Suggested 75–90 minute study plan
 
-- **0–8 min:** retrieval warm-up and predict the current failure points.
-- **8–20 min:** run the example and read its function contracts.
-- **20–32 min:** work the standardization derivation and axis shapes by hand.
-- **32–62 min:** refactor the analyzer and implement axis/`argmax` operations.
-- **62–72 min:** add validation and deliberately trigger one failure.
-- **72–80 min:** run acceptance checks and write the reflection.
+- 0–10: retrieval review and run the example.
+- 10–22: inspect DataFrame, Series, labels, dtypes, and filtering.
+- 22–32: reading and guiding questions.
+- 32–65: implement the valid report independently.
+- 65–75: add validation and run one malformed case.
+- 75–90: quiz, reflection, and NumPy-versus-pandas comparison.
 
+## Submission checklist
+
+- `lesson_12_pandas_exam_report.py`;
+- valid terminal output;
+- one saved malformed-input command and error;
+- `lesson-12-reflection.md` with reading answers, quiz attempts, and a short
+  comparison of NumPy arrays with pandas DataFrames.
