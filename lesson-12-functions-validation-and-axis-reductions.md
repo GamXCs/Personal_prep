@@ -93,7 +93,7 @@ maximum costs `O(n log n)`; a direct maximum-index scan is `O(n)`.
 Read the official pandas tutorials:
 
 - [What kind of data does pandas handle?](https://pandas.pydata.org/docs/getting_started/intro_tutorials/01_table_oriented.html)
-- [How do I select a subset of a DataFrame?](https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/03_subset_data.html)
+- [How do I select a subset of a DataFrame?](https://pandas.p/pydata.org/pandas-docs/stable/getting_started/intro_tutorials/03_subset_data.html)
 
 Guiding questions:
 

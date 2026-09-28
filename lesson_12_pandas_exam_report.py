@@ -1,5 +1,4 @@
 import pandas as pd
-import os 
 
 # read csv 
 exams = pd.read_csv("/Users/gamlielibn/Documents/Grad School Prep/exams.csv")
@@ -27,6 +26,7 @@ if exams["Name"].str.strip().eq("").any():
 # reject missing or nonnumeric exams
 exam_columns = ["Exam1", "Exam2"]
 
+
 # 2 any() methods bc first any returns one res per col
 # second is checking if any col contains missing val
 if exams[exam_columns].isna().any().any():
@@ -48,3 +48,43 @@ outside_scope = (exams[exam_columns] < 0) | (exams[exam_columns] > 100)
 
 if outside_scope.any().any():
     raise ValueError("Exam scores must be between 0 and 100")
+
+
+# display shape, column labels, dtypes
+exams_shape = exams.shape
+col_labels = exams.columns
+exams_dtype = exams.dtypes
+
+# Compute the two exam means using labeled column selection.
+exam1_mean = exams["Exam1"].mean()
+exam2_mean = exams["Exam2"].mean()
+
+# Create `StudentMean` from Exam1 and Exam2 without a Python row loop.
+student_means = exams[exam_columns].mean(axis=1)
+
+# create StudentMean column
+exams["StudentMean"] = student_means
+
+# Identify the complete op-student row without sorting the entire table.
+top_student_index = exams["StudentMean"].idxmax()
+top_student = exams.loc[top_student_index]
+
+# Filter complete rows whose `StudentMean` is at least 85.
+mean_atleast_85_mask = exams["StudentMean"] >= 85
+mean_atleast_85 = exams[mean_atleast_85_mask]
+
+# Create `PerformanceBand`: `Excellent` for at least 90, `Strong` for at
+# least 85 but below 90, and `Developing` below 85.
+exams["PerformanceBand"] = "Developing"
+
+strong_mask = exams["StudentMean"] >=  85
+exams.loc[strong_mask, "PerformanceBand"] = "Strong"
+
+excellent_mask = exams["StudentMean"] >= 90
+exams.loc[excellent_mask, "PerformanceBand"] = "Excellent"
+
+# print group by summary with performanceband and studentmean
+groups = exams.groupby("PerformanceBand")
+student_means_by_group = groups["StudentMean"]
+band_summary = student_means_by_group.agg(["count", "mean"])
+print(band_summary)
