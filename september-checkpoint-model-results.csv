@@ -1,0 +1,13 @@
+RunID,Model,Split,Actual,Predicted
+r01,baseline,validation,70,74
+r02,baseline,validation,82,89
+r03,baseline,validation,91,84
+r04,baseline,test,68,73
+r05,baseline,test,80,83
+r06,baseline,test,94,84
+r07,tuned,validation,70,72
+r08,tuned,validation,82,87
+r09,tuned,validation,91,89
+r10,tuned,test,68,72
+r11,tuned,test,80,86
+r12,tuned,test,94,89

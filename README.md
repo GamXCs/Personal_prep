@@ -18,21 +18,22 @@ independent practice/debugging/review (60–90 minutes), and Friday application
 to the ongoing project (90–120 minutes). Work is organized around monthly
 objectives, with every fourth week used as an independent checkpoint.
 
-**Current scheduling status:** Lesson 12 is active by the student's September
-13 request. Lesson 11's valid NumPy pipeline is complete: it performs both axis
+**Current scheduling status:** Lesson 12's core pandas work was completed and
+reviewed on September 27. Lesson 11's valid NumPy pipeline is complete: it performs both axis
 reductions, aligned filtering, top-student identity recovery, column
 standardization, invariant checks, and formatted presentation. Lesson 12 now
 translates the familiar exam analysis into pandas DataFrames, labeled
 selection, derived columns, validation, and grouped performance summaries.
-No Lesson 12 submission was present at the September 25 Friday review. The
-current 90–120 minute project milestone is one end-to-end valid-data report:
-load and validate `exams.csv`, inspect shape/columns/dtypes, explicitly select
-the exam columns, derive `StudentMean`, recover Sarah's complete `idxmax` row,
-filter the complete Alice/Sarah/Emma rows, assign performance bands, and build
-the count/mean grouped summary. Save a successful run, then add one malformed
-case and the reflection if time remains. Lesson 12 stays the only assignment;
-if unfinished on September 28, it becomes the checkpoint support target rather
-than creating a second project.
+The submitted program now validates the exam table, derives `StudentMean`,
+recovers Sarah's complete `idxmax` row, filters complete qualifying rows,
+assigns performance bands, and produces the expected grouped counts and means.
+At the student's request, presentation formatting, function decomposition, a
+saved malformed run, and the reflection are optional cleanup rather than
+advancement blockers. The unnumbered September independent checkpoint is now
+active. It uses a fresh model-evaluation table to assess validation, vectorized
+error, two-key grouping, direct worst-row lookup, and complete-row filtering
+before the same result is expressed in SQL. No later numbered lesson has been
+opened.
 Lesson 11's companion artifact uses cumulative file number 19, but the
 student's current course position is Lesson 12.
 Historical Lessons 16–18 are Lesson 10 reinforcement records, not separate
@@ -96,6 +97,208 @@ aggregation, and SQL-style data reasoning.
 - [lesson-19-axis-contract-example.py](lesson-19-axis-contract-example.py): executable axis and matrix-contract example
 
 ## Current Status
+
+As of Monday, November 9, 2026:
+
+- No checkpoint code, output, traceback, reflection, or commit appeared after
+  Friday. The unnumbered September checkpoint remains the only active work;
+  Lesson 13, SQL, and a new cycle remain closed. Monday's 60–90 minute focused
+  support makes the CSV-loading boundary observable: create
+  `september_checkpoint_model_report.py`, load the supplied CSV, print its
+  type, `(12, 5)` shape, and ordered labels, then select and print the complete
+  source row `r06` with `Actual = 94` and `Predicted = 84`. Submit the working
+  output or the partial script and first complete failure. Add vectorized
+  `AbsoluteError` and confirm `10` only if that source-row result works; all
+  later checkpoint features remain deferred.
+
+As of Friday, November 6, 2026:
+
+- No checkpoint code, output, traceback, reflection, or commit appeared after
+  Wednesday. The unnumbered September checkpoint remains the only active work;
+  Lesson 13, SQL, and a new cycle remain closed. Friday's 90–120 minute project
+  block keeps one artifact: create `september_checkpoint_model_report.py`, load
+  the supplied CSV, assign vectorized `AbsoluteError`, and print the complete
+  `r06` row with values `94`, `84`, and `10`. Run and save after each operation.
+  Submit the working script and output, or the partial script and first complete
+  failure. Only after that row works, extend the same file to the full 12-row
+  identity/error table and confirm `r01 = 4` and `r12 = 5`; all later checkpoint
+  features remain deferred.
+
+As of Wednesday, November 4, 2026:
+
+- No checkpoint code, output, traceback, reflection, or commit appeared after
+  Monday. The unnumbered September checkpoint remains the only active work;
+  Lesson 13, SQL, and a new cycle remain closed. Wednesday's 60–90 minute
+  independent practice keeps Monday's smallest runnable pandas pipeline:
+  retrieve the expected `r06` values, load the CSV, assign vectorized
+  `AbsoluteError`, and print the complete `r06` row with values `94`, `84`, and
+  `10`. Submit the script and output, or preserve the partial file and first
+  complete failure for review. All later checkpoint features remain deferred.
+
+As of Wednesday, October 28, 2026:
+
+- No checkpoint code, debugging evidence, reflection, or commit appeared after
+  Monday. The unnumbered September checkpoint remains the only active work;
+  Lesson 13, SQL, and the October cycle remain closed. Wednesday's 60–90 minute
+  independent practice is the smallest runnable pandas slice: create
+  `september_checkpoint_model_report.py`, load the supplied CSV, derive and
+  assign vectorized `AbsoluteError`, and print only complete rows `r01`, `r06`,
+  and `r12`. Confirm errors 4, 10, and 5, or preserve the partial file and first
+  complete failure. The full report and later checkpoint features remain
+  deferred pending review.
+
+As of Monday, October 26, 2026:
+
+- No checkpoint code, debugging evidence, reflection, or commit appeared after
+  Friday. The unnumbered September checkpoint remains the only active work;
+  Lesson 13, SQL, and the October cycle remain closed. Monday's 60–90 minute
+  focused support session uses three saved checkpoints to establish derived-
+  column data lineage: load and inspect the 12-row table, compare the
+  vectorized error Series index with the DataFrame index, then assign and print
+  all 12 labeled identity/error rows. Confirm `r01 = 4`, `r06 = 10`, and
+  `r12 = 5`, or preserve the last working output and first complete failure.
+  All grouped and later checkpoint features remain deferred pending review.
+
+As of Friday, October 23, 2026:
+
+- No checkpoint code or debugging evidence appeared after Wednesday. The
+  unnumbered September checkpoint remains the only active work; Lesson 13,
+  SQL, and the October cycle remain closed. Friday's 90–120 minute project
+  block requires one saved `september_checkpoint_model_report.py`: load the
+  checkpoint CSV, check the exact ordered schema, create vectorized
+  `AbsoluteError`, and print the 12 complete identity/error rows. Confirm
+  `r01 = 4`, `r06 = 10`, and `r12 = 5`, or preserve the partial file and first
+  complete failure. Add the two-key grouped summary only after this table
+  works; all later checkpoint features remain deferred.
+
+As of Wednesday, October 21, 2026:
+
+- No checkpoint code or debugging evidence appeared after Monday. The
+  unnumbered September checkpoint remains the only active work; Lesson 13,
+  SQL, and the October cycle remain closed. Wednesday's 60–90 minute
+  independent practice repeats the same bounded artifact: first predict the
+  errors for `r01`, `r06`, and `r12`, then load the checkpoint CSV, check its
+  exact ordered schema, create vectorized `AbsoluteError`, and print the
+  12-row identity/error table. Verify index alignment and `r06` error 10, or
+  preserve the partial file and first complete traceback. All later checkpoint
+  features remain deferred until this evidence is reviewed.
+
+As of Monday, October 19, 2026:
+
+- No checkpoint code or debugging evidence appeared after Friday. The
+  unnumbered September checkpoint remains the only active work; Lesson 13,
+  SQL, and the October cycle remain closed. Monday's 60–90 minute focused
+  support target is labeled Series alignment: load the checkpoint CSV, require
+  its exact ordered schema, create vectorized `AbsoluteError`, and print the
+  12-row `RunID`/`Actual`/`Predicted`/`AbsoluteError` table. Confirm `r06` has
+  error 10, or preserve the partial file and first complete traceback. All
+  grouping and later checkpoint work remains deferred until this slice is
+  reviewed.
+
+As of Friday, October 16, 2026:
+
+- No checkpoint code or debugging evidence appeared after Monday. The
+  unnumbered September checkpoint remains the only active work; Lesson 13,
+  SQL, and the October cycle remain closed. Friday's 90–120 minute project
+  support target is a smaller load-and-error table in
+  `september_checkpoint_model_report.py`: load the supplied CSV, require the
+  exact ordered schema, create vectorized `AbsoluteError`, and print 12
+  complete identity/error rows, including error 10 for `r06`. Add the two-key
+  grouped summary only if that table works. Preserve the first full failure if
+  blocked; all later checkpoint features remain deferred.
+
+As of Monday, October 12, 2026:
+
+- No checkpoint code or debugging evidence appeared after Friday. The
+  unnumbered September checkpoint remains the only active work; no Lesson 13,
+  SQL extension, or October cycle was opened. Monday's 60–90 minute support
+  target focuses on the structure of a two-key pandas `groupby`: create
+  `september_checkpoint_model_report.py`, check the exact ordered schema,
+  derive vectorized `AbsoluteError`, and print count and mean grouped by
+  `Model` and `Split`. Inspect the result's type, shape, columns, and index
+  names, then explain why it contains four groups. A partial file plus output
+  or the first complete traceback is sufficient review evidence. Defer
+  `idxmax`, filtering, further validation, reflection, and SQL.
+
+As of Friday, October 9, 2026:
+
+- No checkpoint code or debugging evidence appeared after Wednesday, so the
+  unnumbered September checkpoint remains the only active work. No Lesson 13,
+  SQL extension, or October cycle was opened. Friday's 90–120 minute target is
+  one runnable `september_checkpoint_model_report.py` containing the ordered
+  schema check, vectorized `AbsoluteError`, and four `Model`/`Split`
+  count-and-mean results. Run after each operation and preserve the first full
+  failure if blocked. Add complete-row `idxmax` and threshold filtering only
+  after the grouped report matches the supplied facts; defer all other
+  checkpoint requirements.
+
+As of Wednesday, October 7, 2026:
+
+- No checkpoint implementation or debugging evidence appeared after Monday.
+  The unnumbered September checkpoint therefore remains the only active work;
+  no new lesson or SQL task was added. Today's 60–90 minute independent target
+  is the smallest runnable pandas report in
+  `september_checkpoint_model_report.py`: ordered-schema check, vectorized
+  `AbsoluteError`, and the four `Model`/`Split` count-and-mean results. Inspect
+  intermediate type/shape/index information and save the complete first error
+  or incorrect output if blocked. Add `idxmax`, threshold filtering, further
+  validation, reflection, and SQL only after that minimum report works.
+
+As of Monday, October 5, 2026:
+
+- No checkpoint implementation or debugging evidence has appeared, so the
+  September independent checkpoint remains the sole active assignment and the
+  October cycle is deferred. Monday's 60–90 minute recovery target is one thin
+  valid pandas path in `september_checkpoint_model_report.py`: load the data,
+  verify the ordered schema, create vectorized `AbsoluteError`, and produce the
+  four `Model`/`Split` count-and-mean results. Add complete-row `idxmax` recovery
+  and the validation threshold mask only if that grouped report works. Save the
+  first failure if blocked; remaining validation, malformed evidence,
+  reflection, SQL, and Lesson 13 stay closed pending review.
+
+As of Friday, October 2, 2026:
+
+- No checkpoint program, reflection, saved output, or malformed-data evidence
+  has appeared, so the unnumbered September checkpoint remains the only active
+  assignment. Friday's 90–120 minute project session is narrowed to completing
+  `september_checkpoint_model_report.py`: ordered-schema validation,
+  vectorized `AbsoluteError`, the two-key `Model`/`Split` summary, complete
+  `idxmax` worst-row recovery, and complete validation-row filtering. Add the
+  remaining validation, one deliberate rejected run, and retrieval answers
+  only after the valid report works. SQLite and the October cycle stay deferred
+  until this checkpoint evidence is reviewed; no Lesson 13 was opened.
+
+As of Wednesday, September 30, 2026:
+
+- No checkpoint submission has appeared since Monday, so the unnumbered
+  September checkpoint remains the only active assignment and no Lesson 13 was
+  opened. Wednesday's 60–90 minute independent/debugging target is one
+  runnable pandas report in `september_checkpoint_model_report.py`: exact
+  ordered-schema check, vectorized `AbsoluteError`, two-key `Model`/`Split`
+  summary, complete worst-row recovery with `idxmax`, and complete validation
+  rows meeting the threshold. Add the remaining input checks and one deliberate
+  malformed run only after the valid path works. Friday's SQLite representation
+  waits until this pandas evidence is reviewed.
+
+As of Monday, September 28, 2026:
+
+- The fourth-week independent checkpoint is active; no Lesson 13 was opened.
+  Monday's 60–90 minute task is to implement the pandas portion in
+  `september_checkpoint_model_report.py` from the behavioral specification in
+  `september-2026-independent-checkpoint.md`, using the supplied fresh model
+  results. Wednesday will review/debug the same artifact, and Friday will add
+  its SQL representation and comparison reflection. The next monthly cycle
+  begins only after checkpoint evidence is reviewed.
+
+As of Sunday, September 27, 2026:
+
+- The core Lesson 12 submission compiles and runs with correct validation,
+  labeled selection, row-wise means, label-preserving maximum lookup,
+  complete-row filtering, performance bands, and grouped counts/means. The
+  student elected to defer formatting, decomposition, saved malformed-output,
+  and reflection work; those are recorded as optional cleanup rather than
+  blockers. No Sunday lesson was added. The next scheduled decision belongs to
+  the September 28 independent-checkpoint week.
 
 As of Friday, September 25, 2026:
 

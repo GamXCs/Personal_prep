@@ -1,6 +1,6 @@
 # AI/Data Science Grad School Prep Progress Log
 
-Last updated: 2026-09-25
+Last updated: 2026-11-09
 
 ## Current module
 
@@ -22,20 +22,28 @@ Last updated: 2026-09-25
 
 ## Canonical lesson state
 
-- **Active student lesson: Lesson 12 — From NumPy Matrices to pandas
-  DataFrames.**
+- **Most recently completed student lesson: Lesson 12 — From NumPy Matrices to
+  pandas DataFrames.**
 - Lesson 11's valid NumPy pipeline is complete by student-requested advancement
   on September 13. Its optional reflection and extra error-context write-up are
   recommended documentation rather than advancement blockers.
-- The expected active submission is `lesson_12_pandas_exam_report.py`; it has
-  not yet been created. Historical files named
+- The core `lesson_12_pandas_exam_report.py` submission was reviewed on
+  September 27. It validates the schema and values, performs labeled column
+  selection and row-wise means, retains complete rows through `idxmax` and a
+  Boolean Series, assigns performance bands, and produces correct grouped
+  counts and means. Historical files named
   Lessons 16–18 are reinforcement publications for Lesson 10, not evidence of
   separate completed student lessons. Lesson 19 is a companion publication for
   the Lesson 11 topic, not a later course position.
 - Preserve those files as historical support material, but do not use their
   publication numbers to advance or calculate student progress.
-- Next advancement decision occurs only after the Lesson 12 implementation and
-  validation evidence are reviewed.
+- The student explicitly chose to defer presentation formatting, function
+  decomposition, a saved malformed-input demonstration, and the written
+  reflection. Treat these as optional cleanup rather than Lesson 12
+  advancement blockers.
+- **Active work: September 2026 independent checkpoint — Model Evaluation
+  Table.** This is an unnumbered checkpoint, not Lesson 13. Review its evidence
+  before starting the October cycle or introducing a new major concept.
 - Optional Lesson 11 cleanup: `rows_abv_85` is computed correctly, but the
   returned `"qualifying score rows"` field stores filtered student means rather
   than those 2-D rows; conversion errors also omit the rejected score text.
@@ -60,6 +68,302 @@ Completion evidence:
   short reflection comparing the three representations.
 
 ## Current status
+
+- November 9 Monday checkpoint support review: no checkpoint implementation,
+  partial file, traceback, saved output, reflection, or new Git commit appeared
+  after Friday. The unnumbered September checkpoint remains the sole active
+  work; Lesson 13, SQL, and a new monthly cycle remain closed. Today's focused
+  60–90 minute concept is **make the data-loading boundary observable before
+  transforming data**. Create `september_checkpoint_model_report.py`, load
+  `september-checkpoint-model-results.csv`, and print the DataFrame type, shape,
+  ordered column labels, and the complete source row whose `RunID` is `r06`.
+  Confirm shape `(12, 5)` and source values `Actual = 94` and
+  `Predicted = 84`. Run and save immediately after the load and again after the
+  row selection. The minimum review evidence is the partial program plus this
+  inspection output or the first complete traceback/incorrect output. Only if
+  that boundary works, add one vectorized `AbsoluteError` column and confirm
+  `r06 = 10`. The 12-row report, schema rejection, grouping, `idxmax`, threshold
+  filtering, further validation, reflection, and SQL remain deferred. This is
+  targeted support inside the existing checkpoint, not a new lesson or
+  parallel backlog.
+
+- November 6 Friday checkpoint project review: no checkpoint implementation,
+  partial file, traceback, saved output, reflection, or new Git commit appeared
+  after Wednesday. The unnumbered September checkpoint remains the sole active
+  work; Lesson 13, SQL, and a new monthly cycle remain closed. Today's 90–120
+  minute project block has one required artifact:
+  `september_checkpoint_model_report.py`. First reproduce Wednesday's smallest
+  read-transform-select pipeline: load the supplied CSV, assign vectorized
+  `AbsoluteError`, select the complete `r06` row by `RunID`, and print only
+  `RunID`, `Actual`, `Predicted`, and `AbsoluteError`. Confirm values `94`,
+  `84`, and `10`, running and saving after each operation. If blocked, preserve
+  the partial file and the first complete traceback or incorrect output; that
+  is sufficient review evidence. Only if the one-row result works, extend the
+  same artifact to print the complete 12-row identity/error table and confirm
+  `r01 = 4` and `r12 = 5`. Ordered-schema validation, grouping, `idxmax`,
+  threshold filtering, further validation, reflection, and SQL remain deferred.
+  This is Friday application work inside the existing checkpoint, not a new
+  lesson or parallel backlog.
+
+- November 4 Wednesday checkpoint practice review: no checkpoint
+  implementation, partial file, traceback, saved output, reflection, or new Git
+  commit appeared after Monday. The unnumbered September checkpoint remains the
+  sole active work; Lesson 13, SQL, and a new monthly cycle remain closed.
+  Today's 60–90 minute independent practice repeats Monday's smallest runnable
+  pipeline, with retrieval and debugging gates: before coding, write the four
+  expected values for `r06` (`Actual = 94`, `Predicted = 84`,
+  `AbsoluteError = 10`); then create
+  `september_checkpoint_model_report.py`, load the supplied CSV, assign a
+  vectorized `AbsoluteError` column, select the complete `r06` row by its
+  `RunID`, and print only `RunID`, `Actual`, `Predicted`, and `AbsoluteError`.
+  After each operation, run the file and inspect the object type or shape. If
+  blocked, stop at the first failure and preserve the partial file plus the
+  complete traceback or incorrect output. That debugging evidence is a valid
+  submission. The other rows, ordered-schema check, grouping, `idxmax`,
+  threshold filtering, additional validation, reflection, and SQL remain
+  deferred. This is retrieval and debugging inside the existing checkpoint,
+  not a new lesson or parallel assignment.
+
+- November 2 Monday checkpoint support review: no checkpoint implementation,
+  partial file, traceback, saved output, reflection, or new Git commit appeared
+  after Friday. The unnumbered September checkpoint remains the sole active
+  work; Lesson 13, SQL, and a new monthly cycle remain closed. Today's focused
+  60–90 minute concept is a **runnable read-transform-select pipeline**: create
+  `september_checkpoint_model_report.py`, load the supplied CSV, derive the
+  vectorized `AbsoluteError` column, select the complete `r06` row, and print
+  `RunID`, `Actual`, `Predicted`, and `AbsoluteError`. The expected error is
+  `10`. Save and run after each of those three operations. The minimum review
+  evidence is the partial program plus its one-row output or the first complete
+  traceback/incorrect output. The other rows, ordered-schema check, grouping,
+  `idxmax`, threshold filtering, additional validation, reflection, and SQL
+  remain deferred. This is a smaller milestone inside the existing checkpoint,
+  not a new numbered lesson or parallel backlog.
+
+- October 30 Friday checkpoint project review: no checkpoint implementation,
+  partial file, traceback, saved output, reflection, or new Git commit appeared
+  after Wednesday. The unnumbered September checkpoint remains the sole active
+  work; Lesson 13, SQL, and the October cycle remain closed. Today's 90–120
+  minute project block keeps one reviewable artifact:
+  `september_checkpoint_model_report.py`. First reproduce Wednesday's three-row
+  result for `r01`, `r06`, and `r12` with vectorized `AbsoluteError` values 4,
+  10, and 5. Save and run that result before extending it. Only if it works,
+  add the exact ordered-schema check and print the full 12-row
+  `RunID`/`Actual`/`Predicted`/`AbsoluteError` table. If blocked, preserve the
+  partial file and first complete traceback or incorrect output. Grouping,
+  `idxmax`, threshold filtering, additional validation, reflection, and SQL
+  remain deferred. This is Friday application work inside the existing
+  checkpoint, not a new lesson or parallel backlog.
+
+- October 28 Wednesday checkpoint practice review: no checkpoint
+  implementation, partial file, traceback, saved output, reflection, or new
+  Git commit appeared after Monday. The unnumbered September checkpoint remains
+  the sole active work; Lesson 13, SQL, and the October cycle remain closed.
+  Today's 60–90 minute independent practice is one smallest runnable slice in
+  `september_checkpoint_model_report.py`: load the supplied CSV, create the
+  vectorized absolute-error Series, assign it as `AbsoluteError`, and print
+  only the `r01`, `r06`, and `r12` rows with `RunID`, `Actual`, `Predicted`,
+  and `AbsoluteError`. The expected errors are 4, 10, and 5. Run and save after
+  each operation; if blocked, preserve the partial file and the first complete
+  traceback or incorrect output. The full 12-row display, ordered-schema check,
+  grouping, `idxmax`, filtering, further validation, reflection, and SQL remain
+  deferred. This is retrieval and debugging inside the existing checkpoint,
+  not a new lesson or parallel assignment.
+
+- October 26 Monday checkpoint support review: no checkpoint implementation,
+  partial file, traceback, saved output, reflection, or new Git commit appeared
+  after Friday. The unnumbered September checkpoint remains the sole active
+  work; Lesson 13, SQL, and the October cycle remain closed. Today's 60–90
+  minute focused concept is **derived-column data lineage**: one labeled
+  `AbsoluteError` value must remain attached to the same source row throughout
+  a pandas transformation. Work in three saved checkpoints in
+  `september_checkpoint_model_report.py`: (1) load the CSV and print shape and
+  ordered columns, (2) create the vectorized error Series and print its index
+  plus the DataFrame index, and (3) assign it and print the 12 complete
+  `RunID`/`Actual`/`Predicted`/`AbsoluteError` rows. Confirm `r01 = 4`,
+  `r06 = 10`, and `r12 = 5`. The minimum review evidence is the partial file
+  plus the output from the last working checkpoint or the first complete
+  traceback. Grouping, `idxmax`, filtering, additional validation, reflection,
+  and SQL remain deferred. This is targeted support inside the existing
+  checkpoint, not a new lesson or parallel assignment.
+
+- October 23 Friday checkpoint project review: no checkpoint implementation,
+  partial file, traceback, saved output, or reflection appeared after
+  Wednesday. The unnumbered September checkpoint remains the sole active work;
+  Lesson 13, SQL, and the October cycle remain closed. Today's 90–120 minute
+  application block has one required artifact:
+  `september_checkpoint_model_report.py` containing the valid-data path from
+  CSV load through exact ordered-schema checking and a vectorized
+  `AbsoluteError` column. Print the 12-row
+  `RunID`/`Actual`/`Predicted`/`AbsoluteError` table and confirm `r01 = 4`,
+  `r06 = 10`, and `r12 = 5`. Work in short run-and-save cycles; if blocked,
+  preserve the partial file and the first complete traceback or incorrect
+  output. Only after this evidence works, add the existing two-key
+  `Model`/`Split` count-and-mean summary. `idxmax`, threshold filtering,
+  further validation, reflection, and SQL remain deferred; this is a narrower
+  project milestone inside the same checkpoint, not a new assignment.
+
+- October 21 Wednesday checkpoint practice review: no checkpoint
+  implementation, partial file, traceback, saved output, or reflection appeared
+  after Monday. The unnumbered September checkpoint remains the sole active
+  work; Lesson 13, SQL, and the October cycle remain closed. Today's 60–90
+  minute independent practice keeps Monday's exact vertical slice: retrieve
+  the expected errors for `r01`, `r06`, and `r12` before running code; load the
+  CSV; require the exact ordered schema; create vectorized `AbsoluteError`;
+  and print the 12-row `RunID`/`Actual`/`Predicted`/`AbsoluteError` table. Then
+  verify that the derived Series has the same index as the source table and
+  that `r06` has error 10. Run after each operation and debug only the first
+  failure. The minimum review evidence is the partial `.py` file plus correct
+  output or the first complete traceback. Grouping, `idxmax`, filtering,
+  further validation, reflection, and SQL remain deferred; this is practice
+  inside the existing checkpoint, not another assignment.
+
+- October 19 Monday checkpoint support review: no checkpoint implementation,
+  partial file, traceback, saved output, or reflection appeared after Friday.
+  The unnumbered September checkpoint remains the sole active work; Lesson 13,
+  SQL, and the October cycle remain closed. Today's 60–90 minute focused
+  concept is **aligned Series arithmetic creates a row-preserving derived
+  column**. In `september_checkpoint_model_report.py`, load the supplied CSV,
+  verify only the exact ordered schema, create `AbsoluteError` from `Actual`
+  and `Predicted` with vectorized subtraction, `.abs()`, and assignment, then
+  print `RunID`, `Actual`, `Predicted`, and `AbsoluteError`. Check 12 rows and
+  `r06` error 10. The minimum review evidence is the partial `.py` file plus
+  correct output or the first complete traceback. Grouping, `idxmax`, threshold
+  filtering, further validation, reflection, and SQL remain deferred. This is
+  a smaller vertical slice inside the existing checkpoint, not a new lesson.
+
+- October 16 Friday checkpoint support review: no checkpoint implementation,
+  partial file, traceback, saved output, or reflection appeared after Monday.
+  The unnumbered September checkpoint remains the sole active work; Lesson 13,
+  SQL, and the October cycle remain closed. Today's 90–120 minute project block
+  narrows the minimum evidence further to a **load-and-error table** in
+  `september_checkpoint_model_report.py`: load the supplied CSV, reject an
+  incorrect ordered schema, create vectorized `AbsoluteError`, and print only
+  `RunID`, `Model`, `Split`, and `AbsoluteError`. Confirm that the output has 12
+  rows and that `r06` has error 10. If this works, add the existing two-key
+  `Model`/`Split` count-and-mean summary; if it fails, preserve the partial file
+  and complete first traceback. `idxmax`, threshold filtering, further
+  validation, reflection, and SQL remain deferred. This is a smaller vertical
+  slice inside the same independent checkpoint, not a new lesson or backlog.
+
+- October 12 Monday checkpoint support review: no checkpoint implementation,
+  partial file, traceback, saved output, or reflection appeared after Friday.
+  The unnumbered September checkpoint remains the sole active work; Lesson 13,
+  SQL, and the October cycle remain closed. Today's 60–90 minute focused
+  concept is **reading the structure of a two-key pandas `groupby` result**.
+  Create `september_checkpoint_model_report.py` and stop after a reviewable
+  vertical slice: load the supplied CSV, require the exact ordered schema,
+  create vectorized `AbsoluteError`, and print the grouped count and mean for
+  `Model` and `Split`. Before comparing values, inspect the result's type,
+  shape, column labels, and index names; explain in one or two sentences why
+  the output has four groups. The minimum evidence is the partial `.py` file
+  plus either its output or the first complete traceback. Complete-row
+  `idxmax`, threshold filtering, additional validation, reflection, and SQL
+  remain deferred until this slice is reviewed. This is targeted support
+  inside the existing checkpoint, not a new assignment or major concept.
+
+- October 9 Friday checkpoint review: no checkpoint implementation, partial
+  file, traceback, saved output, or reflection appeared after Wednesday. The
+  unnumbered September checkpoint remains the sole active work; Lesson 13, SQL,
+  and the October cycle remain closed. Today's 90–120 minute project block has
+  one required deliverable: create and run
+  `september_checkpoint_model_report.py` through the exact ordered-schema
+  check, vectorized `AbsoluteError`, and the four `Model`/`Split` count-and-mean
+  results. Use the expected facts already printed in the checkpoint brief as a
+  retrieval oracle, and run after each operation. If the grouped report works,
+  add complete-row `idxmax` recovery and the validation threshold mask; if it
+  does not, preserve the first complete traceback or incorrect output. Further
+  validation, malformed-input evidence, reflection, and SQLite remain deferred
+  so this session does not create another backlog.
+
+- October 7 Wednesday checkpoint review: no checkpoint program, partial code,
+  traceback, saved output, or reflection appeared after Monday, so advancement
+  is still unsupported. The September independent checkpoint remains the sole
+  active work; no Lesson 13, SQL extension, or October objective was opened.
+  Today's 60–90 minute independent practice is limited to one runnable pandas
+  slice in `september_checkpoint_model_report.py`: load the supplied CSV,
+  assert the exact ordered schema, create vectorized `AbsoluteError`, and print
+  the two-key `Model`/`Split` count-and-mean summary. Before coding, write the
+  four expected group results from the checkpoint brief; after each operation,
+  inspect its type, shape, or index and compare the final values. If blocked,
+  stop at the first failure and preserve the file plus the complete traceback
+  or incorrect output. `idxmax`, threshold filtering, additional validation,
+  reflection, and SQL remain conditional on this minimum report working.
+
+- October 5 Monday checkpoint recovery review: no checkpoint program, partial
+  implementation, traceback, saved output, malformed-data evidence, or
+  reflection has appeared since Friday. The September independent checkpoint
+  therefore remains the sole active work, and the October cycle and Lesson 13
+  remain closed. Today's focused 60–90 minute concept is **preserving table
+  semantics through labeled vectorized operations**. Build only a thin valid
+  path in `september_checkpoint_model_report.py`: load the supplied CSV,
+  confirm the exact ordered columns, create `AbsoluteError` from the labeled
+  `Actual` and `Predicted` Series, and group by both `Model` and `Split` to
+  obtain count and mean error. Stop and save the first traceback or incorrect
+  output if those four grouped results do not match the supplied facts. Only
+  after they match, use `idxmax` to retain the complete `r06` row and one
+  Boolean mask to retain complete validation rows `r02`, `r03`, and `r08`.
+  Remaining validation rules, malformed-input evidence, reflection, and SQL
+  stay deferred. This is a narrower milestone within the existing checkpoint,
+  not a new assignment.
+
+- October 2 Friday checkpoint review: no student checkpoint program,
+  reflection, saved output, or malformed-data evidence has appeared, so the
+  September independent checkpoint remains the sole active work and the
+  October cycle does not begin yet. Friday's 90–120 minute project session is
+  a bounded pandas completion block, not the previously planned SQLite
+  extension. Create `september_checkpoint_model_report.py`, first producing the
+  valid report through ordered-schema validation, vectorized
+  `AbsoluteError`, the two-key `Model`/`Split` summary, complete worst-row
+  recovery, and complete validation-row filtering. Run and compare each stage
+  with the supplied expected facts. Only after the valid report works, add the
+  remaining input checks, preserve one deliberate malformed-input rejection,
+  and answer the four retrieval questions in
+  `september-checkpoint-reflection.md`. Save the current code and first failing
+  output if the report is not complete by the end of the session. SQLite stays
+  deferred until this evidence is reviewed; no Lesson 13 or parallel task was
+  opened.
+
+- September 30 Wednesday checkpoint review: no student checkpoint program or
+  reflection has appeared since Monday, so the September independent
+  checkpoint remains the sole active work and Lesson 13 stays closed. The
+  supplied dataset was rechecked independently: it has shape `(12, 5)`, every
+  `Model`/`Split` group contains three rows, the validation MAEs are `6.0` and
+  `3.0`, the test MAEs are `6.0` and `5.0`, `r06` is the complete worst-error
+  row, and `r02`, `r03`, and `r08` meet the validation threshold. Today's
+  60–90 minute independent milestone is a runnable valid-data path in
+  `september_checkpoint_model_report.py`: load the table, verify the exact
+  ordered schema, add vectorized `AbsoluteError`, print the two-key summary,
+  recover the complete `idxmax` row, and filter the complete validation rows.
+  Run after each stage and debug the first failing operation. If that path
+  works, add input validation and one deliberate malformed-input run; otherwise
+  stop at the first correct end-to-end report and bring the traceback or output
+  for review. Do not start Friday's SQLite work early.
+
+- September 28 Monday checkpoint launch: reviewed the committed Lesson 12
+  submission and confirmed its core pandas operations run with the expected
+  grouped counts and means. Opened the required fourth-week independent
+  checkpoint rather than a new numbered lesson. The fresh 12-row model-results
+  dataset and limited-scaffolding brief ask for schema/value validation,
+  vectorized absolute error, a two-key `Model`/`Split` summary, direct recovery
+  of the complete worst-error row, and a complete-row validation filter. The
+  60–90 minute Monday target is the pandas result only. Wednesday will review
+  and debug the same artifact; Friday will add the SQL representation and short
+  comparison reflection. Advancement is blocked until checkpoint evidence is
+  reviewed.
+
+- September 27 student-led completion review: ran and inspected
+  `lesson_12_pandas_exam_report.py`. The program compiles and its pandas logic
+  is correct: exact-schema and value validation, explicit exam-column
+  selection, row-wise `StudentMean`, Sarah's complete `idxmax` row, complete
+  Alice/Sarah/Emma filtering, ordered performance-band assignment, and the
+  expected grouped result (`Developing: 2, 78.0`; `Excellent: 2, 94.0`;
+  `Strong: 1, 89.5`). The student requested that report formatting, function
+  boundaries, malformed-run documentation, and reflection be skipped for now
+  because those are not current learning priorities. Accepted the core pandas
+  evidence as Lesson 12 completion and recorded the remaining items as
+  optional cleanup. No new lesson was published on Sunday. The next scheduled
+  run should use the September 28 checkpoint-week rules and review this evidence
+  before assigning any fresh work.
 
 - September 25 Friday review: no Lesson 12 implementation or reflection is
   present, so there is still no evidence supporting advancement. The Lesson 12
